@@ -1,0 +1,97 @@
+/* ===================================================================
+   TerraPure Organics - RTL Support (Arabic / Hebrew)
+   Right-to-Left Layout Rules
+   =================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] body {
+  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+[dir="rtl"] .me-1, [dir="rtl"] .me-2, [dir="rtl"] .me-3, [dir="rtl"] .me-4 {
+  margin-right: 0 !important;
+}
+
+[dir="rtl"] .ms-1, [dir="rtl"] .ms-2, [dir="rtl"] .ms-3, [dir="rtl"] .ms-4 {
+  margin-left: 0 !important;
+}
+
+/* Adjust button icons and flex gap */
+[dir="rtl"] .btn-farm-primary,
+[dir="rtl"] .btn-farm-secondary,
+[dir="rtl"] .btn-farm-earth {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .card-badge-top {
+  left: auto;
+  right: 14px;
+}
+
+[dir="rtl"] .usage-step-box {
+  border-left: 1px solid var(--border-color);
+  border-right: 5px solid var(--primary-green);
+}
+
+[dir="rtl"] .step-number {
+  right: auto;
+  left: 20px;
+}
+
+[dir="rtl"] .footer-farm h5::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .footer-links a:hover {
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .bi-arrow-right::before {
+  content: "\f12f"; /* bi-arrow-left */
+}
+
+[dir="rtl"] .scroll-top-btn {
+  right: auto;
+  left: 25px;
+}
+
+[dir="rtl"] .table-farm th,
+[dir="rtl"] .table-farm td {
+  text-align: right;
+}
+
+[dir="rtl"] .floating-stat-card.bottom-left {
+  left: auto;
+  right: -20px;
+}
+
+[dir="rtl"] .floating-stat-card.top-right {
+  right: auto;
+  left: -25px;
+}
+
+[dir="rtl"] .form-farm-control {
+  text-align: right;
+}
+
+/* Hero RTL Enhancements */
+[dir="rtl"] .hero-trust-highlights {
+  text-align: right;
+}
+[dir="rtl"] .floating-stat-card.bottom-left {
+  left: auto;
+  right: -24px;
+}
+[dir="rtl"] .floating-stat-card.top-right {
+  right: auto;
+  left: -24px;
+}
+[dir="rtl"] .hero-image-overlay-pill {
+  left: auto;
+  right: 18px;
+}
