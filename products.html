@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   
   <!-- Custom Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2.7">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.4">
   <link rel="stylesheet" href="assets/css/responsive.css?v=2.1">
   <link rel="stylesheet" href="assets/css/rtl.css?v=2.1">
 </head>
@@ -88,459 +88,296 @@
     </div>
   </nav>
 
-  <!-- INNER PAGE BANNER -->
-    <!-- INNER PAGE BANNER (UNIFORM 380PX CENTERED) -->
-  <section class="inner-page-banner" style="background-image: url('assets/images/products/products-banner.jpg');">
-    <div class="banner-overlay"></div>
-    <div class="container text-center">
+  <!-- INNER PAGE BANNER (HERO BANNER) -->
+  <section class="inner-page-banner" style="background-image: url('assets/images/products/products-banner.jpg?v=5.0'); min-height: 480px;">
+    <div class="banner-overlay" style="background: linear-gradient(135deg, rgba(10, 26, 16, 0.85) 0%, rgba(18, 48, 29, 0.80) 100%);"></div>
+    <div class="container text-center position-relative" style="z-index: 2;">
       <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <!-- Section Badge -->
-          <div class="mb-3">
-            <span class="badge-eco text-white border-white bg-transparent">Certified Organic & Lab-Tested</span>
+        <div class="col-lg-10 col-xl-9">
+          <!-- 1. Breadcrumb Navigation -->
+          <nav aria-label="breadcrumb" class="mb-3">
+            <ol class="banner-breadcrumb list-unstyled mb-0">
+              <li><a href="index.html"><i class="bi bi-house-door-fill me-1"></i>Home</a></li>
+              <li class="text-white-50">/</li>
+              <li class="text-white fw-semibold" aria-current="page">Products</li>
+            </ol>
+          </nav>
+
+          <!-- Small Label -->
+          <div class="mb-2">
+            <span class="badge bg-success bg-opacity-25 text-white border border-success border-opacity-40 px-3 py-1.5 rounded-pill text-uppercase fw-bold" style="letter-spacing: 1px; font-size: 0.8rem;">
+              OUR ORGANIC PRODUCTS
+            </span>
           </div>
-          <!-- Main Title -->
-          <h1 class="banner-title text-white">Our Organic Products</h1>
-          <!-- Subtitle -->
-          <p class="banner-subtitle text-white-50 mb-0">Natural manures, earthworm castings, and biological plant nutrition formulated for commercial soil revitalization.</p>
+
+          <!-- Main Heading -->
+          <h1 class="banner-title text-white mb-3">Natural Organic Fertilizers for Healthier Soil</h1>
+
+          <!-- Description -->
+          <p class="banner-subtitle text-white-50 mb-4 mx-auto" style="max-width: 760px; font-size: 1.1rem; line-height: 1.7;">
+            Discover our range of premium organic fertilizers and natural soil amendments, carefully produced to improve soil fertility, support healthy crop growth, and promote sustainable agriculture.
+          </p>
+
+          <!-- CTA Buttons (Single Line & Identical Size) -->
+          <div class="banner-btn-group">
+            <a href="#productsCatalog" class="btn-cta-primary banner-btn-equal">
+              <i class="bi bi-grid-3x3-gap-fill"></i> Explore Products
+            </a>
+            <a href="contact.html" class="btn-banner-outline banner-btn-equal">
+              <i class="bi bi-envelope-fill"></i> Contact Us
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRODUCTS FILTER & CATALOG SECTION -->
-  <section class="section-py bg-surface">
+  <!-- OUR PREMIUM ORGANIC FERTILIZER COLLECTION -->
+  <section class="section-py bg-surface" id="productsCatalog">
     <div class="container">
-      <div class="text-center section-header reveal-fade-up">
-        <span class="badge-eco">Filter by Crop Type</span>
-        <h2 class="section-title">Select Formulations Tailored to Your Crops</h2>
-        <p class="section-subtitle">
-          Filter our certified organic products according to your cultivated crop requirements, or explore our full product range below.
+      
+      <!-- Section Header -->
+      <div class="text-center section-header reveal-fade-up mx-auto mb-5" style="max-width: 880px;">
+        <span class="badge-eco mb-3 d-inline-block text-uppercase fw-bold" style="letter-spacing: 1.5px; font-size: 0.85rem; padding: 6px 18px; border-radius: 50px; background-color: rgba(30, 77, 43, 0.1); color: #1e4d2b;">
+          OUR PREMIUM ORGANIC FERTILIZER COLLECTION
+        </span>
+        <h2 class="display-6 fw-bold mb-3" style="color: #1a3320; font-family: 'Outfit', sans-serif;">
+          Natural Fertilizers for Healthier Soil and Better Farming
+        </h2>
+        <p class="lead text-muted fs-6" style="line-height: 1.75; color: #4b6354 !important;">
+          Explore our premium range of organic fertilizers and natural manure, carefully processed to enrich soil, improve fertility, support healthy root development, and promote sustainable agriculture.
         </p>
-
-        <!-- Crop Filter Pills -->
-        <div class="filter-nav-pills mt-4">
-          <button class="filter-btn crop-filter-btn active" data-filter="all">All Products (9)</button>
-          <button class="filter-btn crop-filter-btn" data-filter="rice"><i class="bi bi-flower1 me-1"></i> Rice / Paddy</button>
-          <button class="filter-btn crop-filter-btn" data-filter="banana"><i class="bi bi-tree me-1"></i> Banana</button>
-          <button class="filter-btn crop-filter-btn" data-filter="coconut"><i class="bi bi-tropical-storm me-1"></i> Coconut</button>
-          <button class="filter-btn crop-filter-btn" data-filter="vegetables"><i class="bi bi-basket me-1"></i> Vegetables</button>
-          <button class="filter-btn crop-filter-btn" data-filter="sugarcane"><i class="bi bi-segmented-nav me-1"></i> Sugarcane</button>
-          <button class="filter-btn crop-filter-btn" data-filter="fruits"><i class="bi bi-apple me-1"></i> Fruits & Orchards</button>
-        </div>
       </div>
 
-<!-- Product Cards Grid -->
-      <div class="row g-4" id="productsGrid">
+      <!-- 8 Organic Fertilizer Product Cards Grid -->
+      <div class="row g-4">
         
-        <!-- 1. VERMICOMPOST -->
-        <div class="col-md-6 col-lg-4 product-item-col reveal-fade-up" data-crops="all rice banana vegetables fruits sugarcane coconut" id="vermicompost">
-          <div class="farm-card product-card">
-            <div class="card-img-wrapper">
-              <img src="assets/images/products/vermicompost.jpg" alt="Enriched vermicompost organic fertilizer">
+        <!-- Product 1: Enriched Vermicompost -->
+        <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+          <div class="farm-card product-card h-100 d-flex flex-column bg-white rounded-4 shadow-sm border overflow-hidden" style="border-color: #e2ebe4 !important;">
+            <div class="card-img-wrapper position-relative overflow-hidden" style="height: 220px; background-color: #f4f6f4;">
+              <img src="assets/images/products/vermicompost.jpg?v=7.0" alt="Enriched Vermicompost" class="w-100 h-100" style="object-fit: cover;" loading="lazy">
             </div>
-            <div class="card-body">
-              <div class="mb-2"><span class="badge bg-success px-3 py-2 rounded-pill">Pure Earthworm Castings</span></div>
-              <div class="nutrient-specs">
-                <span class="nutrient-tag">NPK: 2.5 - 1.5 - 1.5</span>
-                <span class="nutrient-tag">Organic Carbon: 20%</span>
-                <span class="nutrient-tag">Moisture: 20%</span>
-              </div>
-              <h4 class="product-title">Enriched Vermicompost</h4>
-              <p class="small text-muted mb-3">
-                Biologically digested organic matter created by *Eisenia fetida*. Rich in live beneficial microbes, humic acid, and plant growth auxins.
+            <div class="card-body p-4 d-flex flex-column flex-grow-1">
+              <h3 class="product-title h5 mb-2" style="font-family: 'Outfit', sans-serif; font-weight: 700; color: #1a3320;">Enriched Vermicompost</h3>
+              <p class="text-muted small mb-4 flex-grow-1" style="line-height: 1.6; color: #4e6555 !important;">
+                Nutrient-rich organic compost that improves soil structure, enhances soil fertility, and supports healthy root development.
               </p>
-              
-              <div class="mb-3">
-                <h6 class="small fw-bold text-success mb-2"><i class="bi bi-check2-circle me-1"></i> Key Benefits:</h6>
-                <ul class="list-unstyled small text-muted d-flex flex-column gap-1 mb-0">
-                  <li>&bull; Speeds up seed germination and lateral root branching.</li>
-                  <li>&bull; Supplies slowly available macro and trace micronutrients.</li>
-                  <li>&bull; Enhances water holding capacity by 40%.</li>
-                </ul>
-              </div>
-
-              <div class="crop-tags-row">
-                <span class="small text-muted"><i class="bi bi-tags me-1"></i> Rice, Veggies, Banana, Fruits</span>
-                <button type="button" class="btn btn-sm btn-farm-primary btn-view-product" 
-                  data-bs-toggle="modal" 
+              <div class="mt-auto pt-3 border-top" style="border-color: rgba(30, 77, 43, 0.1) !important;">
+                <button type="button" class="btn btn-farm-secondary btn-sm w-100 justify-content-center btn-view-product"
+                  data-bs-toggle="modal"
                   data-bs-target="#productDetailModal"
-                  data-name="Enriched Vermicompost (Black Gold)"
-                  data-img="assets/images/products/vermicompost.jpg"
-                  data-desc="Our Enriched Vermicompost is produced in state-of-the-art temperature-controlled vermiculture beds using selected Eisenia fetida red worms. Screened through a 3mm mesh, it produces a uniform, tea-ground texture devoid of uncomposted debris or weed seeds. Excellent for soil priming, nursery potting mixes, and seasonal top dressing."
-                  data-npk="N: 2.5% | P: 1.5% | K: 1.5% (Plus Ca, Mg, S, Fe, Zn)"
-                  data-oc="18.0% – 22.0% Organic Carbon"
+                  data-name="Enriched Vermicompost"
+                  data-img="assets/images/products/vermicompost.jpg?v=7.0"
+                  data-desc="Nutrient-rich organic compost that improves soil structure, enhances soil fertility, and supports healthy root development."
+                  data-npk="N: 2.5% | P: 1.5% | K: 1.5%"
+                  data-oc="18.0% - 22.0% Organic Carbon"
                   data-dosage="Basal: 400-800 kg per acre; Potting: 20-30% volume blend; Trees: 3-5 kg per tree/year."
-                  data-benefits="Stimulates intense mycorrhizal associations|Improves soil crumb structure and aeration|Guaranteed free from heavy metals and pathogens|Supplies natural growth hormones (gibberellins and cytokinins)">
-                  View Details
+                  data-benefits="100% natural earthworm castings|Improves soil aeration and water retention|Supplies bio-available micro & macronutrients|Enhances root zone microbial diversity">
+                  <i class="bi bi-info-circle me-1"></i> View Product Details
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 2. COW DUNG MANURE -->
-        <div class="col-md-6 col-lg-4 product-item-col reveal-fade-up" data-crops="all coconut sugarcane banana rice vegetables fruits" id="cowDungManure">
-          <div class="farm-card product-card">
-            <div class="card-img-wrapper">
-              <img src="assets/images/products/cow-dung-manure.jpg" alt="Aged fully decomposed cow dung manure">
+        <!-- Product 2: 180-Day Cow Dung Manure -->
+        <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+          <div class="farm-card product-card h-100 d-flex flex-column bg-white rounded-4 shadow-sm border overflow-hidden" style="border-color: #e2ebe4 !important;">
+            <div class="card-img-wrapper position-relative overflow-hidden" style="height: 220px; background-color: #f4f6f4;">
+              <img src="assets/images/products/cow-dung-manure.jpg?v=7.0" alt="180-Day Cow Dung Manure" class="w-100 h-100" style="object-fit: cover;" loading="lazy">
             </div>
-            <div class="card-body">
-              <div class="mb-2"><span class="badge bg-earth text-white px-3 py-2 rounded-pill" style="background-color: var(--earth-brown);">180-Day Cured</span></div>
-              <div class="nutrient-specs">
-                <span class="nutrient-tag">NPK: 1.2 - 0.8 - 1.1</span>
-                <span class="nutrient-tag">100% Weed-Seed-Free</span>
-                <span class="nutrient-tag">C:N &lt; 18:1</span>
-              </div>
-              <h4 class="product-title">180-Day Cow Dung Manure</h4>
-              <p class="small text-muted mb-3">
-                Naturally fermented for 180+ days through mechanical windrows. Odor-free, dark humus consistency, restoring soil biological fertility.
+            <div class="card-body p-4 d-flex flex-column flex-grow-1">
+              <h3 class="product-title h5 mb-2" style="font-family: 'Outfit', sans-serif; font-weight: 700; color: #1a3320;">180-Day Cow Dung Manure</h3>
+              <p class="text-muted small mb-4 flex-grow-1" style="line-height: 1.6; color: #4e6555 !important;">
+                Well-decomposed natural cow dung manure that enriches soil with organic matter and improves moisture retention.
               </p>
-              
-              <div class="mb-3">
-                <h6 class="small fw-bold text-success mb-2"><i class="bi bi-check2-circle me-1"></i> Key Benefits:</h6>
-                <ul class="list-unstyled small text-muted d-flex flex-column gap-1 mb-0">
-                  <li>&bull; Deeply conditions hard, compacted clay and sandy soils.</li>
-                  <li>&bull; Repopulates native beneficial soil microflora.</li>
-                  <li>&bull; Perfect basal bulk input before pre-monsoon planting.</li>
-                </ul>
-              </div>
-
-              <div class="crop-tags-row">
-                <span class="small text-muted"><i class="bi bi-tags me-1"></i> Coconut, Sugarcane, Banana, Rice</span>
-                <button type="button" class="btn btn-sm btn-farm-primary btn-view-product" 
-                  data-bs-toggle="modal" 
+              <div class="mt-auto pt-3 border-top" style="border-color: rgba(30, 77, 43, 0.1) !important;">
+                <button type="button" class="btn btn-farm-secondary btn-sm w-100 justify-content-center btn-view-product"
+                  data-bs-toggle="modal"
                   data-bs-target="#productDetailModal"
-                  data-name="Aged Cow Dung Manure (180-Day Thermally Matured)"
-                  data-img="assets/images/products/cow-dung-manure.jpg"
-                  data-desc="Unlike unseasoned raw cow dung that damages plant roots with ammonia burning and releases noxious weeds, our Cow Dung Manure is thermally composted at 65°C for 6 months. This produces a sweet, earthy, highly friable natural organic fertilizer ready for immediate plant root uptake."
-                  data-npk="N: 1.2% | P: 0.8% | K: 1.1% (High Organic Matter)"
-                  data-oc="16.0% – 19.5% Organic Carbon"
-                  data-dosage="Basal Application: 3 to 8 Metric Tons per acre depending on soil depletion and crop type; Coconut: 20-30 kg per tree annually."
-                  data-benefits="Zero weed seed contamination guaranteed|Reduces chemical fertilizer need by up to 50%|Maintains soil coolness and soil moisture in summer|Restores natural earthworm populations in degraded soils">
-                  View Details
+                  data-name="180-Day Cow Dung Manure"
+                  data-img="assets/images/products/cow-dung-manure.jpg?v=7.0"
+                  data-desc="Well-decomposed natural cow dung manure that enriches soil with organic matter and improves moisture retention."
+                  data-npk="N: 1.5% | P: 0.8% | K: 1.2%"
+                  data-oc="16.0% - 18.0% Organic Carbon"
+                  data-dosage="General Crops: 2-3 tons per acre; Tree Groves: 10-15 kg per tree; Vegetable Beds: 500g per sq.m."
+                  data-benefits="Naturally cured for 180 days with zero weed seeds|High organic humus content|Increases soil water holding capacity|Restores depleted farm topsoil structure">
+                  <i class="bi bi-info-circle me-1"></i> View Product Details
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 3. NEEM CAKE FERTILIZER -->
-        <div class="col-md-6 col-lg-4 product-item-col reveal-fade-up" data-crops="all banana vegetables sugarcane rice fruits coconut" id="neemCake">
-          <div class="farm-card product-card">
-            <div class="card-img-wrapper">
-              <img src="assets/images/products/neem-cake.jpg" alt="Pure cold pressed neem cake organic fertilizer">
+        <!-- Product 3: Pure Neem Cake Fertilizer -->
+        <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+          <div class="farm-card product-card h-100 d-flex flex-column bg-white rounded-4 shadow-sm border overflow-hidden" style="border-color: #e2ebe4 !important;">
+            <div class="card-img-wrapper position-relative overflow-hidden" style="height: 220px; background-color: #f4f6f4;">
+              <img src="assets/images/products/neem-cake.jpg?v=7.0" alt="Pure Neem Cake Fertilizer" class="w-100 h-100" style="object-fit: cover;" loading="lazy">
             </div>
-            <div class="card-body">
-              <div class="mb-2"><span class="badge bg-success px-3 py-2 rounded-pill">Dual-Action Pest Shield</span></div>
-              <div class="nutrient-specs">
-                <span class="nutrient-tag">NPK: 5.2 - 1.1 - 1.5</span>
-                <span class="nutrient-tag">Azadirachtin Enriched</span>
-                <span class="nutrient-tag">Slow Release</span>
-              </div>
-              <h4 class="product-title">Pure Neem Cake Fertilizer</h4>
-              <p class="small text-muted mb-3">
-                100% pure cold-pressed expeller cake from neem seeds. Combines high organic nitrogen nutrition with subterranean pest control.
+            <div class="card-body p-4 d-flex flex-column flex-grow-1">
+              <h3 class="product-title h5 mb-2" style="font-family: 'Outfit', sans-serif; font-weight: 700; color: #1a3320;">Pure Neem Cake Fertilizer</h3>
+              <p class="text-muted small mb-4 flex-grow-1" style="line-height: 1.6; color: #4e6555 !important;">
+                Plant-based organic soil amendment that supports soil health and provides natural crop nutrition.
               </p>
-              
-              <div class="mb-3">
-                <h6 class="small fw-bold text-success mb-2"><i class="bi bi-check2-circle me-1"></i> Key Benefits:</h6>
-                <ul class="list-unstyled small text-muted d-flex flex-column gap-1 mb-0">
-                  <li>&bull; Suppresses root-knot nematodes, termites, and grubs.</li>
-                  <li>&bull; Prevents nitrification and nitrogen evaporation loss.</li>
-                  <li>&bull; Enhances crop chlorophyll synthesis and leaf greenness.</li>
-                </ul>
-              </div>
-
-              <div class="crop-tags-row">
-                <span class="small text-muted"><i class="bi bi-tags me-1"></i> Banana, Veggies, Sugarcane, Paddy</span>
-                <button type="button" class="btn btn-sm btn-farm-primary btn-view-product" 
-                  data-bs-toggle="modal" 
+              <div class="mt-auto pt-3 border-top" style="border-color: rgba(30, 77, 43, 0.1) !important;">
+                <button type="button" class="btn btn-farm-secondary btn-sm w-100 justify-content-center btn-view-product"
+                  data-bs-toggle="modal"
                   data-bs-target="#productDetailModal"
-                  data-name="Pure Neem Cake Fertilizer (Cold-Pressed)"
-                  data-img="assets/images/products/neem-cake.jpg"
-                  data-desc="Manufactured by crushing prime dried neem fruit kernels via expeller extraction with zero added chemicals or petroleum distillates. It contains active limonoids (azadirachtin, salannin, nimbin) that inhibit soil-borne parasitic nematodes and fungus while acting as a natural nitrogen stabilizer."
-                  data-npk="N: 5.0% - 5.5% | P: 1.0% | K: 1.4% (Rich in Sulfur)"
-                  data-oc="22.0% Organic Carbon"
-                  data-dosage="100-250 kg per acre mixed with basal manures; Banana: 250g per pit; Vegetables: 50g per plant bed."
-                  data-benefits="Eliminates reliance on toxic chemical nematicides|Inhibits denitrification bacteria, making nitrogen last 2x longer|Protects young tender seedlings from wireworms and cutworms|100% bio-safe for earthworms and non-target beneficial soil organisms">
-                  View Details
+                  data-name="Pure Neem Cake Fertilizer"
+                  data-img="assets/images/products/neem-cake.jpg?v=7.0"
+                  data-desc="Plant-based organic soil amendment that supports soil health and provides natural crop nutrition."
+                  data-npk="N: 4.0% | P: 1.0% | K: 1.5%"
+                  data-oc="24.0% - 28.0% Organic Carbon"
+                  data-dosage="Field Crops: 100-200 kg per acre; Horticultural Crops: 250g-500g per tree; Potting mix: 50g per pot."
+                  data-benefits="Natural nitrification inhibitor reduces nitrogen loss|Suppresses parasitic nematodes, termites, and root grubs|Rich in natural limonoids, nimbin, and azadirachtin|Provides sustained, slow-release biological nutrition">
+                  <i class="bi bi-info-circle me-1"></i> View Product Details
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 4. COMPOST MANURE -->
-        <div class="col-md-6 col-lg-4 product-item-col reveal-fade-up" data-crops="all sugarcane coconut fruits rice vegetables" id="compostManure">
-          <div class="farm-card product-card">
-            <div class="card-img-wrapper">
-              <img src="assets/images/products/compost-manure.jpg" alt="Rich aerobic agricultural compost manure">
+        <!-- Product 4: Aerobic Compost Manure -->
+        <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+          <div class="farm-card product-card h-100 d-flex flex-column bg-white rounded-4 shadow-sm border overflow-hidden" style="border-color: #e2ebe4 !important;">
+            <div class="card-img-wrapper position-relative overflow-hidden" style="height: 220px; background-color: #f4f6f4;">
+              <img src="assets/images/products/compost-manure.jpg?v=7.0" alt="Aerobic Compost Manure" class="w-100 h-100" style="object-fit: cover;" loading="lazy">
             </div>
-            <div class="card-body">
-              <div class="mb-2"><span class="badge bg-primary px-3 py-2 rounded-pill">Aerobic Microbial Digestion</span></div>
-              <div class="nutrient-specs">
-                <span class="nutrient-tag">NPK: 1.8 - 1.2 - 1.5</span>
-                <span class="nutrient-tag">Humic Substance: 15%</span>
-                <span class="nutrient-tag">pH: 7.0 Neutral</span>
-              </div>
-              <h4 class="product-title">Aerobic Compost Manure</h4>
-              <p class="small text-muted mb-3">
-                Engineered from diverse crop biomass, sugar press mud, and microbial inoculants. Rebuilds soil organic carbon and aggregates.
+            <div class="card-body p-4 d-flex flex-column flex-grow-1">
+              <h3 class="product-title h5 mb-2" style="font-family: 'Outfit', sans-serif; font-weight: 700; color: #1a3320;">Aerobic Compost Manure</h3>
+              <p class="text-muted small mb-4 flex-grow-1" style="line-height: 1.6; color: #4e6555 !important;">
+                Naturally processed organic compost that improves soil texture and supports sustainable farming practices.
               </p>
-              
-              <div class="mb-3">
-                <h6 class="small fw-bold text-success mb-2"><i class="bi bi-check2-circle me-1"></i> Key Benefits:</h6>
-                <ul class="list-unstyled small text-muted d-flex flex-column gap-1 mb-0">
-                  <li>&bull; Buffers soil pH against alkaline salt and acidic drift.</li>
-                  <li>&bull; Maximizes cation exchange capacity (CEC) for nutrient retention.</li>
-                  <li>&bull; Enhances drought tolerance across dryland crops.</li>
-                </ul>
-              </div>
-
-              <div class="crop-tags-row">
-                <span class="small text-muted"><i class="bi bi-tags me-1"></i> Sugarcane, Coconut, Fruits, Rice</span>
-                <button type="button" class="btn btn-sm btn-farm-primary btn-view-product" 
-                  data-bs-toggle="modal" 
+              <div class="mt-auto pt-3 border-top" style="border-color: rgba(30, 77, 43, 0.1) !important;">
+                <button type="button" class="btn btn-farm-secondary btn-sm w-100 justify-content-center btn-view-product"
+                  data-bs-toggle="modal"
                   data-bs-target="#productDetailModal"
-                  data-name="Aerobic Compost Manure (Microbial Inoculated)"
-                  data-img="assets/images/products/compost-manure.jpg"
-                  data-desc="Crafted via forced-aeration static pile composting utilizing selected Trichoderma and Pseudomonas bacterial cultures. Our compost features stabilized humic substances that bond with sandy or heavy clay particles, creating an ideal crumb structure for deep root development."
-                  data-npk="N: 1.8% | P: 1.2% | K: 1.5% (Humus Rich)"
-                  data-oc="16.5% Organic Carbon"
-                  data-dosage="Basal Broadcast: 2 to 5 Tons per acre prior to land tilling and bed preparation."
-                  data-benefits="Breaks down soil crusting and hardpan plow layers|Enhances root zone oxygen levels significantly|Supplies stabilized humates that prevent nutrient leaching during monsoons|Economical high-tonnage organic base for large commercial farms">
-                  View Details
+                  data-name="Aerobic Compost Manure"
+                  data-img="assets/images/products/compost-manure.jpg?v=7.0"
+                  data-desc="Naturally processed organic compost that improves soil texture and supports sustainable farming practices."
+                  data-npk="N: 2.0% | P: 1.2% | K: 1.4%"
+                  data-oc="18.0% - 20.0% Organic Carbon"
+                  data-dosage="Agriculture: 1-2 tons per acre; Greenhouses: 1 kg per sq.m; Perennial plantations: 5-8 kg per plant."
+                  data-benefits="Thermophilically cured above 55°C for certified pathogen safety|Significantly increases Cation Exchange Capacity (CEC)|Enhances porous soil structure and moisture infiltration|Feeds native beneficial mycorrhizae and earthworms">
+                  <i class="bi bi-info-circle me-1"></i> View Product Details
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 5. POULTRY MANURE -->
-        <div class="col-md-6 col-lg-4 product-item-col reveal-fade-up" data-crops="all vegetables banana sugarcane fruits" id="poultryManure">
-          <div class="farm-card product-card">
-            <div class="card-img-wrapper">
-              <img src="assets/images/products/poultry-manure.jpg?v=2.2" alt="Thermal processed poultry manure pellets and granules">
+        <!-- Product 5: High-N Poultry Manure -->
+        <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+          <div class="farm-card product-card h-100 d-flex flex-column bg-white rounded-4 shadow-sm border overflow-hidden" style="border-color: #e2ebe4 !important;">
+            <div class="card-img-wrapper position-relative overflow-hidden" style="height: 220px; background-color: #f4f6f4;">
+              <img src="assets/images/products/poultry-manure.jpg?v=6.0" alt="High-N Poultry Manure" class="w-100 h-100" style="object-fit: cover;" loading="lazy">
             </div>
-            <div class="card-body">
-              <div class="mb-2"><span class="badge bg-warning text-dark px-3 py-2 rounded-pill">High Nitrogen & Phosphorus</span></div>
-              <div class="nutrient-specs">
-                <span class="nutrient-tag">NPK: 3.2 - 2.8 - 2.0</span>
-                <span class="nutrient-tag">Calcium Rich: 6%</span>
-                <span class="nutrient-tag">Dry Pellet/Granular</span>
-              </div>
-              <h4 class="product-title">High-N Poultry Manure</h4>
-              <p class="small text-muted mb-3">
-                Thermally sterilized and aged poultry litter. Delivers high concentrations of organic nitrogen, phosphorus, and essential calcium.
+            <div class="card-body p-4 d-flex flex-column flex-grow-1">
+              <h3 class="product-title h5 mb-2" style="font-family: 'Outfit', sans-serif; font-weight: 700; color: #1a3320;">High-N Poultry Manure</h3>
+              <p class="text-muted small mb-4 flex-grow-1" style="line-height: 1.6; color: #4e6555 !important;">
+                Nutrient-rich organic poultry manure that supplies essential nutrients to support healthy plant growth.
               </p>
-              
-              <div class="mb-3">
-                <h6 class="small fw-bold text-success mb-2"><i class="bi bi-check2-circle me-1"></i> Key Benefits:</h6>
-                <ul class="list-unstyled small text-muted d-flex flex-column gap-1 mb-0">
-                  <li>&bull; Fast-acting organic vegetative stimulant for heavy feeders.</li>
-                  <li>&bull; Abundant calcium prevents blossom end rot in tomatoes & chilies.</li>
-                  <li>&bull; Heat-treated to eliminate Salmonella, E. coli, and flies.</li>
-                </ul>
-              </div>
-
-              <div class="crop-tags-row">
-                <span class="small text-muted"><i class="bi bi-tags me-1"></i> Vegetables, Banana, Sugarcane, Fruits</span>
-                <button type="button" class="btn btn-sm btn-farm-primary btn-view-product" 
-                  data-bs-toggle="modal" 
+              <div class="mt-auto pt-3 border-top" style="border-color: rgba(30, 77, 43, 0.1) !important;">
+                <button type="button" class="btn btn-farm-secondary btn-sm w-100 justify-content-center btn-view-product"
+                  data-bs-toggle="modal"
                   data-bs-target="#productDetailModal"
-                  data-name="Enriched Poultry Manure (Thermally Sterilized)"
-                  data-img="assets/images/products/poultry-manure.jpg?v=2.2"
-                  data-desc="A powerhouse organic nutrient source, our poultry manure is aged and kiln-dried to eliminate odors and pathogens while stabilizing its natural organic nitrogen and organic phosphorus components. It acts faster than ordinary manures, giving crops an energetic vegetative kick."
-                  data-npk="N: 3.2% | P: 2.8% | K: 2.0% (Plus 6% Calcium)"
-                  data-oc="18.0% Organic Carbon"
-                  data-dosage="500 kg to 1.5 Metric Tons per acre depending on crop requirement; Banana: 1-2 kg per plant."
-                  data-benefits="Significantly higher natural nitrogen compared to other livestock manures|High natural calcium content prevents blossom-end rot and fruit cracking|Ideal for heavy feeding commercial horticulture and banana plantations|Free from weed seeds and unpleasant foul odor">
-                  View Details
+                  data-name="High-N Poultry Manure"
+                  data-img="assets/images/products/poultry-manure.jpg?v=6.0"
+                  data-desc="Nutrient-rich organic poultry manure that supplies essential nutrients to support healthy plant growth."
+                  data-npk="N: 3.5% | P: 2.8% | K: 2.0%"
+                  data-oc="22.0% - 25.0% Organic Carbon"
+                  data-dosage="Cereal crops & Vegetables: 500-800 kg per acre; Fruit Orchards: 3-5 kg per tree before monsoon."
+                  data-benefits="High natural nitrogen and phosphorus content|Rapid vegetative growth stimulation for green leafy vigor|Processed and granularized for even field distribution|Composted to eliminate hot ammonia burning and weeds">
+                  <i class="bi bi-info-circle me-1"></i> View Product Details
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 6. BONE MEAL -->
-        <div class="col-md-6 col-lg-4 product-item-col reveal-fade-up" data-crops="all banana coconut fruits vegetables" id="boneMeal">
-          <div class="farm-card product-card">
-            <div class="card-img-wrapper">
-              <img src="assets/images/products/bone-meal.jpg" alt="Pure steamed bone meal powder organic fertilizer">
+        <!-- Product 6: Organic Bone Meal -->
+        <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+          <div class="farm-card product-card h-100 d-flex flex-column bg-white rounded-4 shadow-sm border overflow-hidden" style="border-color: #e2ebe4 !important;">
+            <div class="card-img-wrapper position-relative overflow-hidden" style="height: 220px; background-color: #f4f6f4;">
+              <img src="assets/images/products/bone-meal.jpg?v=6.0" alt="Organic Bone Meal" class="w-100 h-100" style="object-fit: cover;" loading="lazy">
             </div>
-            <div class="card-body">
-              <div class="mb-2"><span class="badge bg-secondary text-white px-3 py-2 rounded-pill">Slow-Release Phosphorus</span></div>
-              <div class="nutrient-specs">
-                <span class="nutrient-tag">NPK: 3.0 - 15.0 - 0.0</span>
-                <span class="nutrient-tag">Calcium: 22%</span>
-                <span class="nutrient-tag">100% Steamed & Sterilized</span>
-              </div>
-              <h4 class="product-title">Organic Bone Meal</h4>
-              <p class="small text-muted mb-3">
-                Finely milled, high-pressure steamed bone powder. The world's finest organic source of slow-release phosphorus and calcium.
+            <div class="card-body p-4 d-flex flex-column flex-grow-1">
+              <h3 class="product-title h5 mb-2" style="font-family: 'Outfit', sans-serif; font-weight: 700; color: #1a3320;">Organic Bone Meal</h3>
+              <p class="text-muted small mb-4 flex-grow-1" style="line-height: 1.6; color: #4e6555 !important;">
+                Natural phosphorus and calcium-rich soil amendment that supports root development and plant establishment.
               </p>
-              
-              <div class="mb-3">
-                <h6 class="small fw-bold text-success mb-2"><i class="bi bi-check2-circle me-1"></i> Key Benefits:</h6>
-                <ul class="list-unstyled small text-muted d-flex flex-column gap-1 mb-0">
-                  <li>&bull; Stimulates profuse root establishment and floral bloom.</li>
-                  <li>&bull; Prevents flower and premature fruit drop.</li>
-                  <li>&bull; Strengthens plant cellular walls against drought stress.</li>
-                </ul>
-              </div>
-
-              <div class="crop-tags-row">
-                <span class="small text-muted"><i class="bi bi-tags me-1"></i> Banana, Coconut, Fruits, Vegetables</span>
-                <button type="button" class="btn btn-sm btn-farm-primary btn-view-product" 
-                  data-bs-toggle="modal" 
+              <div class="mt-auto pt-3 border-top" style="border-color: rgba(30, 77, 43, 0.1) !important;">
+                <button type="button" class="btn btn-farm-secondary btn-sm w-100 justify-content-center btn-view-product"
+                  data-bs-toggle="modal"
                   data-bs-target="#productDetailModal"
-                  data-name="Pure Steamed Bone Meal (High Phosphorus & Calcium)"
-                  data-img="assets/images/products/bone-meal.jpg"
-                  data-desc="Steamed under high-pressure autoclaves to remove all fats and sterilize raw bone tissue, then micronized into fine granular meal. It releases bio-available phosphorus steadily over a 4-to-6-month window without leaching or fixing into insoluble soil complexes."
-                  data-npk="N: 3.0% | P: 15.0% - 18.0% | K: 0.0% (Calcium 22%)"
-                  data-oc="10.0% Organic Carbon"
-                  data-dosage="100-200 kg per acre; Coconut: 500g - 1kg per tree; Fruit Trees: 250g - 500g per tree during pre-bloom."
-                  data-benefits="Essential organic source of phosphorus for root expansion and robust flowering|Provides massive 22% natural calcium ensuring thick fruit rind and long shelf life|Non-burning formulation safe for tender seedlings and perennial root systems|Sustained 6-month nutrient release curve">
-                  View Details
+                  data-name="Organic Bone Meal"
+                  data-img="assets/images/products/bone-meal.jpg?v=6.0"
+                  data-desc="Natural phosphorus and calcium-rich soil amendment that supports root development and plant establishment."
+                  data-npk="N: 3.0% | P: 15.0% | K: 0.0% (Calcium 20%)"
+                  data-oc="12.0% - 15.0% Organic Carbon"
+                  data-dosage="Flowering & Root crops: 150-250 kg per acre; Fruit Trees: 500g-1kg per tree; Potted ornamentals: 2 tbsp."
+                  data-benefits="Rich in slow-release bio-available phosphorus and calcium|Fosters extensive root proliferation and deep root anchoring|Stimulates prolific flowering, fruit set, and firm skin development|Balances soil calcium levels without altering soil pH drastically">
+                  <i class="bi bi-info-circle me-1"></i> View Product Details
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 7. ORGANIC POTASH -->
-        <div class="col-md-6 col-lg-4 product-item-col reveal-fade-up" data-crops="all banana coconut sugarcane fruits vegetables rice" id="organicPotash">
-          <div class="farm-card product-card">
-            <div class="card-img-wrapper">
-              <img src="assets/images/products/organic-potash.jpg?v=2.2" alt="Bio organic potash powder for crop sweetness and weight">
+        <!-- Product 7: Bio Organic Potash -->
+        <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+          <div class="farm-card product-card h-100 d-flex flex-column bg-white rounded-4 shadow-sm border overflow-hidden" style="border-color: #e2ebe4 !important;">
+            <div class="card-img-wrapper position-relative overflow-hidden" style="height: 220px; background-color: #f4f6f4;">
+              <img src="assets/images/products/organic-potash.jpg?v=6.0" alt="Bio Organic Potash" class="w-100 h-100" style="object-fit: cover;" loading="lazy">
             </div>
-            <div class="card-body">
-              <div class="mb-2"><span class="badge bg-success px-3 py-2 rounded-pill">Bio-Derived Potassium</span></div>
-              <div class="nutrient-specs">
-                <span class="nutrient-tag">K2O: 14.0%</span>
-                <span class="nutrient-tag">Natural Molasses/Ash Extract</span>
-                <span class="nutrient-tag">Chlorine-Free</span>
-              </div>
-              <h4 class="product-title">Bio Organic Potash</h4>
-              <p class="small text-muted mb-3">
-                Derived from fermented plant extracts and botanical vinasse. Boosts fruit weight, brix sugar content, and seasonal drought tolerance.
+            <div class="card-body p-4 d-flex flex-column flex-grow-1">
+              <h3 class="product-title h5 mb-2" style="font-family: 'Outfit', sans-serif; font-weight: 700; color: #1a3320;">Bio Organic Potash</h3>
+              <p class="text-muted small mb-4 flex-grow-1" style="line-height: 1.6; color: #4e6555 !important;">
+                Organic potassium-rich fertilizer that supports plant strength, nutrient balance, and overall crop development.
               </p>
-              
-              <div class="mb-3">
-                <h6 class="small fw-bold text-success mb-2"><i class="bi bi-check2-circle me-1"></i> Key Benefits:</h6>
-                <ul class="list-muted small text-muted d-flex flex-column gap-1 mb-0">
-                  <li>&bull; Increases fruit sweetness, uniform color, and bunch weight.</li>
-                  <li>&bull; Regulates stomatal water loss during dry summer heat.</li>
-                  <li>&bull; Fully chlorine-free—prevents leaf tip burn in sensitive crops.</li>
-                </ul>
-              </div>
-
-              <div class="crop-tags-row">
-                <span class="small text-muted"><i class="bi bi-tags me-1"></i> Banana, Coconut, Sugarcane, Fruits, Rice</span>
-                <button type="button" class="btn btn-sm btn-farm-primary btn-view-product" 
-                  data-bs-toggle="modal" 
+              <div class="mt-auto pt-3 border-top" style="border-color: rgba(30, 77, 43, 0.1) !important;">
+                <button type="button" class="btn btn-farm-secondary btn-sm w-100 justify-content-center btn-view-product"
+                  data-bs-toggle="modal"
                   data-bs-target="#productDetailModal"
-                  data-name="Bio Organic Potash (Plant-Derived K2O)"
-                  data-img="assets/images/products/organic-potash.jpg?v=2.2"
-                  data-desc="An innovative biological potassium fertilizer derived from molasses fermentation residues and vegetable ash extracts. Unlike chemical Muriate of Potash (MOP) which dumps damaging chlorides into farmland, our Organic Potash is 100% chloride-free and 100% bio-absorbable."
-                  data-npk="N: 1.5% | P: 1.0% | K (as K2O): 14.0% - 16.0%"
-                  data-oc="15.0% Organic Carbon"
-                  data-dosage="50-100 kg per acre applied during flowering and fruit/grain filling stage; Banana: 200g per tree."
-                  data-benefits="Dramatically increases fruit brix (sweetness), size, and market weight|Enables plants to maintain turgor pressure during drought and heat waves|Chlorine-free organic formulation certified safe for high-value export crops|Compatible with all organic manure blends and bio-fertilizer inoculants">
-                  View Details
+                  data-name="Bio Organic Potash"
+                  data-img="assets/images/products/organic-potash.jpg?v=6.0"
+                  data-desc="Organic potassium-rich fertilizer that supports plant strength, nutrient balance, and overall crop development."
+                  data-npk="N: 0.0% | P: 0.0% | K: 14.0%"
+                  data-oc="14.0% - 16.0% Organic Carbon"
+                  data-dosage="Tuber, Sugar & Fruit Crops: 100-150 kg per acre applied during pre-flowering and fruit development."
+                  data-benefits="100% natural, chlorine-free potassium source|Enhances plant water regulation, drought tolerance, and stem strength|Improves fruit weight, sugar content (Brix), color, and shelf life|Activates over 60 essential crop metabolic enzymes">
+                  <i class="bi bi-info-circle me-1"></i> View Product Details
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 8. COLD-PRESSED CASTOR CAKE -->
-        <div class="col-md-6 col-lg-4 product-item-col reveal-fade-up" data-crops="all banana coconut sugarcane fruits vegetables" id="castorCake">
-          <div class="farm-card product-card">
-            <div class="card-img-wrapper">
-              <img src="assets/images/products/castor-cake.jpg?v=2.2" alt="Pure cold-pressed castor cake organic fertilizer">
+        <!-- Product 8: Natural Farmyard Compost -->
+        <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+          <div class="farm-card product-card h-100 d-flex flex-column bg-white rounded-4 shadow-sm border overflow-hidden" style="border-color: #e2ebe4 !important;">
+            <div class="card-img-wrapper position-relative overflow-hidden" style="height: 220px; background-color: #f4f6f4;">
+              <img src="assets/images/products/farmyard-compost.jpg?v=6.0" alt="Natural Farmyard Compost" class="w-100 h-100" style="object-fit: cover;" loading="lazy">
             </div>
-            <div class="card-body">
-              <div class="mb-2"><span class="badge bg-success px-3 py-2 rounded-pill">High-N Botanical Cake</span></div>
-              <div class="nutrient-specs">
-                <span class="nutrient-tag">NPK: 4.5 &ndash; 1.8 &ndash; 1.2</span>
-                <span class="nutrient-tag">Organic Carbon: 42%</span>
-                <span class="nutrient-tag">Termite Deterrent</span>
-              </div>
-              <h4 class="product-title">Pure Castor Cake Manure</h4>
-              <p class="small text-muted mb-3">
-                100% cold-pressed Ricinus seed meal providing sustained organic nitrogen, improving soil friability, and deterring subterranean pests.
+            <div class="card-body p-4 d-flex flex-column flex-grow-1">
+              <h3 class="product-title h5 mb-2" style="font-family: 'Outfit', sans-serif; font-weight: 700; color: #1a3320;">Natural Farmyard Compost</h3>
+              <p class="text-muted small mb-4 flex-grow-1" style="line-height: 1.6; color: #4e6555 !important;">
+                Well-decomposed farmyard compost that adds organic matter and improves long-term soil health.
               </p>
-              
-              <div class="mb-3">
-                <h6 class="small fw-bold text-success mb-2"><i class="bi bi-check2-circle me-1"></i> Key Benefits:</h6>
-                <ul class="list-muted small text-muted d-flex flex-column gap-1 mb-0">
-                  <li>&bull; Provides steady slow-release nitrogen throughout vegetative tillering and shoot expansion.</li>
-                  <li>&bull; Natural ricin alkaloids repel subterranean termites, white grubs, and nematodes.</li>
-                  <li>&bull; Substantially boosts earthworm feeding and improves crumb soil structure in heavy clays.</li>
-                </ul>
-              </div>
-
-              <div class="crop-tags-row">
-                <span class="small text-muted"><i class="bi bi-tags me-1"></i> Banana, Coconut, Sugarcane, Vegetables, Fruits</span>
-                <button type="button" class="btn btn-sm btn-farm-primary btn-view-product" 
-                  data-bs-toggle="modal" 
+              <div class="mt-auto pt-3 border-top" style="border-color: rgba(30, 77, 43, 0.1) !important;">
+                <button type="button" class="btn btn-farm-secondary btn-sm w-100 justify-content-center btn-view-product"
+                  data-bs-toggle="modal"
                   data-bs-target="#productDetailModal"
-                  data-name="Pure Cold-Pressed Castor Cake Manure"
-                  data-img="assets/images/products/castor-cake.jpg?v=2.2"
-                  data-desc="TerraPure Pure Castor Cake Manure is the dry biological expeller residue obtained from cold-pressing high-grade castor seeds (Ricinus communis). It is an invaluable organic fertilizer offering rich biological nitrogen, phosphorus, and potassium alongside natural insecticidal and nematicidal compounds. Its sustained decomposition curve ensures continuous vegetative nourishment without the danger of leaching during heavy rains."
-                  data-npk="N: 4.5% - 5.0% | P: 1.8% - 2.0% | K: 1.0% - 1.2%"
-                  data-oc="42.0% Organic Carbon"
-                  data-dosage="150 - 250 kg per acre; Fruit Trees: 500g - 1.5 kg per tree ring application; Sugarcane & Banana: 200 kg per acre as split application."
-                  data-benefits="Slow-release biological nitrogen fuels deep green foliage and shoot extension|Natural alkaloid compounds repel subterranean termites, white grubs, and nematodes|Enhances soil water-holding capacity and accelerates earthworm activity|Ideal organic basal and top-dressing for plantations and high-value horticultural crops">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 9. ACTIVATED BIOCHAR COMPOST -->
-        <div class="col-md-6 col-lg-4 product-item-col reveal-fade-up" data-crops="all banana coconut sugarcane fruits vegetables rice" id="biocharCompost">
-          <div class="farm-card product-card">
-            <div class="card-img-wrapper">
-              <img src="assets/images/products/biochar-compost.jpg?v=2.2" alt="Activated biochar enriched organic compost for permanent soil carbon">
-            </div>
-            <div class="card-body">
-              <div class="mb-2"><span class="badge bg-success px-3 py-2 rounded-pill">Activated Carbon & Microbes</span></div>
-              <div class="nutrient-specs">
-                <span class="nutrient-tag">Soil Carbon: 60%+</span>
-                <span class="nutrient-tag">CEC: 120+ meq/100g</span>
-                <span class="nutrient-tag">Pre-Inoculated</span>
-              </div>
-              <h4 class="product-title">Activated Biochar Compost</h4>
-              <p class="small text-muted mb-3">
-                Ultra-porous pyrolyzed biomass co-composted with aged manure and humic inoculants for permanent soil carbon and extraordinary moisture retention.
-              </p>
-              
-              <div class="mb-3">
-                <h6 class="small fw-bold text-success mb-2"><i class="bi bi-check2-circle me-1"></i> Key Benefits:</h6>
-                <ul class="list-muted small text-muted d-flex flex-column gap-1 mb-0">
-                  <li>&bull; Permanently expands soil cation exchange capacity (CEC), locking minerals in the root zone.</li>
-                  <li>&bull; Internal porous micro-cavities store up to 400% water, offering exceptional drought resilience.</li>
-                  <li>&bull; Pre-inoculated with beneficial aerobic fungi and bacteria for immediate root colonization.</li>
-                </ul>
-              </div>
-
-              <div class="crop-tags-row">
-                <span class="small text-muted"><i class="bi bi-tags me-1"></i> All Crops, Banana, Coconut, Sugarcane, Vegetables, Rice</span>
-                <button type="button" class="btn btn-sm btn-farm-primary btn-view-product" 
-                  data-bs-toggle="modal" 
-                  data-bs-target="#productDetailModal"
-                  data-name="Activated Biochar Enriched Organic Compost"
-                  data-img="assets/images/products/biochar-compost.jpg?v=2.2"
-                  data-desc="TerraPure Activated Biochar Compost unites high-temperature pyrolyzed agricultural carbon with aged bovine manure and beneficial microbial inoculants. Unlike ordinary compost which degrades over seasons, biochar carbon remains stable in the soil profile for decades, creating permanent microscopic coral-reef-like habitats for beneficial soil biology and multiplying water retention exponentially."
-                  data-npk="N: 2.0% | P: 1.5% | K: 1.8% (Trace Si, Ca, Mg)"
-                  data-oc="60.0%+ Recalcitrant Organic Carbon"
-                  data-dosage="500 kg - 1 Ton per acre as one-time basal soil restructuring amendment; Potting soil: 15% - 20% by volume."
-                  data-benefits="Permanent soil carbon builder that persists in soil for decades without oxidizing|Ultra-high porosity holds 4x moisture, reducing summer irrigation requirements by up to 40%|Microscopic habitat cavities shield mycorrhizae and beneficial microbes from heat and UV|Rebalances soil pH and neutralizes residual chemical fertilizer salinity">
-                  View Details
+                  data-name="Natural Farmyard Compost"
+                  data-img="assets/images/products/farmyard-compost.jpg?v=6.0"
+                  data-desc="Well-decomposed farmyard compost that adds organic matter and improves long-term soil health."
+                  data-npk="N: 1.8% | P: 1.0% | K: 1.5%"
+                  data-oc="18.0% - 22.0% Organic Carbon"
+                  data-dosage="Field broadcast: 2-4 tons per acre during land preparation; Kitchen gardens: 1-2 kg per sq.m."
+                  data-benefits="Balanced blend of cured animal manures and agricultural residues|Significantly builds stable long-term soil organic carbon (SOC)|Improves soil tilth, microbial biomass, and nutrient storage|Prevents soil compaction, surface crusting, and erosion">
+                  <i class="bi bi-info-circle me-1"></i> View Product Details
                 </button>
               </div>
             </div>
@@ -548,6 +385,14 @@
         </div>
 
       </div>
+
+      <!-- Centered Explore All Products Button -->
+      <div class="text-center mt-5 pt-3">
+        <a href="contact.html" class="btn-farm-primary px-5 py-3 shadow-sm d-inline-flex align-items-center text-decoration-none">
+          <i class="bi bi-collection-fill me-2"></i> Explore All Products
+        </a>
+      </div>
+
     </div>
   </section>
 
@@ -558,7 +403,7 @@
         <!-- Left: Image with Quality Badge -->
         <div class="col-lg-6 reveal-fade-up">
           <div class="position-relative">
-            <img src="assets/images/products/organic-soil-quality.jpg" alt="Agronomist inspecting rich biological organic compost and soil structure" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 440px; object-fit: cover;">
+            <img src="assets/images/products/organic-soil-quality.jpg?v=5.0" alt="Agronomist conducting 5-stage biological and nutrient assay testing on organic vermicompost in laboratory" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 440px; object-fit: cover;">
             <div class="position-absolute bottom-0 start-0 m-3 p-3 rounded-3 bg-surface shadow-sm border border-success-subtle d-flex align-items-center gap-3">
               <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center" style="width: 44px; height: 44px; font-size: 1.25rem;">
                 <i class="bi bi-patch-check-fill"></i>
@@ -616,57 +461,132 @@
   </section>
 
   <!-- PACKAGING, STORAGE & CUSTOM FORMULATIONS SECTION -->
-  <section class="section-py bg-surface">
+  <section class="section-py bg-surface" id="packagingSection">
     <div class="container">
-      <div class="text-center section-header reveal-fade-up">
-        <span class="badge-eco">Flexible Logistics & Bagging</span>
-        <h2 class="section-title">Commercial Farm Packaging & Tailored Formulations</h2>
-        <p class="section-subtitle">
-          Whether you operate a 5-acre progressive orchard or a 500-acre corporate plantation, we provide tailored bagging and custom N-P-K mineral blending suited to your farm operations.
-        </p>
+      <!-- Section Intro: 2-Column Layout -->
+      <div class="row align-items-center g-5 mb-5 pb-lg-2">
+        <!-- Left: Small Label, Main Heading & Description -->
+        <div class="col-lg-6 reveal-fade-up">
+          <span class="badge-eco mb-3">FLEXIBLE LOGISTICS & BAGGING</span>
+          <h2 class="section-title mb-3">Commercial Farm Packaging & Customized Fertilizer Solutions</h2>
+          <p class="section-subtitle mb-4 text-muted">
+            Whether you manage a small orchard or a large commercial plantation, TerraPure offers flexible packaging, bulk delivery, and customized organic fertilizer blends to meet your agricultural requirements.
+          </p>
+          <div class="d-flex flex-wrap gap-2 pt-1">
+            <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 py-2 px-3">
+              <i class="bi bi-shield-check me-1"></i> Moisture-Proof Lining
+            </span>
+            <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 py-2 px-3">
+              <i class="bi bi-truck me-1"></i> Farmgate Delivery
+            </span>
+            <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 py-2 px-3">
+              <i class="bi bi-sliders me-1"></i> Tailored Formulations
+            </span>
+          </div>
+        </div>
+
+        <!-- Right: Large High-Quality Image of Packaging & Warehouse Operations -->
+        <div class="col-lg-6 reveal-fade-up">
+          <div class="position-relative rounded-4 overflow-hidden shadow-lg border border-success-subtle">
+            <img src="assets/images/products/packaging-storage.jpg?v=5.0" 
+                 alt="TerraPure commercial organic fertilizer packaging warehouse and automated bagging operations" 
+                 class="img-fluid w-100" 
+                 style="height: 380px; object-fit: cover;">
+            <div class="position-absolute bottom-0 start-0 m-3 p-3 rounded-3 bg-surface bg-opacity-95 shadow-sm border border-success-subtle d-flex align-items-center gap-3">
+              <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center flex-shrink-0" style="width: 42px; height: 42px; font-size: 1.2rem;">
+                <i class="bi bi-boxes"></i>
+              </div>
+              <div>
+                <span class="d-block fw-bold text-main small">Industrial Bagging Facility</span>
+                <span class="d-block text-muted" style="font-size: 0.75rem;">Daily Dispatch Capacity: 250+ Metric Tons</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="row g-4 align-items-center mb-5">
-        <div class="col-lg-6 order-lg-2 reveal-fade-up">
-          <img src="assets/images/products/packaging-storage.jpg" alt="Commercial organic fertilizer sacks and storage warehouse" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 420px; object-fit: cover;">
+      <!-- Four Service Categories: 4-Column Card Layout on Desktop, 2-Col Tablet, 1-Col Mobile -->
+      <div class="row g-4">
+        <!-- 1. 50kg Poly Bags -->
+        <div class="col-12 col-md-6 col-lg-3 reveal-fade-up">
+          <div class="packaging-card h-100 rounded-4 bg-warm-light border border-success-subtle shadow-sm overflow-hidden d-flex flex-column">
+            <div class="card-img-wrapper position-relative" style="height: 200px; overflow: hidden;">
+              <img src="assets/images/products/packaging-50kg-bags.jpg?v=5.0" 
+                   alt="50kg organic fertilizer bags stacked neatly inside a fertilizer warehouse" 
+                   class="w-100 h-100 packaging-card-img" 
+                   style="object-fit: cover;">
+              <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-1.5 rounded-pill shadow-sm small">
+                <i class="bi bi-bag-check-fill me-1"></i> 1. Poly Bags
+              </span>
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h5 class="fw-bold text-main mb-2">50kg Poly Bags</h5>
+              <p class="small text-muted mb-0">
+                Heavy-duty laminated HDPE woven bags designed for convenient handling, storage, and transportation of organic fertilizers.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-6 order-lg-1 reveal-fade-up">
-          <div class="row g-3">
-            <div class="col-sm-6">
-              <div class="p-3 rounded-4 bg-warm-light border border-success-subtle h-100">
-                <div class="rounded-circle bg-success text-white d-inline-flex align-items-center justify-content-center mb-2" style="width: 36px; height: 36px;">
-                  <i class="bi bi-bag-check-fill"></i>
-                </div>
-                <h6 class="fw-bold mb-1">50kg Poly Bags</h6>
-                <p class="small text-muted mb-0">Heavy-duty laminated HDPE woven bags with inner liner protecting moisture and living microbes from harsh sun.</p>
-              </div>
+
+        <!-- 2. 1000kg Jumbo FIBC Bags -->
+        <div class="col-12 col-md-6 col-lg-3 reveal-fade-up">
+          <div class="packaging-card h-100 rounded-4 bg-warm-light border border-success-subtle shadow-sm overflow-hidden d-flex flex-column">
+            <div class="card-img-wrapper position-relative" style="height: 200px; overflow: hidden;">
+              <img src="assets/images/products/packaging-1000kg-jumbo.jpg?v=5.0" 
+                   alt="Large white 1000kg FIBC jumbo bags filled with organic fertilizer" 
+                   class="w-100 h-100 packaging-card-img" 
+                   style="object-fit: cover;">
+              <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-1.5 rounded-pill shadow-sm small">
+                <i class="bi bi-box-seam-fill me-1"></i> 2. Jumbo FIBC
+              </span>
             </div>
-            <div class="col-sm-6">
-              <div class="p-3 rounded-4 bg-warm-light border border-success-subtle h-100">
-                <div class="rounded-circle bg-success text-white d-inline-flex align-items-center justify-content-center mb-2" style="width: 36px; height: 36px;">
-                  <i class="bi bi-box-seam-fill"></i>
-                </div>
-                <h6 class="fw-bold mb-1">1000kg Jumbo FIBC</h6>
-                <p class="small text-muted mb-0">UV-stabilized 1 Metric Ton bulk totes with top filling spout and heavy bottom discharge loop for tractor loader discharge.</p>
-              </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h5 class="fw-bold text-main mb-2">1000kg Jumbo FIBC Bags</h5>
+              <p class="small text-muted mb-0">
+                Industrial-grade 1-ton bulk bags designed for efficient loading, storage, and transportation of large fertilizer quantities.
+              </p>
             </div>
-            <div class="col-sm-6">
-              <div class="p-3 rounded-4 bg-warm-light border border-success-subtle h-100">
-                <div class="rounded-circle bg-success text-white d-inline-flex align-items-center justify-content-center mb-2" style="width: 36px; height: 36px;">
-                  <i class="bi bi-truck"></i>
-                </div>
-                <h6 class="fw-bold mb-1">Loose Tipper Loads</h6>
-                <p class="small text-muted mb-0">High-tonnage 10 to 25 metric ton bulk tipper deliveries directly deposited on your farmland beds with weighbridge slips.</p>
-              </div>
+          </div>
+        </div>
+
+        <!-- 3. Loose Tipper Loads -->
+        <div class="col-12 col-md-6 col-lg-3 reveal-fade-up">
+          <div class="packaging-card h-100 rounded-4 bg-warm-light border border-success-subtle shadow-sm overflow-hidden d-flex flex-column">
+            <div class="card-img-wrapper position-relative" style="height: 200px; overflow: hidden;">
+              <img src="assets/images/products/packaging-tipper-loads.jpg?v=5.0" 
+                   alt="A tipper truck unloading organic compost at an agricultural farm" 
+                   class="w-100 h-100 packaging-card-img" 
+                   style="object-fit: cover;">
+              <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-1.5 rounded-pill shadow-sm small">
+                <i class="bi bi-truck me-1"></i> 3. Bulk Tippers
+              </span>
             </div>
-            <div class="col-sm-6">
-              <div class="p-3 rounded-4 bg-warm-light border border-success-subtle h-100">
-                <div class="rounded-circle bg-success text-white d-inline-flex align-items-center justify-content-center mb-2" style="width: 36px; height: 36px;">
-                  <i class="bi bi-sliders"></i>
-                </div>
-                <h6 class="fw-bold mb-1">Custom Farm Blends</h6>
-                <p class="small text-muted mb-0">Specialized ratios fortified with bio-potash, steamed bone meal, or neem cake blended to match your specific soil diagnostic audit.</p>
-              </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h5 class="fw-bold text-main mb-2">Loose Tipper Loads</h5>
+              <p class="small text-muted mb-0">
+                Bulk organic fertilizer deliveries using 10 to 25 metric ton tipper trucks, directly to your farm or agricultural facility.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Custom Farm Blends -->
+        <div class="col-12 col-md-6 col-lg-3 reveal-fade-up">
+          <div class="packaging-card h-100 rounded-4 bg-warm-light border border-success-subtle shadow-sm overflow-hidden d-flex flex-column">
+            <div class="card-img-wrapper position-relative" style="height: 200px; overflow: hidden;">
+              <img src="assets/images/products/packaging-custom-blends.jpg?v=5.0" 
+                   alt="Organic fertilizer blending process showing neem cake, bio-potash, and compost materials" 
+                   class="w-100 h-100 packaging-card-img" 
+                   style="object-fit: cover;">
+              <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-1.5 rounded-pill shadow-sm small">
+                <i class="bi bi-sliders me-1"></i> 4. Custom Blends
+              </span>
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h5 class="fw-bold text-main mb-2">Custom Farm Blends</h5>
+              <p class="small text-muted mb-0">
+                Customized organic fertilizer blends using suitable ingredients such as bio-potash, neem cake, and bone meal based on your crop nutrition and soil requirements.
+              </p>
             </div>
           </div>
         </div>
@@ -677,7 +597,7 @@
   <!-- ORGANIC FERTILIZERS VS CHEMICAL INPUTS COMPARISON -->
   <section class="section-py bg-warm-light">
     <div class="container">
-      <div class="row g-5 align-items-center">
+      <div class="row g-5 align-items-stretch">
         <div class="col-lg-6 reveal-fade-up">
           <span class="badge-eco">Long-Term Farm Economics</span>
           <h2 class="section-title">Organic Nutrition vs. Chemical Fertilizers</h2>
@@ -703,11 +623,11 @@
                 <tr>
                   <td class="fw-bold px-3">Nutrient Leaching Loss</td>
                   <td class="text-success fw-semibold px-3"><i class="bi bi-check-circle-fill me-1"></i> &lt; 10% (Sustained release)</td>
-                  <td class="text-danger px-3"><i class="bi bi-x-circle-fill me-1"></i> 50–70% lost to runoff</td>
+                  <td class="text-danger px-3"><i class="bi bi-x-circle-fill me-1"></i> 50&ndash;70% lost to runoff</td>
                 </tr>
                 <tr>
                   <td class="fw-bold px-3">Water Holding Capacity</td>
-                  <td class="text-success fw-semibold px-3"><i class="bi bi-check-circle-fill me-1"></i> Increases by 30–40%</td>
+                  <td class="text-success fw-semibold px-3"><i class="bi bi-check-circle-fill me-1"></i> Increases by 30&ndash;40%</td>
                   <td class="text-danger px-3"><i class="bi bi-x-circle-fill me-1"></i> Hardens soil &amp; pan layer</td>
                 </tr>
                 <tr>
@@ -725,12 +645,276 @@
           </div>
         </div>
 
-        <div class="col-lg-6 reveal-fade-up">
-          <div class="position-relative">
-            <img src="assets/images/products/harvest-quality.jpg" alt="Bountiful organic agricultural harvest and fresh produce" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 460px; object-fit: cover;">
+        <div class="col-lg-6 reveal-fade-up d-flex flex-column justify-content-end">
+          <div class="comparison-image-card position-relative rounded-4 overflow-hidden shadow-lg border border-success-subtle mx-auto w-100" style="max-width: 520px; height: 460px;">
+            <img src="assets/images/products/harvest-quality.jpg?v=6.0" alt="Indian organic farmer showing rich living humus soil with earthworms and high-yield resilient harvest crate" class="w-100 h-100 comparison-card-img" style="object-fit: cover;">
             <div class="badge-eco position-absolute top-0 end-0 m-3 bg-white text-success shadow">
               <i class="bi bi-stars"></i> Proven 25% Higher Yield Resiliency
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CROP-WISE ORGANIC FERTILIZER APPLICATION GUIDE -->
+  <section class="section-py bg-surface" id="cropGuideSection">
+    <div class="container">
+      <div class="text-center section-header reveal-fade-up mx-auto mb-5" style="max-width: 820px;">
+        <span class="badge-eco mb-3 d-inline-block text-uppercase fw-bold" style="letter-spacing: 1.5px; font-size: 0.85rem; padding: 6px 18px; border-radius: 50px; background-color: rgba(30, 77, 43, 0.1); color: #1e4d2b;">
+          PRACTICAL FIELD APPLICATION
+        </span>
+        <h2 class="display-6 fw-bold mb-3" style="color: #1a3320; font-family: 'Outfit', sans-serif;">
+          Crop-Wise Organic Fertilizer Recommendations
+        </h2>
+        <p class="lead text-muted fs-6" style="line-height: 1.75; color: #4b6354 !important;">
+          Achieve optimal soil vitality and harvest yields by matching the right TerraPure organic fertilizers to your specific crop nutrition requirements.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Crop 1: Paddy & Rice -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="p-4 rounded-4 bg-white border h-100 shadow-sm d-flex flex-column" style="border-color: #e2ebe4 !important; transition: transform 0.3s ease;">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background-color: rgba(30, 77, 43, 0.1); color: #1e4d2b; font-size: 1.4rem;">
+                <i class="bi bi-flower2"></i>
+              </div>
+              <div>
+                <h4 class="h5 fw-bold mb-0" style="color: #1a3320;">Paddy & Rice Crops</h4>
+                <span class="small text-muted">Basal & Tillering Nutrition</span>
+              </div>
+            </div>
+            <div class="mb-3 p-2 px-3 rounded-3 bg-light border border-success-subtle small">
+              <strong class="text-success">Best Products:</strong> Enriched Vermicompost + High-N Poultry Manure
+            </div>
+            <p class="small text-muted mb-3 flex-grow-1" style="line-height: 1.6; color: #4e6555 !important;">
+              Stimulates profuse root proliferation, accelerates active tillering, and strengthens panicle formation without the lodging risks of chemical nitrogen.
+            </p>
+            <div class="pt-2 border-top small text-muted d-flex justify-content-between" style="border-color: #eef3ef !important;">
+              <span><i class="bi bi-clock-history me-1 text-success"></i> Application: Basal & Active Tillering</span>
+              <span class="fw-bold text-success">500-800 kg/acre</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Crop 2: Banana & Plantations -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="p-4 rounded-4 bg-white border h-100 shadow-sm d-flex flex-column" style="border-color: #e2ebe4 !important; transition: transform 0.3s ease;">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background-color: rgba(30, 77, 43, 0.1); color: #1e4d2b; font-size: 1.4rem;">
+                <i class="bi bi-tree"></i>
+              </div>
+              <div>
+                <h4 class="h5 fw-bold mb-0" style="color: #1a3320;">Banana & Plantations</h4>
+                <span class="small text-muted">Pseudostem & Bunch Heavy Feeder</span>
+              </div>
+            </div>
+            <div class="mb-3 p-2 px-3 rounded-3 bg-light border border-success-subtle small">
+              <strong class="text-success">Best Products:</strong> Bio Organic Potash + 180-Day Cow Dung Manure
+            </div>
+            <p class="small text-muted mb-3 flex-grow-1" style="line-height: 1.6; color: #4e6555 !important;">
+              Increases pseudostem girth, strengthens bunch attachment, accelerates finger filling, and delivers natural potassium for premium fruit weight and sweetness.
+            </p>
+            <div class="pt-2 border-top small text-muted d-flex justify-content-between" style="border-color: #eef3ef !important;">
+              <span><i class="bi bi-clock-history me-1 text-success"></i> Application: Planting & Pre-Flowering</span>
+              <span class="fw-bold text-success">10-15 kg/plant</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Crop 3: Coconut & Arecanut -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="p-4 rounded-4 bg-white border h-100 shadow-sm d-flex flex-column" style="border-color: #e2ebe4 !important; transition: transform 0.3s ease;">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background-color: rgba(30, 77, 43, 0.1); color: #1e4d2b; font-size: 1.4rem;">
+                <i class="bi bi-sun"></i>
+              </div>
+              <div>
+                <h4 class="h5 fw-bold mb-0" style="color: #1a3320;">Coconut & Arecanut</h4>
+                <span class="small text-muted">Perennial Tree Nutrition</span>
+              </div>
+            </div>
+            <div class="mb-3 p-2 px-3 rounded-3 bg-light border border-success-subtle small">
+              <strong class="text-success">Best Products:</strong> Natural Farmyard Compost + Bio Organic Potash
+            </div>
+            <p class="small text-muted mb-3 flex-grow-1" style="line-height: 1.6; color: #4e6555 !important;">
+              Feeds the 2-meter active root basin, prevents immature button shedding, boosts copra kernel thickness, and protects palms during summer moisture stress.
+            </p>
+            <div class="pt-2 border-top small text-muted d-flex justify-content-between" style="border-color: #eef3ef !important;">
+              <span><i class="bi bi-clock-history me-1 text-success"></i> Application: Pre & Post-Monsoon</span>
+              <span class="fw-bold text-success">25-35 kg/palm</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Crop 4: Vegetables & Horticulture -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="p-4 rounded-4 bg-white border h-100 shadow-sm d-flex flex-column" style="border-color: #e2ebe4 !important; transition: transform 0.3s ease;">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background-color: rgba(30, 77, 43, 0.1); color: #1e4d2b; font-size: 1.4rem;">
+                <i class="bi bi-basket"></i>
+              </div>
+              <div>
+                <h4 class="h5 fw-bold mb-0" style="color: #1a3320;">Vegetables & Greens</h4>
+                <span class="small text-muted">High-Turnover Intensive Cropping</span>
+              </div>
+            </div>
+            <div class="mb-3 p-2 px-3 rounded-3 bg-light border border-success-subtle small">
+              <strong class="text-success">Best Products:</strong> Enriched Vermicompost + Pure Neem Cake Fertilizer
+            </div>
+            <p class="small text-muted mb-3 flex-grow-1" style="line-height: 1.6; color: #4e6555 !important;">
+              Provides complete water-soluble micro-nutrients while neem azadirachtin builds a natural botanical shield against root-knot nematodes and wireworms.
+            </p>
+            <div class="pt-2 border-top small text-muted d-flex justify-content-between" style="border-color: #eef3ef !important;">
+              <span><i class="bi bi-clock-history me-1 text-success"></i> Application: Bed Prep & Vegetative</span>
+              <span class="fw-bold text-success">1 Ton/acre</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Crop 5: Sugarcane & Cash Crops -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="p-4 rounded-4 bg-white border h-100 shadow-sm d-flex flex-column" style="border-color: #e2ebe4 !important; transition: transform 0.3s ease;">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background-color: rgba(30, 77, 43, 0.1); color: #1e4d2b; font-size: 1.4rem;">
+                <i class="bi bi-moisture"></i>
+              </div>
+              <div>
+                <h4 class="h5 fw-bold mb-0" style="color: #1a3320;">Sugarcane & Cash Crops</h4>
+                <span class="small text-muted">Deep Furrow Soil Enrichment</span>
+              </div>
+            </div>
+            <div class="mb-3 p-2 px-3 rounded-3 bg-light border border-success-subtle small">
+              <strong class="text-success">Best Products:</strong> Aerobic Compost Manure + Bio Organic Potash
+            </div>
+            <p class="small text-muted mb-3 flex-grow-1" style="line-height: 1.6; color: #4e6555 !important;">
+              Loosens compacted subsoil for deeper root anchoring, expands internode cane thickness, and significantly enhances recoverable sugar sucrose levels.
+            </p>
+            <div class="pt-2 border-top small text-muted d-flex justify-content-between" style="border-color: #eef3ef !important;">
+              <span><i class="bi bi-clock-history me-1 text-success"></i> Application: Furrow Planting & Earthing Up</span>
+              <span class="fw-bold text-success">2-3 Tons/acre</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Crop 6: Fruit Orchards & Groves -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="p-4 rounded-4 bg-white border h-100 shadow-sm d-flex flex-column" style="border-color: #e2ebe4 !important; transition: transform 0.3s ease;">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background-color: rgba(30, 77, 43, 0.1); color: #1e4d2b; font-size: 1.4rem;">
+                <i class="bi bi-apple"></i>
+              </div>
+              <div>
+                <h4 class="h5 fw-bold mb-0" style="color: #1a3320;">Fruit Orchards & Groves</h4>
+                <span class="small text-muted">Mango, Citrus, Guava & Pomegranate</span>
+              </div>
+            </div>
+            <div class="mb-3 p-2 px-3 rounded-3 bg-light border border-success-subtle small">
+              <strong class="text-success">Best Products:</strong> Organic Bone Meal + 180-Day Cow Dung Manure
+            </div>
+            <p class="small text-muted mb-3 flex-grow-1" style="line-height: 1.6; color: #4e6555 !important;">
+              Supplies bio-available slow-release calcium and phosphorus that prevents fruit skin cracking, ensures heavy fruit set, and extends post-harvest shelf life.
+            </p>
+            <div class="pt-2 border-top small text-muted d-flex justify-content-between" style="border-color: #eef3ef !important;">
+              <span><i class="bi bi-clock-history me-1 text-success"></i> Application: Ring Method Before Flowering</span>
+              <span class="fw-bold text-success">1-2 kg/tree</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREQUENTLY ASKED QUESTIONS (FAQ) SECTION -->
+  <section class="section-py bg-warm-light" id="faqSection">
+    <div class="container">
+      <div class="text-center section-header reveal-fade-up mx-auto mb-5" style="max-width: 820px;">
+        <span class="badge-eco mb-3 d-inline-block text-uppercase fw-bold" style="letter-spacing: 1.5px; font-size: 0.85rem; padding: 6px 18px; border-radius: 50px; background-color: rgba(30, 77, 43, 0.1); color: #1e4d2b;">
+          KNOWLEDGE & BUYER FAQS
+        </span>
+        <h2 class="display-6 fw-bold mb-3" style="color: #1a3320; font-family: 'Outfit', sans-serif;">
+          Frequently Asked Questions About Our Organic Inputs
+        </h2>
+        <p class="lead text-muted fs-6" style="line-height: 1.75; color: #4b6354 !important;">
+          Clear, practical answers to help farmers, plantation managers, and agricultural buyers make informed decisions about organic soil nutrition.
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="accordion accordion-flush" id="productFaqAccordion">
+            
+            <!-- FAQ 1 -->
+            <div class="accordion-item border rounded-4 mb-3 overflow-hidden shadow-sm" style="border-color: #e2ebe4 !important;">
+              <h3 class="accordion-header" id="faqHead1">
+                <button class="accordion-button collapsed fw-bold py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol1" aria-expanded="false" aria-controls="faqCol1" style="background-color: #ffffff; color: #1a3320; font-size: 1.05rem;">
+                  <i class="bi bi-patch-question-fill text-success me-3 fs-5"></i> How do TerraPure organic fertilizers compare to conventional synthetic fertilizers?
+                </button>
+              </h3>
+              <div id="faqCol1" class="accordion-collapse collapse" aria-labelledby="faqHead1" data-bs-parent="#productFaqAccordion">
+                <div class="accordion-body px-4 py-3 text-muted small" style="line-height: 1.75; color: #4e6555 !important; background-color: #fbfcfa;">
+                  Synthetic chemical fertilizers deliver a rapid but fleeting surge of chemical salts, leading to heavy leaching losses (up to 70% in monsoon runoff), topsoil compaction, and microbial sterilization over time. In contrast, TerraPure organic manures and vermicomposts release bio-available NPK steadily over months, compound soil organic carbon (&gt;1.5%), enhance water retention by 30–40%, and nourish millions of beneficial soil bacteria and mycorrhizae.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item border rounded-4 mb-3 overflow-hidden shadow-sm" style="border-color: #e2ebe4 !important;">
+              <h3 class="accordion-header" id="faqHead2">
+                <button class="accordion-button collapsed fw-bold py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol2" aria-expanded="false" aria-controls="faqCol2" style="background-color: #ffffff; color: #1a3320; font-size: 1.05rem;">
+                  <i class="bi bi-patch-question-fill text-success me-3 fs-5"></i> Can multiple TerraPure products be mixed together for single-pass application?
+                </button>
+              </h3>
+              <div id="faqCol2" class="accordion-collapse collapse" aria-labelledby="faqHead2" data-bs-parent="#productFaqAccordion">
+                <div class="accordion-body px-4 py-3 text-muted small" style="line-height: 1.75; color: #4e6555 !important; background-color: #fbfcfa;">
+                  Yes! In fact, combining our organic inputs is highly recommended for balanced nutrition. For instance, blending <strong>180-Day Cow Dung Manure</strong> (bulk organic humus) with <strong>Enriched Vermicompost</strong> (active enzymes & microbes), <strong>Pure Neem Cake</strong> (nematode repellent & nitrification inhibitor), and <strong>Bio Organic Potash</strong> produces a comprehensive all-in-one organic fertilizer blend that feeds both plant and root-zone ecology simultaneously.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item border rounded-4 mb-3 overflow-hidden shadow-sm" style="border-color: #e2ebe4 !important;">
+              <h3 class="accordion-header" id="faqHead3">
+                <button class="accordion-button collapsed fw-bold py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol3" aria-expanded="false" aria-controls="faqCol3" style="background-color: #ffffff; color: #1a3320; font-size: 1.05rem;">
+                  <i class="bi bi-patch-question-fill text-success me-3 fs-5"></i> How do you ensure your cow dung and aerobic manures are 100% free of weed seeds and pathogens?
+                </button>
+              </h3>
+              <div id="faqCol3" class="accordion-collapse collapse" aria-labelledby="faqHead3" data-bs-parent="#productFaqAccordion">
+                <div class="accordion-body px-4 py-3 text-muted small" style="line-height: 1.75; color: #4e6555 !important; background-color: #fbfcfa;">
+                  All raw manure undergoes an intensive 180-day windrow curing protocol. During active composting, internal temperatures naturally sustain between <strong>55°C and 65°C</strong> for multiple consecutive weeks. This thermal phase pasteurizes the compost, sterilizing unwanted weed seeds, pathogenic E. coli, salmonella, and root grub larvae, resulting in dark, sweet-smelling, fully matured organic humus that will not burn tender roots.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item border rounded-4 mb-3 overflow-hidden shadow-sm" style="border-color: #e2ebe4 !important;">
+              <h3 class="accordion-header" id="faqHead4">
+                <button class="accordion-button collapsed fw-bold py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol4" aria-expanded="false" aria-controls="faqCol4" style="background-color: #ffffff; color: #1a3320; font-size: 1.05rem;">
+                  <i class="bi bi-patch-question-fill text-success me-3 fs-5"></i> What is the shelf life and proper on-farm storage method for bagged fertilizers?
+                </button>
+              </h3>
+              <div id="faqCol4" class="accordion-collapse collapse" aria-labelledby="faqHead4" data-bs-parent="#productFaqAccordion">
+                <div class="accordion-body px-4 py-3 text-muted small" style="line-height: 1.75; color: #4e6555 !important; background-color: #fbfcfa;">
+                  Our 50 kg HDPE multi-layer laminated bags have a shelf life of <strong>12 to 18 months</strong> when stored in a cool, covered, and well-ventilated farm shed away from standing water and direct sunlight. Because our vermicomposts and manures contain living beneficial microbes, keeping bags shielded from excessive heat preserves maximum biological activity and soil inoculating power.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item border rounded-4 mb-3 overflow-hidden shadow-sm" style="border-color: #e2ebe4 !important;">
+              <h3 class="accordion-header" id="faqHead5">
+                <button class="accordion-button collapsed fw-bold py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol5" aria-expanded="false" aria-controls="faqCol5" style="background-color: #ffffff; color: #1a3320; font-size: 1.05rem;">
+                  <i class="bi bi-patch-question-fill text-success me-3 fs-5"></i> What are the minimum order quantities (MOQ) and commercial delivery options?
+                </button>
+              </h3>
+              <div id="faqCol5" class="accordion-collapse collapse" aria-labelledby="faqHead5" data-bs-parent="#productFaqAccordion">
+                <div class="accordion-body px-4 py-3 text-muted small" style="line-height: 1.75; color: #4e6555 !important; background-color: #fbfcfa;">
+                  We cater to both retail gardeners and large-scale agricultural enterprises. Individual farm orders start from single 50 kg bags, while commercial plantation orders can be dispatched in 1000 kg Jumbo FIBC bags or full <strong>10 to 25 Metric Ton tipper truckloads</strong> directly unloaded at your estate. Every shipment includes batch assay certificates and NPOP compliance documentation.
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
