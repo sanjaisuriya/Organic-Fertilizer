@@ -88,93 +88,59 @@
     </div>
   </nav>
 
-  <!-- PREMIUM CONTACT US HERO BANNER -->
-  <section class="contact-hero-banner position-relative overflow-hidden">
-    <div class="contact-hero-overlay"></div>
-    <div class="container position-relative py-5" style="z-index: 2;">
-      <div class="row align-items-center g-4 g-lg-5">
-        <!-- Left Side Content -->
-        <div class="col-lg-7 col-xl-6 reveal-fade-up text-start">
-          <!-- Breadcrumb Navigation: Home / Contact Us -->
+  <!-- INNER PAGE BANNER (HERO BANNER) -->
+  <section class="inner-page-banner" style="background-image: url('assets/images/contact/contact-banner.jpg?v=2.0');">
+    <div class="banner-overlay" style="background: linear-gradient(135deg, rgba(10, 26, 16, 0.85) 0%, rgba(18, 48, 29, 0.80) 100%);"></div>
+    <div class="container text-center position-relative" style="z-index: 2;">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-9">
+          <!-- 1. Breadcrumb Navigation -->
           <nav aria-label="breadcrumb" class="mb-3">
-            <ol class="banner-breadcrumb list-unstyled d-flex align-items-center gap-2 mb-0">
-              <li><a href="index.html" class="text-white-50 text-decoration-none hover-white"><i class="bi bi-house-door-fill me-1"></i>Home</a></li>
+            <ol class="banner-breadcrumb list-unstyled mb-0">
+              <li><a href="index.html"><i class="bi bi-house-door-fill me-1"></i>Home</a></li>
               <li class="text-white-50">/</li>
               <li class="text-white fw-semibold" aria-current="page">Contact Us</li>
             </ol>
           </nav>
 
-          <!-- Small Label: GET IN TOUCH WITH US -->
-          <div class="mb-3">
-            <span class="badge bg-success bg-opacity-25 text-white border border-success border-opacity-40 px-3 py-1.5 rounded-pill text-uppercase fw-bold contact-hero-badge" style="letter-spacing: 1.2px; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.45rem;">
-              <i class="bi bi-patch-check-fill text-accent-mint"></i> GET IN TOUCH WITH US
+          <!-- Small Label -->
+          <div class="mb-2">
+            <span class="badge bg-success bg-opacity-25 text-white border border-success border-opacity-40 px-3 py-1.5 rounded-pill text-uppercase fw-bold" style="letter-spacing: 1px; font-size: 0.8rem;">
+              <i class="bi bi-patch-check-fill text-accent-mint me-1"></i> GET IN TOUCH WITH US
             </span>
           </div>
 
-          <!-- Main Heading: Let's Grow a Greener Future Together. -->
-          <h1 class="contact-hero-title text-white fw-bold mb-3">
-            Let's Grow a Greener <br class="d-none d-sm-inline">
-            <span class="text-accent-mint" style="color: var(--accent-mint, #b7e4c7) !important;">Future Together.</span>
-          </h1>
+          <!-- Main Heading -->
+          <h1 class="banner-title text-white mb-2">Let's Grow a Greener Future Together.</h1>
 
           <!-- Description -->
-          <p class="contact-hero-desc mb-4" style="color: #e2f0d9 !important;">
+          <p class="banner-subtitle text-white-50 mb-3 mx-auto" style="max-width: 820px; font-size: 1rem; line-height: 1.6; color: #e2f0d9 !important;">
             Connect with TerraPure Organics for premium organic fertilizers, natural manure, and reliable bulk supply solutions. Our team is ready to help with your farming and product requirements.
           </p>
 
           <!-- Action Buttons -->
-          <div class="d-flex flex-wrap gap-3 align-items-center mb-4 pb-2">
-            <!-- Primary button: Contact Our Team -->
-            <a href="#bulkOrderFormSection" class="btn-farm-primary d-inline-flex align-items-center gap-2 shadow">
-              <i class="bi bi-chat-dots-fill"></i> Contact Our Team
+          <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-2">
+            <a href="#bulkOrderFormSection" class="btn-cta-primary">
+              <i class="bi bi-chat-dots-fill me-1"></i> Contact Our Team
             </a>
-            <!-- Secondary button: Explore Our Products -->
-            <a href="products.html" class="btn-hero-secondary d-inline-flex align-items-center gap-2">
-              <i class="bi bi-flower1"></i> Explore Our Products
+            <a href="products.html" class="btn-banner-outline">
+              <i class="bi bi-flower1 me-1"></i> Explore Our Products
             </a>
           </div>
 
-          <!-- Small Trust Labels: Organic Fertilizers | Bulk Manure Supply | Agricultural Support -->
-          <div class="contact-hero-trust pt-3 border-top border-white border-opacity-20">
-            <div class="d-flex flex-wrap align-items-center gap-2 gap-md-3">
-              <span class="trust-pill-item d-inline-flex align-items-center gap-1.5">
-                <i class="bi bi-shield-check text-accent-mint"></i> Organic Fertilizers
-              </span>
-              <span class="trust-divider d-none d-sm-inline opacity-50">|</span>
-              <span class="trust-pill-item d-inline-flex align-items-center gap-1.5">
-                <i class="bi bi-truck text-accent-mint"></i> Bulk Manure Supply
-              </span>
-              <span class="trust-divider d-none d-sm-inline opacity-50">|</span>
-              <span class="trust-pill-item d-inline-flex align-items-center gap-1.5">
-                <i class="bi bi-headset text-accent-mint"></i> Agricultural Support
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Side Image: Farmer holding dark, rich organic vermicompost in their hands with green crops in background -->
-        <div class="col-lg-5 col-xl-6 reveal-fade-up">
-          <div class="contact-hero-frame position-relative mx-auto">
-            <div class="contact-hero-img-card rounded-4 overflow-hidden position-relative">
-              <img src="assets/images/contact/vermicompost-hands.jpg?v=2.0" alt="High-quality realistic photograph of a farmer holding dark, rich organic vermicompost in their hands, with healthy green crops and fertile agricultural land in the background" class="w-100 h-100 object-fit-cover" loading="eager">
-              <!-- Floating Micro Badge / Stat -->
-              <div class="contact-hero-card-footer position-absolute bottom-0 start-0 end-0 p-3 p-sm-3.5">
-                <div class="d-flex align-items-center justify-content-between text-white">
-                  <div class="d-flex align-items-center gap-2.5">
-                    <div class="contact-card-icon rounded-circle bg-success bg-opacity-80 d-flex align-items-center justify-content-center">
-                      <i class="bi bi-patch-check-fill text-accent-mint fs-5"></i>
-                    </div>
-                    <div>
-                      <span class="d-block fw-bold text-white" style="font-size: 0.9rem; line-height: 1.2;">100% Organic Vermicompost</span>
-                      <span class="small" style="font-size: 0.76rem; color: #d4ebd6;">Rich Earthworm Castings & Humus</span>
-                    </div>
-                  </div>
-                  <span class="badge rounded-pill bg-white bg-opacity-20 text-white border border-white border-opacity-30 px-2.5 py-1" style="font-size: 0.72rem; letter-spacing: 0.5px;">Bio-Active Soil</span>
-                </div>
-              </div>
-            </div>
-            <!-- Decorative Subtle Ambient Glow Behind Card -->
-            <div class="contact-hero-glow"></div>
+          <!-- Small Trust Labels -->
+          <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 gap-md-3 pt-2 border-top border-white border-opacity-20 mx-auto" style="max-width: 650px;">
+            <span class="d-inline-flex align-items-center gap-1.5 fw-medium small" style="color: #d4ebd6 !important;">
+              <i class="bi bi-shield-check text-accent-mint"></i> Organic Fertilizers
+            </span>
+            <span class="text-white-50 d-none d-sm-inline opacity-50">|</span>
+            <span class="d-inline-flex align-items-center gap-1.5 fw-medium small" style="color: #d4ebd6 !important;">
+              <i class="bi bi-truck text-accent-mint"></i> Bulk Manure Supply
+            </span>
+            <span class="text-white-50 d-none d-sm-inline opacity-50">|</span>
+            <span class="d-inline-flex align-items-center gap-1.5 fw-medium small" style="color: #d4ebd6 !important;">
+              <i class="bi bi-headset text-accent-mint"></i> Agricultural Support
+            </span>
           </div>
         </div>
       </div>
