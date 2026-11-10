@@ -5719,7 +5719,7 @@ img.rounded-4.shadow-sm:hover {
   justify-content: center;
   border: 3px solid var(--bg-surface);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
-  z-index: 5;
+  z-index: 15 !important;
   transition: transform 0.35s ease, background 0.35s ease;
 }
 
@@ -5742,6 +5742,8 @@ img.rounded-4.shadow-sm:hover {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .soil-health-card-title {
@@ -6632,7 +6634,6 @@ img.rounded-4.shadow-sm:hover {
 /* Standardize card image wrappers for uniform card tops across all grids */
 .card-img-wrapper,
 .usage-card-img-wrapper,
-.soil-health-card-img-wrapper,
 .edu-card-img-wrap,
 .action-card-img-wrapper {
   height: 220px !important;
@@ -6642,6 +6643,19 @@ img.rounded-4.shadow-sm:hover {
   overflow: hidden !important;
   position: relative !important;
   flex-shrink: 0 !important;
+  background-color: var(--warm-beige, #f4f6f3);
+}
+
+/* Soil health card image wrapper MUST remain overflow: visible so .soil-health-icon-bubble is completely unclipped */
+.soil-health-card-img-wrapper {
+  height: 220px !important;
+  min-height: 220px !important;
+  max-height: 220px !important;
+  width: 100% !important;
+  overflow: visible !important;
+  position: relative !important;
+  flex-shrink: 0 !important;
+  z-index: 5 !important;
   background-color: var(--warm-beige, #f4f6f3);
 }
 
@@ -6965,11 +6979,23 @@ html:not([data-theme="dark"]) .crop-tag-text {
 [data-theme="dark"] .brand-icon-box,
 [data-theme="dark"] .kpi-icon-box,
 [data-theme="dark"] .proven-edge-icon-box,
-[data-theme="dark"] .depot-feature-icon,
-[data-theme="dark"] .soil-health-icon-bubble {
+[data-theme="dark"] .depot-feature-icon {
   background-color: rgba(82, 183, 136, 0.18) !important;
   color: #74c69d !important;
   border: 1px solid rgba(82, 183, 136, 0.3) !important;
+}
+
+[data-theme="dark"] .soil-health-icon-bubble {
+  background: linear-gradient(135deg, #2d6a4f, #1b4332) !important;
+  color: #ffffff !important;
+  border: 3px solid #142419 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .soil-health-icon-bubble i,
+[data-theme="dark"] .soil-health-icon-bubble svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 /* --------------------------------------------------------------------------
