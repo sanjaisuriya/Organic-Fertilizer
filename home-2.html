@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TerraPure Organics - Smart Organic Farming, Crop-Specific Fertilizer Solutions, Dosage Calculator & Bulk Agricultural Supply.">
-  <title>Smart Organic Farming & Crop Fertilizer Solutions | TerraPure Organics</title>
+  <meta name="description" content="TerraPure Organics Home 2 - Comprehensive farmer education on soil assessment, scientific nutrient testing, organic waste recycling, manure storage & seasonal farm preparation.">
+  <title>Soil Assessment & Seasonal Farm Preparation Guide | TerraPure Organics</title>
 
   <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,46 +21,43 @@
   <link rel="stylesheet" href="assets/css/rtl.css?v=2.1">
 
   <style>
-    /* Custom Stylings for Home Page 2 - Smart Organic Farming */
+    /* -------------------------------------------------------------
+       HOME PAGE 2 SPECIALIZED EDUCATINAL SYSTEM STYLES
+       ------------------------------------------------------------- */
     html, body {
       overflow-x: hidden;
       max-width: 100vw;
     }
 
-    /* Section Backgrounds */
-    #cropGuideSection,
-    #bulkSupplySection {
-      background-color: var(--bg-surface-secondary, #f4f0e8);
+    /* Section Backgrounds Alternating Scheme */
+    .edu-section-light {
+      background-color: var(--bg-surface, #fdfbf7);
+      transition: background-color 0.3s ease;
     }
-    #calculatorSection,
-    #seasonalScheduleSection,
-    #faqSection {
-      background-color: var(--bg-body, #faf8f5);
+    .edu-section-alt {
+      background-color: var(--bg-surface-secondary, #f5f0e6);
+      transition: background-color 0.3s ease;
     }
 
-    [data-theme="dark"] #cropGuideSection,
-    [data-theme="dark"] #bulkSupplySection {
-      background-color: #142219 !important;
-    }
-    [data-theme="dark"] #calculatorSection,
-    [data-theme="dark"] #seasonalScheduleSection,
-    [data-theme="dark"] #faqSection {
+    [data-theme="dark"] .edu-section-light {
       background-color: #0d1611 !important;
+    }
+    [data-theme="dark"] .edu-section-alt {
+      background-color: #142219 !important;
     }
 
     /* Hero Section */
-    .hero-smart-agro {
+    .hero-edu-farming {
       position: relative;
-      background-color: #112217;
-      background-image: linear-gradient(135deg, rgba(17, 34, 23, 0.90) 0%, rgba(27, 67, 50, 0.82) 50%, rgba(17, 34, 23, 0.88) 100%), url('assets/images/home-2/hero-banner-seedlings.jpg');
+      background-color: #0e1e14;
+      background-image: linear-gradient(135deg, rgba(14, 30, 20, 0.92) 0%, rgba(27, 67, 50, 0.85) 50%, rgba(14, 30, 20, 0.90) 100%), url('assets/images/home-2/seasonal-field-preparation.jpg');
       background-size: cover;
       background-position: center center;
-      background-repeat: no-repeat;
-      padding: 100px 0 90px;
+      padding: 100px 0 95px;
       color: #ffffff;
       overflow: hidden;
     }
-    .hero-smart-agro::after {
+    .hero-edu-farming::after {
       content: "";
       position: absolute;
       bottom: 0;
@@ -70,9 +67,10 @@
       background: linear-gradient(to top, var(--bg-surface, #fdfbf7), transparent);
       pointer-events: none;
     }
-    [data-theme="dark"] .hero-smart-agro::after {
-      background: linear-gradient(to top, #142219, transparent);
+    [data-theme="dark"] .hero-edu-farming::after {
+      background: linear-gradient(to top, #0d1611, transparent);
     }
+
     .hero-badge-pill {
       display: inline-flex;
       align-items: center;
@@ -98,407 +96,471 @@
       margin-bottom: 22px;
     }
     .hero-desc-lead {
-      font-size: 1.15rem;
-      line-height: 1.7;
-      color: rgba(255, 255, 255, 0.88);
-      max-width: 680px;
-      margin-bottom: 35px;
-    }
-    .btn-hero-primary {
-      background: #52b788;
-      color: #0b1f14;
-      font-weight: 700;
-      font-size: 1.02rem;
-      padding: 14px 28px;
-      border-radius: 50px;
-      border: none;
-      transition: all 0.25s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(82, 183, 136, 0.35);
-    }
-    .btn-hero-primary:hover {
-      background: #74c69d;
-      color: #08160e;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(82, 183, 136, 0.45);
-    }
-    .btn-hero-outline {
-      background: rgba(255, 255, 255, 0.1);
-      color: #ffffff;
-      font-weight: 600;
-      font-size: 1.02rem;
-      padding: 14px 26px;
-      border-radius: 50px;
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      transition: all 0.25s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-    .btn-hero-outline:hover {
-      background: rgba(255, 255, 255, 0.22);
-      color: #ffffff;
-      border-color: #ffffff;
-      transform: translateY(-2px);
+      font-size: 1.18rem;
+      line-height: 1.68;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 640px;
+      margin-bottom: 32px;
     }
 
-    /* Standardized Card Image Uniformity */
-    .crop-card-img-wrap,
-    .app-card-img-wrap,
-    .calendar-img-wrap {
+    .hero-stats-box {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 16px;
+      padding: 22px;
+    }
+    .hero-stat-item {
+      border-right: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 0 16px;
+    }
+    .hero-stat-item:last-child {
+      border-right: none;
+    }
+    .hero-stat-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #74c69d;
+      line-height: 1.1;
+    }
+    .hero-stat-lbl {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    /* Badges & Section Titles */
+    .section-badge-edu {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #2d6a4f;
+      background-color: rgba(45, 106, 79, 0.12);
+      border: 1px solid rgba(45, 106, 79, 0.22);
+      border-radius: 30px;
+      padding: 6px 16px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .section-badge-edu {
+      color: #74c69d;
+      background-color: rgba(82, 183, 136, 0.16);
+      border-color: rgba(82, 183, 136, 0.3);
+    }
+    .section-title-edu {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      color: var(--text-main, #142e1d);
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+    [data-theme="dark"] .section-title-edu {
+      color: #f0fdf4 !important;
+    }
+    .section-subtitle-edu {
+      font-size: 1.08rem;
+      line-height: 1.65;
+      color: var(--text-muted, #526658);
+      max-width: 760px;
+      margin: 0 auto 40px;
+    }
+    [data-theme="dark"] .section-subtitle-edu {
+      color: #b7cebf !important;
+    }
+
+    /* Universal Educational Card System */
+    .edu-card {
+      background: var(--bg-card, #ffffff);
+      border: 1px solid rgba(45, 106, 79, 0.14);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .edu-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+      border-color: #52b788;
+    }
+    [data-theme="dark"] .edu-card {
+      background: #18281e !important;
+      border-color: rgba(82, 183, 136, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.28);
+    }
+    [data-theme="dark"] .edu-card:hover {
+      border-color: #74c69d !important;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    }
+
+    .edu-card-img-wrap {
       width: 100%;
       height: 220px;
-      overflow: hidden;
-      border-radius: 12px 12px 0 0;
       position: relative;
-      background-color: var(--warm-beige, #f3ede2);
+      overflow: hidden;
+      background: #e9e4da;
     }
-    [data-theme="dark"] .crop-card-img-wrap,
-    [data-theme="dark"] .app-card-img-wrap,
-    [data-theme="dark"] .calendar-img-wrap {
-      background-color: #121e16 !important;
+    [data-theme="dark"] .edu-card-img-wrap {
+      background: #111e16;
     }
-    .crop-card-img-wrap img,
-    .app-card-img-wrap img,
-    .calendar-img-wrap img {
+    .edu-card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+    .edu-card:hover .edu-card-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .edu-card-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(14, 30, 20, 0.85);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      color: #74c69d;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 30px;
+      border: 1px solid rgba(82, 183, 136, 0.4);
+    }
+    .edu-card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .edu-card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.32rem;
+      font-weight: 700;
+      color: var(--text-main, #142e1d);
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .edu-card-title {
+      color: #f0fdf4 !important;
+    }
+    .edu-card-desc {
+      font-size: 0.96rem;
+      line-height: 1.62;
+      color: var(--text-muted, #495e51);
+      margin-bottom: 18px;
+    }
+    [data-theme="dark"] .edu-card-desc {
+      color: #b7cebf !important;
+    }
+
+    .edu-feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px;
+    }
+    .edu-feature-list li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 9px;
+      font-size: 0.92rem;
+      color: var(--text-main, #243c2c);
+      line-height: 1.5;
+    }
+    [data-theme="dark"] .edu-feature-list li {
+      color: #c9ded0 !important;
+    }
+    .edu-feature-list li::before {
+      content: "\F26E";
+      font-family: "bootstrap-icons";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #2d6a4f;
+      font-weight: 700;
+    }
+    [data-theme="dark"] .edu-feature-list li::before {
+      color: #74c69d;
+    }
+
+    /* Diagnostic Parameter Cards (Soil Testing) */
+    .diagnostic-feature-card {
+      background: var(--bg-card, #ffffff);
+      border: 1px solid rgba(45, 106, 79, 0.14);
+      border-radius: 14px;
+      padding: 20px 22px;
+      height: 100%;
+      transition: all 0.25s ease;
+    }
+    .diagnostic-feature-card:hover {
+      border-color: #52b788;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    }
+    [data-theme="dark"] .diagnostic-feature-card {
+      background: #18281e !important;
+      border-color: rgba(82, 183, 136, 0.2);
+    }
+    [data-theme="dark"] .diagnostic-feature-card:hover {
+      border-color: #74c69d !important;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+    }
+    .param-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(45, 106, 79, 0.12);
+      color: #2d6a4f;
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+    }
+    [data-theme="dark"] .param-icon-box {
+      background: rgba(82, 183, 136, 0.18);
+      color: #74c69d;
+    }
+
+    /* 4-Stage Waste Process Flow */
+    .process-step-card {
+      position: relative;
+      background: var(--bg-card, #ffffff);
+      border: 1px solid rgba(45, 106, 79, 0.14);
+      border-radius: 16px;
+      padding: 24px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+    }
+    .process-step-card:hover {
+      transform: translateY(-5px);
+      border-color: #52b788;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    }
+    [data-theme="dark"] .process-step-card {
+      background: #18281e !important;
+      border-color: rgba(82, 183, 136, 0.2);
+    }
+    [data-theme="dark"] .process-step-card:hover {
+      border-color: #74c69d !important;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    }
+    .step-number-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2d6a4f, #1b4332);
+      color: #ffffff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 10px rgba(45, 106, 79, 0.3);
+    }
+    [data-theme="dark"] .step-number-badge {
+      background: linear-gradient(135deg, #52b788, #2d6a4f);
+      color: #0b1a10;
+    }
+    .process-step-img {
+      width: 100%;
+      height: 180px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 18px;
+    }
+    .process-step-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.4s ease;
     }
-    .crop-card:hover .crop-card-img-wrap img,
-    .app-card:hover .app-card-img-wrap img,
-    .calendar-card:hover .calendar-img-wrap img {
-      transform: scale(1.05);
+    .process-step-card:hover .process-step-img img {
+      transform: scale(1.06);
     }
 
-    /* Cards */
-    .crop-card,
-    .app-card,
-    .calendar-card {
-      border: 1px solid var(--border-color, rgba(35, 93, 58, 0.12));
+    /* Seasonal Timeline Component */
+    .seasonal-phase-item {
       background: var(--bg-card, #ffffff);
+      border: 1px solid rgba(45, 106, 79, 0.14);
       border-radius: 14px;
-      overflow: hidden;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      padding: 22px;
       height: 100%;
+      transition: all 0.28s ease;
       display: flex;
       flex-direction: column;
     }
-    .crop-card:hover,
-    .app-card:hover,
-    .calendar-card:hover {
+    .seasonal-phase-item:hover {
+      border-color: #52b788;
       transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(35, 93, 58, 0.12);
-      border-color: var(--accent-green, #52b788);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
     }
-
-    [data-theme="dark"] .crop-card,
-    [data-theme="dark"] .app-card,
-    [data-theme="dark"] .calendar-card {
-      background: #1a2c21 !important;
-      border-color: rgba(82, 183, 136, 0.25) !important;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    [data-theme="dark"] .seasonal-phase-item {
+      background: #18281e !important;
+      border-color: rgba(82, 183, 136, 0.2);
     }
-    [data-theme="dark"] .crop-card:hover,
-    [data-theme="dark"] .app-card:hover,
-    [data-theme="dark"] .calendar-card:hover {
-      border-color: #52b788 !important;
-      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55);
+    [data-theme="dark"] .seasonal-phase-item:hover {
+      border-color: #74c69d !important;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
     }
-
-    [data-theme="dark"] .crop-card h3,
-    [data-theme="dark"] .calendar-card h3,
-    [data-theme="dark"] .app-card h3,
-    [data-theme="dark"] .calendar-card h4,
-    [data-theme="dark"] .app-card h4 {
-      color: #f0fdf4 !important;
-    }
-    [data-theme="dark"] .crop-card p,
-    [data-theme="dark"] .calendar-card p,
-    [data-theme="dark"] .app-card p {
-      color: #b7cebf !important;
-    }
-
-    /* Section Headers */
-    .section-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(45, 106, 79, 0.12);
-      color: #2d6a4f;
-      font-size: 0.8rem;
+    .phase-pill {
+      font-size: 0.76rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      padding: 6px 14px;
-      border-radius: 50px;
-      margin-bottom: 12px;
-    }
-    [data-theme="dark"] .section-badge {
-      background: rgba(82, 183, 136, 0.18) !important;
-      color: #74c69d !important;
-      border: 1px solid rgba(82, 183, 136, 0.3) !important;
-    }
-
-    .section-title {
-      font-family: 'Outfit', sans-serif;
-      font-weight: 700;
-      font-size: 2.35rem;
-      color: var(--text-main, #1a3320);
-      margin-bottom: 14px;
-      line-height: 1.25;
-    }
-    [data-theme="dark"] .section-title {
-      color: #f0fdf4 !important;
-    }
-
-    .section-subtitle {
-      font-size: 1.05rem;
-      color: var(--text-muted, #536b5c);
-      max-width: 680px;
-      margin: 0 auto;
-      line-height: 1.65;
-    }
-    [data-theme="dark"] .section-subtitle {
-      color: #b7cebf !important;
-    }
-
-    /* Crop Recommendation Box */
-    .crop-rec-box {
-      background-color: var(--bg-surface-secondary, #f3ede2);
-      color: var(--text-main, #1f2e24);
-      border: 1px solid var(--border-color, rgba(35, 93, 58, 0.12));
-    }
-    [data-theme="dark"] .crop-rec-box {
-      background-color: #142219 !important;
-      color: #ebf5ee !important;
-      border-color: rgba(82, 183, 136, 0.28) !important;
-    }
-    [data-theme="dark"] .crop-rec-box strong {
-      color: #74c69d !important;
-    }
-
-    /* Calculator Card Styling */
-    .calc-card-container {
-      background: var(--bg-card, #ffffff);
-      border: 1px solid var(--border-color, rgba(35, 93, 58, 0.12));
-      border-radius: 18px;
-      box-shadow: 0 16px 40px rgba(35, 93, 58, 0.06);
-      overflow: hidden;
-    }
-    [data-theme="dark"] .calc-card-container {
-      background: #1a2c21 !important;
-      border-color: rgba(82, 183, 136, 0.25) !important;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45) !important;
-    }
-
-    [data-theme="dark"] .calc-card-container label {
-      color: #f0fdf4 !important;
-    }
-    [data-theme="dark"] .calc-card-container select,
-    [data-theme="dark"] .calc-card-container input[type="number"],
-    [data-theme="dark"] .calc-card-container input[type="text"] {
-      background-color: #142219 !important;
-      color: #f0fdf4 !important;
-      border-color: rgba(82, 183, 136, 0.35) !important;
-    }
-    [data-theme="dark"] .calc-card-container .input-group-text {
-      background-color: #18281e !important;
-      color: #74c69d !important;
-      border-color: rgba(82, 183, 136, 0.35) !important;
-    }
-    [data-theme="dark"] .calc-card-container h3,
-    [data-theme="dark"] .calc-card-container h4 {
-      color: #f0fdf4 !important;
-    }
-    [data-theme="dark"] .calc-card-container p {
-      color: #b7cebf !important;
-    }
-
-    .calc-result-box {
-      background: var(--bg-surface-secondary, #f4f7f5);
-      border: 1px solid rgba(82, 183, 136, 0.25);
-      border-radius: 14px;
-      padding: 24px;
-    }
-    [data-theme="dark"] .calc-result-box {
-      background: #142219 !important;
-      border-color: rgba(82, 183, 136, 0.35) !important;
-    }
-
-    .calc-stat-item {
-      padding: 12px 16px;
-      background: var(--bg-card, #ffffff);
-      border-radius: 10px;
-      border: 1px solid var(--border-color, rgba(35, 93, 58, 0.12));
-      margin-bottom: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    [data-theme="dark"] .calc-stat-item {
-      background: #1a2c21 !important;
-      border-color: rgba(82, 183, 136, 0.25) !important;
-    }
-    .calc-stat-label {
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--text-main, #1f2e24);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    [data-theme="dark"] .calc-stat-label {
-      color: #ebf5ee !important;
-    }
-    .calc-stat-val {
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: #235d3a;
-    }
-    [data-theme="dark"] .calc-stat-val {
-      color: #74c69d !important;
-    }
-
-    /* Calendar Step Styling */
-    .calendar-step-badge {
-      position: absolute;
-      top: 14px;
-      left: 14px;
-      background: #235d3a;
-      color: #ffffff;
-      font-size: 0.78rem;
-      font-weight: 700;
-      padding: 4px 12px;
-      border-radius: 50px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Bulk Supply Banner Box */
-    .bulk-feature-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 12px 18px;
-      background: var(--bg-card, #ffffff);
-      border-radius: 10px;
-      border: 1px solid var(--border-color, rgba(35, 93, 58, 0.12));
-      font-weight: 600;
-      color: var(--text-main, #1f2e24);
-    }
-    [data-theme="dark"] .bulk-feature-item {
-      background: #1a2c21 !important;
-      border-color: rgba(82, 183, 136, 0.25) !important;
-      color: #f0fdf4 !important;
-    }
-    [data-theme="dark"] .bulk-feature-item i {
-      color: #52b788 !important;
-    }
-
-    /* Final CTA Banner */
-    .final-cta-section {
-      position: relative;
-      background-image: linear-gradient(135deg, rgba(17, 34, 23, 0.90) 0%, rgba(27, 67, 50, 0.85) 100%), url('assets/images/home-2/final-cta-crops.jpg');
-      background-size: cover;
-      background-position: center center;
-      padding: 95px 0;
-      color: #ffffff;
+      color: #2d6a4f;
+      background: rgba(45, 106, 79, 0.1);
       border-radius: 20px;
-      overflow: hidden;
-      margin: 40px 0;
+      padding: 4px 12px;
+      display: inline-block;
+      margin-bottom: 10px;
+      align-self: flex-start;
+    }
+    [data-theme="dark"] .phase-pill {
+      color: #74c69d;
+      background: rgba(82, 183, 136, 0.18);
     }
 
-    /* FAQ Custom Accordion */
-    .faq-farm .accordion-item {
-      border: 1px solid var(--border-color, rgba(35, 93, 58, 0.12));
-      margin-bottom: 12px;
-      border-radius: 12px !important;
-      overflow: hidden;
+    /* Farmer's Checklist */
+    .checklist-container-card {
       background: var(--bg-card, #ffffff);
+      border: 1.5px solid rgba(45, 106, 79, 0.16);
+      border-radius: 18px;
+      padding: 32px 30px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
     }
-    [data-theme="dark"] .faq-farm .accordion-item {
-      background: #1a2c21 !important;
-      border-color: rgba(82, 183, 136, 0.25) !important;
+    [data-theme="dark"] .checklist-container-card {
+      background: #18281e !important;
+      border-color: rgba(82, 183, 136, 0.25);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+    }
+    .checklist-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px;
+      border-radius: 12px;
+      background: rgba(45, 106, 79, 0.03);
+      border: 1px solid rgba(45, 106, 79, 0.08);
+      margin-bottom: 14px;
+      transition: all 0.22s ease;
+    }
+    .checklist-row:hover {
+      background: rgba(45, 106, 79, 0.08);
+      border-color: rgba(45, 106, 79, 0.25);
+    }
+    [data-theme="dark"] .checklist-row {
+      background: #142219 !important;
+      border-color: rgba(82, 183, 136, 0.15);
+    }
+    [data-theme="dark"] .checklist-row:hover {
+      background: #1d3325 !important;
+      border-color: #52b788;
+    }
+    .check-icon-bubble {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #2d6a4f;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.05rem;
+    }
+    [data-theme="dark"] .check-icon-bubble {
+      background: #52b788;
+      color: #0d1611;
     }
 
-    .faq-farm .accordion-button {
+    /* Accordion Customization */
+    .accordion-edu .accordion-item {
+      background: var(--bg-card, #ffffff);
+      border: 1px solid rgba(45, 106, 79, 0.15);
+      border-radius: 12px !important;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+    [data-theme="dark"] .accordion-edu .accordion-item {
+      background: #18281e !important;
+      border-color: rgba(82, 183, 136, 0.2);
+    }
+    .accordion-edu .accordion-button {
       font-family: 'Outfit', sans-serif;
-      font-weight: 600;
-      font-size: 1.05rem;
-      color: var(--text-main, #1a3320);
+      font-weight: 700;
+      font-size: 1.06rem;
+      color: var(--text-main, #142e1d);
       background: var(--bg-card, #ffffff);
       padding: 18px 22px;
-      box-shadow: none;
+      box-shadow: none !important;
     }
-    [data-theme="dark"] .faq-farm .accordion-button {
+    [data-theme="dark"] .accordion-edu .accordion-button {
+      background: #18281e !important;
       color: #f0fdf4 !important;
-      background: #1a2c21 !important;
     }
-
-    .faq-farm .accordion-button:not(.collapsed) {
-      color: #235d3a;
-      background: #eef7f1;
-      border-bottom: 1px solid rgba(35, 93, 58, 0.12);
+    .accordion-edu .accordion-button:not(.collapsed) {
+      background: rgba(45, 106, 79, 0.08);
+      color: #1b4332;
     }
-    [data-theme="dark"] .faq-farm .accordion-button:not(.collapsed) {
+    [data-theme="dark"] .accordion-edu .accordion-button:not(.collapsed) {
+      background: #1d3325 !important;
       color: #74c69d !important;
-      background: #233d2c !important;
-      border-bottom: 1px solid rgba(82, 183, 136, 0.3) !important;
     }
-    [data-theme="dark"] .faq-farm .accordion-button::after {
-      filter: invert(1) hue-rotate(90deg) brightness(1.2);
-    }
-
-    .faq-farm .accordion-body {
-      color: var(--text-muted, #536b5c);
-      line-height: 1.7;
-      padding: 20px 22px;
+    .accordion-edu .accordion-body {
+      color: var(--text-muted, #495e51);
       font-size: 0.98rem;
-      background: #fafcfb;
+      line-height: 1.65;
+      padding: 14px 22px 22px;
+      border-top: 1px solid rgba(45, 106, 79, 0.1);
     }
-    [data-theme="dark"] .faq-farm .accordion-body {
-      background: #142219 !important;
+    [data-theme="dark"] .accordion-edu .accordion-body {
       color: #b7cebf !important;
+      border-top-color: rgba(82, 183, 136, 0.15);
     }
 
-    @media (max-width: 768px) {
-      .hero-title-main {
-        font-size: 2.15rem;
-      }
-      .section-title {
-        font-size: 1.85rem;
-      }
-      .hero-smart-agro {
-        padding: 70px 0 60px;
-      }
+    /* Call to Action Banner */
+    .cta-banner-edu {
+      background: linear-gradient(135deg, #12281a 0%, #1b4332 50%, #2d6a4f 100%);
+      color: #ffffff;
+      border-radius: 24px;
+      padding: 56px 40px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: hidden;
     }
-    @media (max-width: 576px) {
-      .hero-title-main {
-        font-size: 1.62rem;
-        line-height: 1.25;
-        word-break: normal;
-        overflow-wrap: break-word;
-      }
-      .hero-desc-lead {
-        font-size: 1rem;
-      }
-      .btn-hero-primary, .btn-hero-outline {
-        width: 100%;
-        justify-content: center;
-      }
+    .cta-banner-edu::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(116, 198, 157, 0.25) 0%, transparent 70%);
+      pointer-events: none;
     }
   </style>
 </head>
 <body>
 
-  <!-- Main Navigation Header -->
+  <!-- ========================================================================= -->
+  <!-- NAVIGATION BAR                                                            -->
+  <!-- ========================================================================= -->
   <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
     <div class="container">
       <a class="navbar-brand navbar-brand-logo" href="index.html">
@@ -507,7 +569,7 @@
         </div>
         <div class="brand-text-block">
           <span class="brand-main-title">TerraPure</span>
-          <span class="brand-sub-title">ORGANICS & MANURE</span>
+          <span class="brand-sub-title">ORGANICS &amp; MANURE</span>
         </div>
       </a>
 
@@ -528,8 +590,8 @@
               Home
             </a>
             <ul class="dropdown-menu shadow-sm border-0">
-              <li><a class="dropdown-item" href="index.html"><i class="bi bi-flower1 me-2 text-success"></i>Organic Farming & Soil Health</a></li>
-              <li><a class="dropdown-item active" href="home-2.html"><i class="bi bi-seedling me-2 text-success"></i>Smart Farming & Crop Solutions</a></li>
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-flower1 me-2 text-success"></i>Organic Farming &amp; Soil Health</a></li>
+              <li><a class="dropdown-item active" href="home-2.html"><i class="bi bi-seedling me-2 text-success"></i>Soil Assessment &amp; Farm Preparation</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -566,28 +628,52 @@
   </nav>
 
   <!-- ========================================================================= -->
-  <!-- SECTION 1 – HERO BANNER                                                   -->
+  <!-- HERO BANNER                                                               -->
   <!-- ========================================================================= -->
-  <header class="hero-smart-agro" id="homeHero">
+  <header class="hero-edu-farming">
     <div class="container position-relative" style="z-index: 2;">
-      <div class="row align-items-center">
-        <div class="col-lg-9 col-xl-8">
-          <div class="hero-badge-pill">
-            <i class="bi bi-stars"></i> SMART ORGANIC FARMING
-          </div>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <span class="hero-badge-pill">
+            <i class="bi bi-compass"></i> Field Assessment &amp; Farm Management
+          </span>
           <h1 class="hero-title-main">
-            Give Every Crop the Natural Nutrition It Needs.
+            Scientific Soil Preparation &amp; Sustainable Farm Management
           </h1>
           <p class="hero-desc-lead">
-            Discover practical organic farming solutions, crop-specific nutrient planning, and natural soil enrichment methods to support healthier cultivation and sustainable agricultural growth.
+            Empowering cultivators with field-tested knowledge: understand natural soil textures, master organic compost curing, recycle agricultural crop residues, and plan seasonal inputs for long-term ecological prosperity.
           </p>
-          <div class="d-flex flex-wrap gap-3 pt-2">
-            <a href="#cropGuideSection" class="btn-hero-primary">
-              <i class="bi bi-grid-3x3-gap-fill"></i> Explore Crop Solutions
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#soilAssessmentSection" class="btn btn-success rounded-pill px-4 py-3 fw-bold shadow">
+              <i class="bi bi-geo-alt-fill me-2"></i> Explore Soil Types
             </a>
-            <a href="#calculatorSection" class="btn-hero-outline">
-              <i class="bi bi-calculator-fill"></i> Calculate Fertilizer Needs
+            <a href="#farmerChecklistSection" class="btn btn-outline-light rounded-pill px-4 py-3 fw-semibold">
+              <i class="bi bi-check2-square me-2"></i> Farmer's Checklist
             </a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="hero-stats-box">
+            <h4 class="text-white fw-bold mb-3 fs-5">
+              <i class="bi bi-award text-success me-2"></i>Sustainable Cultivation Metrics
+            </h4>
+            <div class="row g-3 text-center">
+              <div class="col-4 hero-stat-item">
+                <div class="hero-stat-num">3</div>
+                <div class="hero-stat-lbl">Primary Soil Classes</div>
+              </div>
+              <div class="col-4 hero-stat-item">
+                <div class="hero-stat-num">4</div>
+                <div class="hero-stat-lbl">Waste Curing Stages</div>
+              </div>
+              <div class="col-4 hero-stat-item">
+                <div class="hero-stat-num">5</div>
+                <div class="hero-stat-lbl">Seasonal Phases</div>
+              </div>
+            </div>
+            <p class="small text-white-50 mt-3 mb-0 text-center">
+              Targeted guidance for smallholders, plantations, and organic estate managers.
+            </p>
           </div>
         </div>
       </div>
@@ -595,169 +681,116 @@
   </header>
 
   <main>
+
     <!-- ========================================================================= -->
-    <!-- SECTION 2 – CROP-BASED FERTILIZER GUIDE                                   -->
+    <!-- SECTION 1: UNDERSTAND YOUR SOIL BEFORE CULTIVATION                        -->
     <!-- ========================================================================= -->
-    <section class="py-5" id="cropGuideSection">
+    <section class="py-5 edu-section-light" id="soilAssessmentSection">
       <div class="container py-4">
         <div class="text-center mb-5">
-          <div class="section-badge">
-            <i class="bi bi-flower3"></i> Targeted Crop Nutrition
-          </div>
-          <h2 class="section-title">Find the Right Organic Nutrition for Your Crops</h2>
-          <p class="section-subtitle">
-            Every crop has different nutrient requirements. Explore organic manure and fertilizer options suitable for your cultivation type.
+          <span class="section-badge-edu">
+            <i class="bi bi-layers-half"></i> Soil Physical Typology
+          </span>
+          <h2 class="section-title-edu display-6">
+            Every Healthy Harvest Begins with Understanding Your Soil
+          </h2>
+          <p class="section-subtitle-edu">
+            Before applying organic inputs, identifying your native soil texture and organic matter status ensures effective moisture management, prevents nutrient leaching, and establishes an optimal root zone.
           </p>
         </div>
 
         <div class="row g-4">
-          <!-- 1. Rice / Paddy -->
-          <div class="col-md-6 col-lg-4">
-            <div class="crop-card">
-              <div class="crop-card-img-wrap">
-                <img src="assets/images/home-2/crop-paddy.jpg" alt="Paddy rice cultivation" loading="lazy">
+          <!-- Sandy Soil Card -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="edu-card">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/soil-sandy.jpg" alt="Sandy Soil Structure showing loose coarse particles" loading="lazy">
+                <span class="edu-card-badge">Coarse Particle Texture</span>
               </div>
-              <div class="p-4 d-flex flex-column flex-grow-1">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 rounded-pill">Grain & Cereal</span>
-                  <small class="text-muted"><i class="bi bi-droplet-half me-1"></i>Basal & Tillering</small>
-                </div>
-                <h3 class="h5 fw-bold text-success mb-2">1. Rice / Paddy</h3>
-                <p class="text-muted small mb-3 flex-grow-1">
-                  Supports flooded soil microbial health, root anchorage, and prevents nitrogen leaching with cured organic matter.
+              <div class="edu-card-body">
+                <h3 class="edu-card-title">Sandy Soil Structure</h3>
+                <p class="edu-card-desc">
+                  Composed of large mineral grains with high porosity, resulting in rapid water percolation and moisture challenges where soluble nutrients easily leach past shallow root zones.
                 </p>
-                <div class="crop-rec-box p-2 rounded small mb-3">
-                  <strong>Recommended:</strong> Aged Cow Dung + Enriched Vermicompost (5 MT / Acre).
+                <ul class="edu-feature-list">
+                  <li><strong>Drainage Profile:</strong> Extremely rapid, minimal water holding</li>
+                  <li><strong>Nutrient Retention:</strong> Low cation exchange capacity</li>
+                  <li><strong>Management Key:</strong> Regular additions of aged cow manure and vermicompost create binding humus to hold water</li>
+                </ul>
+                <div class="mt-auto pt-3 border-top border-light-subtle d-flex justify-content-between align-items-center">
+                  <span class="text-success fw-bold small"><i class="bi bi-shield-check me-1"></i> Humus Enrichment Needed</span>
+                  <span class="badge bg-success-subtle text-success rounded-pill px-3 py-1 small">Drainage Fast</span>
                 </div>
-                <a href="#calculatorSection" class="btn btn-sm btn-outline-success rounded-pill w-100 fw-semibold" onclick="setCalculatorCrop('rice')">
-                  Calculate Paddy Dosage <i class="bi bi-arrow-right ms-1"></i>
-                </a>
               </div>
             </div>
           </div>
 
-          <!-- 2. Banana -->
-          <div class="col-md-6 col-lg-4">
-            <div class="crop-card">
-              <div class="crop-card-img-wrap">
-                <img src="assets/images/home-2/crop-banana.jpg" alt="Banana plantation" loading="lazy">
+          <!-- Clay Soil Card -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="edu-card">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/soil-clay.jpg" alt="Dense Clay Soil texture with moisture retention" loading="lazy">
+                <span class="edu-card-badge">Fine Dense Texture</span>
               </div>
-              <div class="p-4 d-flex flex-column flex-grow-1">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="badge bg-warning-subtle text-warning border border-warning-subtle px-2 py-1 rounded-pill">Heavy Feeder</span>
-                  <small class="text-muted"><i class="bi bi-calendar3 me-1"></i>Split Dosage</small>
-                </div>
-                <h3 class="h5 fw-bold text-success mb-2">2. Banana</h3>
-                <p class="text-muted small mb-3 flex-grow-1">
-                  Demands massive organic potassium and nitrogen for pseudostem girth, leaf health, and heavy fruit bunch emergence.
+              <div class="edu-card-body">
+                <h3 class="edu-card-title">Clay Soil Structure</h3>
+                <p class="edu-card-desc">
+                  Features tightly packed micro-particles that hold large volumes of moisture but present poor internal aeration and waterlogging risks when heavily irrigated or compacted.
                 </p>
-                <div class="crop-rec-box p-2 rounded small mb-3">
-                  <strong>Recommended:</strong> Cured Cattle Manure + Potash Compost (8–10 MT / Acre).
+                <ul class="edu-feature-list">
+                  <li><strong>Drainage Profile:</strong> Slow infiltration with surface crusting tendencies</li>
+                  <li><strong>Nutrient Retention:</strong> High natural mineral binding capability</li>
+                  <li><strong>Management Key:</strong> Incorporating coarse composted biomass and neem cake opens aeration channels and loosens hard clods</li>
+                </ul>
+                <div class="mt-auto pt-3 border-top border-light-subtle d-flex justify-content-between align-items-center">
+                  <span class="text-success fw-bold small"><i class="bi bi-shield-check me-1"></i> Aeration Conditioning</span>
+                  <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill px-3 py-1 small">High Retention</span>
                 </div>
-                <a href="#calculatorSection" class="btn btn-sm btn-outline-success rounded-pill w-100 fw-semibold" onclick="setCalculatorCrop('banana')">
-                  Calculate Banana Dosage <i class="bi bi-arrow-right ms-1"></i>
-                </a>
               </div>
             </div>
           </div>
 
-          <!-- 3. Coconut -->
-          <div class="col-md-6 col-lg-4">
-            <div class="crop-card">
-              <div class="crop-card-img-wrap">
-                <img src="assets/images/home-2/crop-coconut.jpg" alt="Coconut orchard" loading="lazy">
+          <!-- Loamy Soil Card -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="edu-card">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/soil-loamy.jpg" alt="Rich crumbly Loamy Soil rich in organic matter" loading="lazy">
+                <span class="edu-card-badge">Balanced Agricultural Ideal</span>
               </div>
-              <div class="p-4 d-flex flex-column flex-grow-1">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-2 py-1 rounded-pill">Perennial Palm</span>
-                  <small class="text-muted"><i class="bi bi-shield-check me-1"></i>Basin Mulching</small>
-                </div>
-                <h3 class="h5 fw-bold text-success mb-2">3. Coconut</h3>
-                <p class="text-muted small mb-3 flex-grow-1">
-                  Circular ring application preserves root moisture during droughts, curbs button shedding, and maximizes copra oil quality.
+              <div class="edu-card-body">
+                <h3 class="edu-card-title">Loamy Soil Structure</h3>
+                <p class="edu-card-desc">
+                  The ideal equilibrium of sand, silt, and clay particles bound together by active soil organic matter, promoting deep root penetration, balanced moisture, and high biological activity.
                 </p>
-                <div class="crop-rec-box p-2 rounded small mb-3">
-                  <strong>Recommended:</strong> Vermicompost + Raw Cow Dung + Salt-tolerant Blend (4 MT / Acre).
+                <ul class="edu-feature-list">
+                  <li><strong>Drainage Profile:</strong> Perfect moisture retention with surplus runoff release</li>
+                  <li><strong>Nutrient Retention:</strong> Optimal reservoir for sustained slow release</li>
+                  <li><strong>Management Key:</strong> Maintenance dressings of bio-enriched vermicompost to sustain native microbial vitality</li>
+                </ul>
+                <div class="mt-auto pt-3 border-top border-light-subtle d-flex justify-content-between align-items-center">
+                  <span class="text-success fw-bold small"><i class="bi bi-check-circle-fill me-1"></i> Balanced Friability</span>
+                  <span class="badge bg-success text-white rounded-pill px-3 py-1 small">Optimal Matrix</span>
                 </div>
-                <a href="#calculatorSection" class="btn btn-sm btn-outline-success rounded-pill w-100 fw-semibold" onclick="setCalculatorCrop('coconut')">
-                  Calculate Coconut Dosage <i class="bi bi-arrow-right ms-1"></i>
-                </a>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- 4. Vegetables -->
-          <div class="col-md-6 col-lg-4">
-            <div class="crop-card">
-              <div class="crop-card-img-wrap">
-                <img src="assets/images/home-2/crop-vegetables.jpg" alt="Tomato and vegetable farming" loading="lazy">
-              </div>
-              <div class="p-4 d-flex flex-column flex-grow-1">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 rounded-pill">High Intensive</span>
-                  <small class="text-muted"><i class="bi bi-clock-history me-1"></i>Rapid Cycle</small>
-                </div>
-                <h3 class="h5 fw-bold text-success mb-2">4. Vegetables</h3>
-                <p class="text-muted small mb-3 flex-grow-1">
-                  Targeted nutrition for tomatoes, chilis, brinjal, and greens to stimulate active rooting, early flowering, and pest defense.
-                </p>
-                <div class="crop-rec-box p-2 rounded small mb-3">
-                  <strong>Recommended:</strong> Premium Vermicompost + Neem Cake Soil Booster (6 MT / Acre).
-                </div>
-                <a href="#calculatorSection" class="btn btn-sm btn-outline-success rounded-pill w-100 fw-semibold" onclick="setCalculatorCrop('vegetables')">
-                  Calculate Vegetable Dosage <i class="bi bi-arrow-right ms-1"></i>
-                </a>
-              </div>
+        <!-- Identifying Soil Conditions Educational Banner -->
+        <div class="mt-5 p-4 rounded-4 edu-card">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <h4 class="fw-bold mb-2 text-success">
+                <i class="bi bi-hand-index-thumb me-2"></i> Quick In-Field Assessment: The Ribbon &amp; Squeeze Test
+              </h4>
+              <p class="mb-0 text-muted">
+                Moisten a golf-ball sized soil sample in your palm and squeeze. If it falls apart instantly upon opening your hand, you have <strong>Sandy Soil</strong>. If it molds into an unbreakable ribbon longer than 5cm, it is <strong>Clay Soil</strong>. If it forms a spongy ball that crumbles softly under gentle finger pressure, you have balanced <strong>Loamy Soil</strong>.
+              </p>
             </div>
-          </div>
-
-          <!-- 5. Sugarcane -->
-          <div class="col-md-6 col-lg-4">
-            <div class="crop-card">
-              <div class="crop-card-img-wrap">
-                <img src="assets/images/home-2/crop-sugarcane.jpg" alt="Sugarcane cultivation" loading="lazy">
-              </div>
-              <div class="p-4 d-flex flex-column flex-grow-1">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle px-2 py-1 rounded-pill">Cash Crop</span>
-                  <small class="text-muted"><i class="bi bi-activity me-1"></i>High Tonnage</small>
-                </div>
-                <h3 class="h5 fw-bold text-success mb-2">5. Sugarcane</h3>
-                <p class="text-muted small mb-3 flex-grow-1">
-                  Enriched biological organic carbon promotes robust tillering, cane thickness, internodal height, and superior brix content.
-                </p>
-                <div class="crop-rec-box p-2 rounded small mb-3">
-                  <strong>Recommended:</strong> Well-aged Farmyard Manure + Pressmud Compost (8–10 MT / Acre).
-                </div>
-                <a href="#calculatorSection" class="btn btn-sm btn-outline-success rounded-pill w-100 fw-semibold" onclick="setCalculatorCrop('sugarcane')">
-                  Calculate Cane Dosage <i class="bi bi-arrow-right ms-1"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 6. Fruits & Orchards -->
-          <div class="col-md-6 col-lg-4">
-            <div class="crop-card">
-              <div class="crop-card-img-wrap">
-                <img src="assets/images/home-2/crop-fruits.jpg" alt="Mango and citrus orchard" loading="lazy">
-              </div>
-              <div class="p-4 d-flex flex-column flex-grow-1">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="badge bg-info-subtle text-info border border-info-subtle px-2 py-1 rounded-pill">Perennial Orchard</span>
-                  <small class="text-muted"><i class="bi bi-sun me-1"></i>Canopy Feeding</small>
-                </div>
-                <h3 class="h5 fw-bold text-success mb-2">6. Fruits & Orchards</h3>
-                <p class="text-muted small mb-3 flex-grow-1">
-                  Long-term living soil feeding for mango, citrus, guava, and pomegranate, ensuring uniform fruit sizing and sweetness.
-                </p>
-                <div class="crop-rec-box p-2 rounded small mb-3">
-                  <strong>Recommended:</strong> Cured Cow Dung + Vermicompost + Steamed Bone Meal (7 MT / Acre).
-                </div>
-                <a href="#calculatorSection" class="btn btn-sm btn-outline-success rounded-pill w-100 fw-semibold" onclick="setCalculatorCrop('fruits')">
-                  Calculate Orchard Dosage <i class="bi bi-arrow-right ms-1"></i>
-                </a>
-              </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="#soilTestingSection" class="btn btn-outline-success rounded-pill px-4 py-2 fw-semibold">
+                Learn Scientific Testing <i class="bi bi-arrow-right ms-1"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -765,190 +798,157 @@
     </section>
 
     <!-- ========================================================================= -->
-    <!-- SECTION 3 – ORGANIC FERTILIZER APPLICATION GUIDE                          -->
+    <!-- SECTION 2: SOIL TESTING AND NUTRIENT ASSESSMENT                          -->
     <!-- ========================================================================= -->
-    <section class="py-5" id="applicationGuideSection">
+    <section class="py-5 edu-section-alt" id="soilTestingSection">
       <div class="container py-4">
         <div class="text-center mb-5">
-          <div class="section-badge">
-            <i class="bi bi-signpost-split"></i> Agronomy Best Practices
-          </div>
-          <h2 class="section-title">Apply Organic Fertilizers the Right Way</h2>
-          <p class="section-subtitle">
-            Understand how to apply organic manure and soil amendments effectively according to crop requirements and cultivation practices.
+          <span class="section-badge-edu">
+            <i class="bi bi-clipboard2-pulse"></i> Scientific Diagnostics
+          </span>
+          <h2 class="section-title-edu display-6">
+            Know What Your Soil Needs
+          </h2>
+          <p class="section-subtitle-edu">
+            Eliminate guesswork from your farm budget. Routine soil testing establishes accurate baseline parameters for pH, essential macronutrients, organic carbon percentage, and salinity levels.
           </p>
         </div>
 
-        <div class="row g-4">
-          <!-- Card 1: Basal Application -->
-          <div class="col-lg-4 col-md-6">
-            <div class="app-card">
-              <div class="app-card-img-wrap">
-                <img src="assets/images/home-2/application-basal.jpg" alt="Organic manure being incorporated into agricultural soil" loading="lazy">
+        <!-- Diagnostic Parameters Grid -->
+        <div class="row g-4 mb-5">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="diagnostic-feature-card">
+              <div class="param-icon-box">
+                <i class="bi bi-speedometer2"></i>
               </div>
-              <div class="p-4 d-flex flex-column flex-grow-1">
-                <div class="text-success fw-bold small text-uppercase mb-1">
-                  <i class="bi bi-1-circle-fill me-1"></i> Foundation Stage
-                </div>
-                <h3 class="h5 fw-bold mb-2">Basal Application</h3>
-                <h4 class="h6 text-success fw-semibold mb-3">Prepare soil with aged organic manure before planting.</h4>
-                <p class="text-muted small mb-0">
-                  Broadcast aged farmyard manure or cow dung compost across the plot 15 to 20 days prior to final harrowing. Incorporating organic matter into the top 15–20 cm builds water retention, aeration, and vital mycorrhizal networks for newly developing roots.
-                </p>
+              <h4 class="fw-bold fs-5 mb-2">Soil pH Levels</h4>
+              <p class="text-muted small mb-3">
+                Measures the soil solution acidity or alkalinity. An ideal range between 6.2 and 7.5 provides the perfect biochemical climate for beneficial bacteria and prevents micronutrient lockup.
+              </p>
+              <div class="p-2 rounded bg-light-subtle small fw-semibold text-success">
+                <i class="bi bi-check-circle me-1"></i> Optimal Range: 6.2 – 7.2
               </div>
             </div>
           </div>
 
-          <!-- Card 2: Soil Application -->
-          <div class="col-lg-4 col-md-6">
-            <div class="app-card">
-              <div class="app-card-img-wrap">
-                <img src="assets/images/home-2/application-soil.jpg" alt="Farmer spreading vermicompost around vegetable plants" loading="lazy">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="diagnostic-feature-card">
+              <div class="param-icon-box">
+                <i class="bi bi-diagram-3"></i>
               </div>
-              <div class="p-4 d-flex flex-column flex-grow-1">
-                <div class="text-success fw-bold small text-uppercase mb-1">
-                  <i class="bi bi-2-circle-fill me-1"></i> Root Zone Placement
-                </div>
-                <h3 class="h5 fw-bold mb-2">Soil Application</h3>
-                <h4 class="h6 text-success fw-semibold mb-3">Apply suitable compost around crop root zones following recommended practices.</h4>
-                <p class="text-muted small mb-0">
-                  Apply enriched vermicompost in continuous bands along planting furrows or circular rings 15 cm from crop stems. Light earthing-up and moisture management ensure earthworm castings and humic substances dissolve directly into active feeder roots.
-                </p>
+              <h4 class="fw-bold fs-5 mb-2">Nitrogen, Phosphorus and Potassium (NPK)</h4>
+              <p class="text-muted small mb-3">
+                Identifies available reserves of the primary crop nutrients. Balancing NPK organically avoids toxic salt accumulation while supplying sustained nutrition throughout all vegetative cycles.
+              </p>
+              <div class="p-2 rounded bg-light-subtle small fw-semibold text-success">
+                <i class="bi bi-check-circle me-1"></i> Primary Growth Drivers
               </div>
             </div>
           </div>
 
-          <!-- Card 3: Nutrient Management -->
-          <div class="col-lg-4 col-md-6 mx-auto">
-            <div class="app-card">
-              <div class="app-card-img-wrap">
-                <img src="assets/images/home-2/application-neem-roots.jpg" alt="Neem cake fertilizer being applied around plant roots" loading="lazy">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="diagnostic-feature-card">
+              <div class="param-icon-box">
+                <i class="bi bi-radioactive"></i>
               </div>
-              <div class="p-4 d-flex flex-column flex-grow-1">
-                <div class="text-success fw-bold small text-uppercase mb-1">
-                  <i class="bi bi-3-circle-fill me-1"></i> Plant Protection & Balance
-                </div>
-                <h3 class="h5 fw-bold mb-2">Nutrient Management</h3>
-                <h4 class="h6 text-success fw-semibold mb-3">Follow crop-specific recommendations and soil testing.</h4>
-                <p class="text-muted small mb-0">
-                  Integrate organic neem cake alongside microbial compost. The natural triterpenoids in neem cake shield delicate crop root hairs from soil pathogens and nematodes, while naturally retarding nitrogen loss for sustained seasonal feeding.
-                </p>
+              <h4 class="fw-bold fs-5 mb-2">Organic Carbon (SOC)</h4>
+              <p class="text-muted small mb-3">
+                The core barometer of living biological matter. Organic carbon sustains soil microbiome networks, enhances moisture retention, and builds crumbly humic structures in cultivated beds.
+              </p>
+              <div class="p-2 rounded bg-light-subtle small fw-semibold text-success">
+                <i class="bi bi-check-circle me-1"></i> Target Level: &gt; 0.75%
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="diagnostic-feature-card">
+              <div class="param-icon-box">
+                <i class="bi bi-lightning-charge"></i>
+              </div>
+              <h4 class="fw-bold fs-5 mb-2">Electrical Conductivity (EC)</h4>
+              <p class="text-muted small mb-3">
+                Measures total soluble salt concentration. High EC indicates salinization from over-irrigation or chemical synthetic residues, which stunts root tips and disrupts water intake.
+              </p>
+              <div class="p-2 rounded bg-light-subtle small fw-semibold text-success">
+                <i class="bi bi-check-circle me-1"></i> Non-Saline Threshold: &lt; 1.0 dS/m
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="diagnostic-feature-card">
+              <div class="param-icon-box">
+                <i class="bi bi-moisture"></i>
+              </div>
+              <h4 class="fw-bold fs-5 mb-2">Soil Moisture and Texture</h4>
+              <p class="text-muted small mb-3">
+                Evaluates effective field water-holding capacity, pore aeration, and bulk density, guiding the volume and frequency of organic mulch and compost amendments needed per plot.
+              </p>
+              <div class="p-2 rounded bg-light-subtle small fw-semibold text-success">
+                <i class="bi bi-check-circle me-1"></i> Soil Water Reserve Metric
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="diagnostic-feature-card">
+              <div class="param-icon-box">
+                <i class="bi bi-journal-check"></i>
+              </div>
+              <h4 class="fw-bold fs-5 mb-2">Soil Test Report Reading</h4>
+              <p class="text-muted small mb-3">
+                Interpreting test columns enables cultivators to purchase only required organic amendments, preventing wasteful expenditures and avoiding excessive nitrogen during sensitive fruiting phases.
+              </p>
+              <div class="p-2 rounded bg-light-subtle small fw-semibold text-success">
+                <i class="bi bi-check-circle me-1"></i> Informed Fertilizer Strategy
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ========================================================================= -->
-    <!-- SECTION 4 – SMART FARM DOSAGE CALCULATOR                                  -->
-    <!-- ========================================================================= -->
-    <section class="py-5" id="calculatorSection">
-      <div class="container py-4">
-        <div class="text-center mb-5">
-          <div class="section-badge">
-            <i class="bi bi-calculator"></i> SMART FARMING TOOL
-          </div>
-          <h2 class="section-title">Calculate Your Seasonal Organic Fertilizer Requirements</h2>
-          <p class="section-subtitle">
-            Select your crop variety and cultivated acreage to estimate the quantities of organic manure, enriched vermicompost, and neem cake required for your farm.
-          </p>
-        </div>
-
-        <div class="row g-4 align-items-center">
-          <!-- Interactive Calculator Form -->
-          <div class="col-lg-7">
-            <div class="calc-card-container p-4 p-md-5">
-              <form id="smartDosageCalculatorForm" novalidate onsubmit="return false;">
-                <div class="row g-3">
-                  <!-- Target Crop Type -->
-                  <div class="col-md-6">
-                    <label for="calcCropType" class="form-label fw-bold">Target Crop Type *</label>
-                    <select id="calcCropType" class="form-select form-select-lg" required>
-                      <option value="vegetables" selected>Vegetables (Tomato, Chili, Greens)</option>
-                      <option value="rice">Rice / Paddy Field</option>
-                      <option value="banana">Banana Plantation</option>
-                      <option value="coconut">Coconut Orchard</option>
-                      <option value="sugarcane">Commercial Sugarcane</option>
-                      <option value="fruits">Fruit Orchards (Mango, Citrus)</option>
-                    </select>
-                    <small class="text-muted">Crop-specific biological uptake profile.</small>
-                  </div>
-
-                  <!-- Cultivated Land (Acreage) -->
-                  <div class="col-md-6">
-                    <label for="calcAcreage" class="form-label fw-bold">Cultivated Land (Acres) *</label>
-                    <div class="input-group input-group-lg">
-                      <input type="number" id="calcAcreage" class="form-control" value="2.5" min="0.1" max="500" step="0.1" placeholder="e.g. 2.5" required>
-                      <span class="input-group-text bg-light text-muted">Acres</span>
-                    </div>
-                    <small class="text-muted">Decimal values supported (e.g. 1.5, 3.2).</small>
-                  </div>
-                </div>
-
-                <!-- Live Results Area -->
-                <div class="calc-result-box mt-4">
-                  <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
-                    <h4 class="h6 fw-bold mb-0 text-success text-uppercase">
-                      <i class="bi bi-check2-circle me-1"></i> Estimated Fertilizer Requirements
-                    </h4>
-                    <span class="badge bg-success" id="calcCropBadge">Vegetables</span>
-                  </div>
-
-                  <!-- Stat 1: Cow Dung / Compost -->
-                  <div class="calc-stat-item">
-                    <span class="calc-stat-label">
-                      <i class="bi bi-layers-fill text-success"></i> Aged Cow Dung / Compost:
-                    </span>
-                    <span class="calc-stat-val" id="resCowDung">15.0 Metric Tons</span>
-                  </div>
-
-                  <!-- Stat 2: Enriched Vermicompost -->
-                  <div class="calc-stat-item">
-                    <span class="calc-stat-label">
-                      <i class="bi bi-basket3-fill text-success"></i> Enriched Vermicompost:
-                    </span>
-                    <span class="calc-stat-val" id="resVermicompost">1,875 Kg (38 Bags of 50kg)</span>
-                  </div>
-
-                  <!-- Stat 3: Neem Cake Soil Booster -->
-                  <div class="calc-stat-item">
-                    <span class="calc-stat-label">
-                      <i class="bi bi-shield-shaded text-success"></i> Neem Cake Soil Booster:
-                    </span>
-                    <span class="calc-stat-val" id="resNeemCake">500 Kg (10 Bags of 50kg)</span>
-                  </div>
-
-                  <p class="small text-muted mb-0 mt-3 fst-italic">
-                    <i class="bi bi-info-circle me-1"></i> Note: Displayed results are estimated agronomic guidelines based on typical organic farming standards. Actual dosage may vary with specific soil test results and cultivation practices.
-                  </p>
-                </div>
-
-                <div class="pt-4">
-                  <button type="button" id="btnOrderCalculated" class="btn btn-success btn-lg w-100 rounded-pill fw-bold py-3 shadow-sm">
-                    <i class="bi bi-cart-check-fill me-2"></i> Order This Estimated Quantity
-                  </button>
-                </div>
-              </form>
+        <!-- 3 Soil Testing Visual Steps -->
+        <div class="row g-4 align-items-stretch">
+          <div class="col-12 col-md-4">
+            <div class="edu-card">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/soil-sample-collection.jpg" alt="Farmer collecting soil sample in field using zig-zag core sampling" loading="lazy">
+                <span class="edu-card-badge">Step 1: In-Field Sampling</span>
+              </div>
+              <div class="edu-card-body">
+                <h4 class="edu-card-title fs-5">Zig-Zag Sample Collection</h4>
+                <p class="edu-card-desc mb-0">
+                  Collect 10 to 15 V-shaped core slices at 15cm depth across your field, discarding surface weeds, and composite them thoroughly into a representative 500g batch.
+                </p>
+              </div>
             </div>
           </div>
 
-          <!-- Section Image & Agronomist Context -->
-          <div class="col-lg-5">
-            <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
-              <img src="assets/images/home-2/calculator-measuring-vermicompost.jpg" alt="Farmer measuring dark organic vermicompost for crop cultivation" class="img-fluid w-100" style="height: 380px; object-fit: cover;" loading="lazy">
-              <div class="card-body p-4 bg-white">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <div class="bg-success text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
-                    <i class="bi bi-shield-fill-check fs-5"></i>
-                  </div>
-                  <div>
-                    <h5 class="h6 fw-bold mb-0">Agronomist-Verified Ratios</h5>
-                    <small class="text-muted">Formulated for Indian agro-climatic conditions</small>
-                  </div>
-                </div>
-                <p class="text-muted small mb-0">
-                  Our organic formulations maintain a biologically balanced C:N ratio (< 20:1) to prevent nitrogen lock-up and ensure uninterrupted vegetative vigor and soil humus build-up.
+          <div class="col-12 col-md-4">
+            <div class="edu-card">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/soil-lab-testing.jpg" alt="Agricultural soil testing equipment in laboratory" loading="lazy">
+                <span class="edu-card-badge">Step 2: Lab Diagnostics</span>
+              </div>
+              <div class="edu-card-body">
+                <h4 class="edu-card-title fs-5">Laboratory Testing Equipment</h4>
+                <p class="edu-card-desc mb-0">
+                  Certified testing facilities utilize spectrophotometry, flame photometers, and calibrated probes to quantify accurate elemental concentrations per acre.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="edu-card">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/soil-test-report.jpg" alt="Agronomist reviewing soil test report with recommendations" loading="lazy">
+                <span class="edu-card-badge">Step 3: Actionable Advice</span>
+              </div>
+              <div class="edu-card-body">
+                <h4 class="edu-card-title fs-5">Interpreting Soil Test Reports</h4>
+                <p class="edu-card-desc mb-0">
+                  Translate laboratory indices into exact tons of aged manure, bags of enriched vermicompost, and organic botanical cakes for targeted application.
                 </p>
               </div>
             </div>
@@ -958,85 +958,467 @@
     </section>
 
     <!-- ========================================================================= -->
-    <!-- SECTION 5 – SEASONAL ORGANIC FARMING CALENDAR                             -->
+    <!-- SECTION 3: CHOOSE ORGANIC INPUTS BASED ON FARM REQUIREMENTS              -->
     <!-- ========================================================================= -->
-    <section class="py-5" id="calendarSection">
+    <section class="py-5 edu-section-light" id="inputDecisionSection">
       <div class="container py-4">
         <div class="text-center mb-5">
-          <div class="section-badge">
-            <i class="bi bi-calendar-event"></i> Cropping Lifecycle
-          </div>
-          <h2 class="section-title">Plan Your Organic Farming Season</h2>
-          <p class="section-subtitle">
-            Understand the important stages of crop cultivation and plan organic soil preparation and nutrient management at the right time.
+          <span class="section-badge-edu">
+            <i class="bi bi-ui-checks-grid"></i> Strategic Input Selection
+          </span>
+          <h2 class="section-title-edu display-6">
+            Make Better Decisions for Your Farm
+          </h2>
+          <p class="section-subtitle-edu">
+            Selecting organic inputs requires matching soil structure, seasonal crop lifecycle demands, moisture texture, and verified manure maturity before placing large farm orders.
           </p>
         </div>
 
+        <div class="row g-4 align-items-stretch mb-5">
+          <!-- Card 1: Manure Quality Inspection -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="edu-card">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/manure-quality-inspection.jpg" alt="Farmer carefully inspecting organic manure quality by hand" loading="lazy">
+                <span class="edu-card-badge">Maturity &amp; Odor Check</span>
+              </div>
+              <div class="edu-card-body">
+                <h3 class="edu-card-title">Checking Manure Maturity &amp; Quality</h3>
+                <p class="edu-card-desc">
+                  Properly matured organic manure exhibits a uniform dark-brown color, a cool core temperature (&lt;30°C), and a clean forest-floor earthy aroma with zero ammonia or rancid sour smells.
+                </p>
+                <ul class="edu-feature-list">
+                  <li><strong>Color Indicator:</strong> Uniform dark chocolate brown or black</li>
+                  <li><strong>Odor Check:</strong> Earthy and pleasant, completely free of foul stench</li>
+                  <li><strong>Heat Test:</strong> Zero reheating when placed into a moist test bucket</li>
+                </ul>
+                <div class="mt-auto pt-3 border-top border-light-subtle">
+                  <span class="text-success fw-bold small"><i class="bi bi-shield-check me-1"></i> Eliminates Root-Burn Risks</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Compost Sample Check -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="edu-card">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/compost-sample-check.jpg" alt="Agronomist checking compost sample moisture and crumb texture" loading="lazy">
+                <span class="edu-card-badge">Moisture &amp; Texture Check</span>
+              </div>
+              <div class="edu-card-body">
+                <h3 class="edu-card-title">Understanding Moisture Content &amp; Texture</h3>
+                <p class="edu-card-desc">
+                  Optimal organic manure contains 25% to 30% moisture. When compressed in hand, it should form a moist clump without dripping water droplets and crumble effortlessly when touched.
+                </p>
+                <ul class="edu-feature-list">
+                  <li><strong>Target Moisture:</strong> 25% to 30% friable living consistency</li>
+                  <li><strong>Under-moist Pitfall:</strong> Bone-dry powder leads to dormant microbes</li>
+                  <li><strong>Over-moist Pitfall:</strong> Soggy clods cause anaerobic rotting</li>
+                </ul>
+                <div class="mt-auto pt-3 border-top border-light-subtle">
+                  <span class="text-success fw-bold small"><i class="bi bi-droplet me-1"></i> Balanced Friable Consistency</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Fertilizer Preparation -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="edu-card">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/fertilizer-preparation.jpg" alt="Agricultural worker preparing organic fertilizer mixture in farm shed" loading="lazy">
+                <span class="edu-card-badge">Planning &amp; Quantity</span>
+              </div>
+              <div class="edu-card-body">
+                <h3 class="edu-card-title">Selecting Packaging &amp; Quantities</h3>
+                <p class="edu-card-desc">
+                  Plan organic inputs 3 to 4 weeks prior to basal application. Choose moisture-barrier 50kg bags for easy manual spreading or palletized jumbo tonner bags for mechanized field broadcasting.
+                </p>
+                <ul class="edu-feature-list">
+                  <li><strong>Packaging Selection:</strong> UV-stabilized woven HDPE with liners</li>
+                  <li><strong>Acreage Calculation:</strong> Baseline 3 to 5 tons per acre for orchard beds</li>
+                  <li><strong>Lead-time Planning:</strong> Order early to prevent sowing-window delays</li>
+                </ul>
+                <div class="mt-auto pt-3 border-top border-light-subtle">
+                  <span class="text-success fw-bold small"><i class="bi bi-box-seam me-1"></i> Reliable Field Logistics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Matching Crop Requirements Table -->
+        <div class="edu-card p-4">
+          <h4 class="fw-bold mb-3 text-success">
+            <i class="bi bi-diagram-2 me-2"></i> Matching Crop Nutrient Requirements with Soil Types
+          </h4>
+          <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th scope="col">Crop Category</th>
+                  <th scope="col">Nutrient Requirement Focus</th>
+                  <th scope="col">Recommended Soil Formulation</th>
+                  <th scope="col">Application Objective</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fw-bold">Vegetables &amp; Greens</td>
+                  <td>Continuous steady nitrogen &amp; high humic acids</td>
+                  <td>Loose loamy matrix rich in vermicompost &amp; leaf humus</td>
+                  <td>Rapid root branching and tender leaf harvest</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Fruit Orchards (Banana, Citrus)</td>
+                  <td>High potassium reserves &amp; deep moisture retention</td>
+                  <td>Heavy basal aged dung blended with botanical cake</td>
+                  <td>Sustained flowering retention &amp; brix fruit sweetness</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Paddy &amp; Wetland Crops</td>
+                  <td>Active microbial cycling in submerged soils</td>
+                  <td>Well-decomposed aerobic compost plowed during puddling</td>
+                  <td>Strong tillering and non-lodging stalk stability</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 4: FARM WASTE TO VALUABLE ORGANIC RESOURCES                      -->
+    <!-- ========================================================================= -->
+    <section class="py-5 edu-section-alt" id="wasteRecyclingSection">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-badge-edu">
+            <i class="bi bi-recycle"></i> Circular On-Farm Resources
+          </span>
+          <h2 class="section-title-edu display-6">
+            Turn Farm Waste into Useful Resources
+          </h2>
+          <p class="section-subtitle-edu">
+            Agricultural residues, dry leaves, and plant biomass are valuable carbon assets. Transforming them into nutrient-rich compost stops burning, preserves the carbon bank, and saves fertilizer costs.
+          </p>
+        </div>
+
+        <!-- 4-Stage Step-by-Step Visual Process -->
         <div class="row g-4">
           <!-- Stage 1 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="calendar-card">
-              <div class="calendar-img-wrap">
-                <span class="calendar-step-badge">Stage 1</span>
-                <img src="assets/images/home-2/season-stage-1.jpg" alt="Before Planting stage - soil preparation and organic manure incorporation" loading="lazy">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="process-step-card">
+              <div class="step-number-badge">1</div>
+              <div class="process-step-img">
+                <img src="assets/images/home-2/waste-stage1-collect.jpg" alt="Stage 1: Collect Organic Waste showing crop residue and dry leaf gathering" loading="lazy">
               </div>
-              <div class="p-3 d-flex flex-column flex-grow-1">
-                <h3 class="h6 fw-bold text-success mb-1">1. Before Planting</h3>
-                <h4 class="small fw-semibold mb-2">Soil preparation and organic manure incorporation.</h4>
-                <p class="text-muted small mb-0 flex-grow-1">
-                  Plow deeply with aged cattle manure 3 weeks prior to sowing. Recharges aerobic microflora, aerates compacted soil, and raises basal moisture storage.
+              <h3 class="fw-bold fs-5 mb-2">Collect Organic Waste</h3>
+              <p class="text-muted small mb-0">
+                Gather dry crop residues, fallen leaves, straw, and post-harvest biomass into designated holding zones instead of open-field burning.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="process-step-card">
+              <div class="step-number-badge">2</div>
+              <div class="process-step-img">
+                <img src="assets/images/home-2/waste-stage2-separate.jpg" alt="Stage 2: Separate Suitable Materials segregating woody and non-biodegradable trash" loading="lazy">
+              </div>
+              <h3 class="fw-bold fs-5 mb-2">Separate Suitable Materials</h3>
+              <p class="text-muted small mb-0">
+                Segregate clean biodegradable greens and browns. Remove plastic ties, non-compostable trash, and diseased plants to protect compost hygiene.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="process-step-card">
+              <div class="step-number-badge">3</div>
+              <div class="process-step-img">
+                <img src="assets/images/home-2/waste-stage3-prepare.jpg" alt="Stage 3: Prepare Compost Materials stacking carbon and nitrogen layers" loading="lazy">
+              </div>
+              <h3 class="fw-bold fs-5 mb-2">Prepare Compost Materials</h3>
+              <p class="text-muted small mb-0">
+                Shred coarse stalks to 2-inch pieces. Build layered piles with 3 parts dry brown carbon matter to 1 part fresh green nitrogen or animal manure.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stage 4 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="process-step-card">
+              <div class="step-number-badge">4</div>
+              <div class="process-step-img">
+                <img src="assets/images/home-2/waste-stage4-store.jpg" alt="Stage 4: Store for Further Composting in aerated covered windrow" loading="lazy">
+              </div>
+              <h3 class="fw-bold fs-5 mb-2">Store for Further Composting</h3>
+              <p class="text-muted small mb-0">
+                Shield the decomposing pile under breathable covers, maintain 50% moisture, and turn periodically to cultivate rich, mature dark compost.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Practical Waste Reduction Guidance -->
+        <div class="row g-4 mt-4">
+          <div class="col-lg-6">
+            <div class="edu-card p-4 h-100">
+              <h4 class="fw-bold text-success mb-3 fs-5">
+                <i class="bi bi-check2-circle me-2"></i> Materials Ideal for Farm Composting
+              </h4>
+              <ul class="edu-feature-list mb-0">
+                <li><strong>Browns (High Carbon):</strong> Rice straw, dry banana leaves, shredded pruning twigs, dried bagasse.</li>
+                <li><strong>Greens (High Nitrogen):</strong> Leguminous cover crops, green grass clippings, fresh cattle dung slurry.</li>
+                <li><strong>Biological Accelerators:</strong> Well-rotted vermicompost leachate, sour buttermilk spray, and beneficial microbial culture.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="edu-card p-4 h-100">
+              <h4 class="fw-bold text-danger mb-3 fs-5">
+                <i class="bi bi-x-circle me-2"></i> Farm Waste to Strictly Avoid in Piles
+              </h4>
+              <ul class="edu-feature-list mb-0">
+                <li><strong>Diseased Crops:</strong> Bacterial wilt stems, tobacco mosaic leaves, or virus-infected plant tissue.</li>
+                <li><strong>Persistent Weeds:</strong> Mature weed roots or seed heads of parthenium and nutsedge.</li>
+                <li><strong>Contaminants:</strong> Synthetic drip pipes, pesticide containers, treated timber, and inorganic stones.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 5: ORGANIC MANURE QUALITY AND STORAGE                            -->
+    <!-- ========================================================================= -->
+    <section class="py-5 edu-section-light" id="manureStorageSection">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-badge-edu">
+            <i class="bi bi-shield-shaded"></i> Post-Purchase Preservation
+          </span>
+          <h2 class="section-title-edu display-6">
+            Proper Storage Helps Maintain Manure Quality
+          </h2>
+          <p class="section-subtitle-edu">
+            Poor storage allows valuable nitrogen to volatize into the air and rainfall to wash away soluble bio-nutrients. Implement sound on-farm storage practices to safeguard manure vitality.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch mb-5">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="edu-card">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/storage-maturity-check.jpg" alt="Inspecting matured manure condition before warehouse stocking" loading="lazy">
+                <span class="edu-card-badge">Batch Quality Verification</span>
+              </div>
+              <div class="edu-card-body">
+                <h3 class="edu-card-title">Identify Properly Matured Manure</h3>
+                <p class="edu-card-desc">
+                  Confirm the pile is stabilized before stacking. If manure is still warm inside or emits steam, it is actively digesting and will lose nitrogen if bagged prematurely.
                 </p>
+                <ul class="edu-feature-list">
+                  <li><strong>Cool Core:</strong> Temperature remains near ambient field levels</li>
+                  <li><strong>Physical Feel:</strong> Silky and crumbly without sticky clumps</li>
+                  <li><strong>Inspection:</strong> Check packaging condition before accepting delivery</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="edu-card">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/storage-covered-shed.jpg" alt="Covered dry agricultural manure storage shed protecting inputs from rain" loading="lazy">
+                <span class="edu-card-badge">Environmental Protection</span>
+              </div>
+              <div class="edu-card-body">
+                <h3 class="edu-card-title">Protecting from Rainfall &amp; Moisture</h3>
+                <p class="edu-card-desc">
+                  Direct rain leaches water-soluble potassium and nitrates into the soil beneath your shed. Always store under dry, covered roofs or heavy-gauge waterproof tarpaulins.
+                </p>
+                <ul class="edu-feature-list">
+                  <li><strong>Roofing:</strong> Elevated covered shed with cross-ventilation</li>
+                  <li><strong>Avoid Moisture:</strong> Elevate bags on wooden pallets off bare ground</li>
+                  <li><strong>Rain Defense:</strong> Secure durable UV tarps over temporary outdoor heaps</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="edu-card">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/storage-properly-packed.jpg" alt="Properly stacked and labeled organic manure bags with FIFO system" loading="lazy">
+                <span class="edu-card-badge">Warehouse Management</span>
+              </div>
+              <div class="edu-card-body">
+                <h3 class="edu-card-title">Using Suitable Bags &amp; FIFO Rotation</h3>
+                <p class="edu-card-desc">
+                  Store manure in breathable woven sacks with protective inner liners. Follow First-In, First-Out (FIFO) stock rotation so earlier cured batches are applied first.
+                </p>
+                <ul class="edu-feature-list">
+                  <li><strong>Bagging Standard:</strong> High-density poly bags free of punctures</li>
+                  <li><strong>FIFO Method:</strong> Label shipment date; use older lots first</li>
+                  <li><strong>Clean Floor:</strong> Keep storage floors dry, cemented, and rodent-free</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Essential Storage Rules -->
+        <div class="row g-3">
+          <div class="col-md-3">
+            <div class="p-3 rounded-3 edu-card text-center">
+              <div class="fs-3 text-success mb-2"><i class="bi bi-umbrella-fill"></i></div>
+              <h5 class="fw-bold fs-6">Rain Shielding</h5>
+              <p class="small text-muted mb-0">Never allow rainwater to soak stacked fertilizer sacks.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-3 rounded-3 edu-card text-center">
+              <div class="fs-3 text-success mb-2"><i class="bi bi-wind"></i></div>
+              <h5 class="fw-bold fs-6">Air Circulation</h5>
+              <p class="small text-muted mb-0">Ensure continuous ventilation to prevent mold condensation.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-3 rounded-3 edu-card text-center">
+              <div class="fs-3 text-success mb-2"><i class="bi bi-stack"></i></div>
+              <h5 class="fw-bold fs-6">Stack Height</h5>
+              <p class="small text-muted mb-0">Limit pallet stacks to 8 bags high to prevent compaction.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-3 rounded-3 edu-card text-center">
+              <div class="fs-3 text-success mb-2"><i class="bi bi-arrow-repeat"></i></div>
+              <h5 class="fw-bold fs-6">FIFO Rotation</h5>
+              <p class="small text-muted mb-0">Cycle inventory systematically to prevent bag degradation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 6: SEASONAL FARM PREPARATION GUIDE                               -->
+    <!-- ========================================================================= -->
+    <section class="py-5 edu-section-alt" id="seasonalTimelineSection">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-badge-edu">
+            <i class="bi bi-calendar3-range"></i> Seasonal Management Framework
+          </span>
+          <h2 class="section-title-edu display-6">
+            Prepare Your Farm for Every Growing Season
+          </h2>
+          <p class="section-subtitle-edu">
+            Sustainable cultivation relies on planned field operations. This five-stage seasonal framework guides you from soil testing and land prep to post-harvest nutrient replenishment.
+          </p>
+        </div>
+
+        <!-- 5-Stage Seasonal Planning Timeline -->
+        <div class="row g-4 mb-5">
+          <!-- Stage 1 -->
+          <div class="col-12 col-md-6 col-lg">
+            <div class="seasonal-phase-item">
+              <span class="phase-pill">Stage 01</span>
+              <h4 class="fw-bold fs-5 mb-2">Before Cultivation</h4>
+              <p class="text-muted small mb-3">
+                Conduct pre-cultivation soil assessment, test baseline pH and carbon levels, review preceding crop yields, and estimate organic input quantities.
+              </p>
+              <div class="mt-auto pt-2 border-top border-light-subtle small text-success fw-semibold">
+                <i class="bi bi-clipboard2-check me-1"></i> Diagnostic Baseline
               </div>
             </div>
           </div>
 
           <!-- Stage 2 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="calendar-card">
-              <div class="calendar-img-wrap">
-                <span class="calendar-step-badge">Stage 2</span>
-                <img src="assets/images/home-2/season-stage-2.jpg" alt="Early Growth stage - support healthy root establishment" loading="lazy">
-              </div>
-              <div class="p-3 d-flex flex-column flex-grow-1">
-                <h3 class="h6 fw-bold text-success mb-1">2. Early Growth</h3>
-                <h4 class="small fw-semibold mb-2">Support healthy root establishment.</h4>
-                <p class="text-muted small mb-0 flex-grow-1">
-                  Apply enriched vermicompost mixed with neem cake 15–20 days post-emergence. Stimulates lateral root branching and safeguards young stems.
-                </p>
+          <div class="col-12 col-md-6 col-lg">
+            <div class="seasonal-phase-item">
+              <span class="phase-pill">Stage 02</span>
+              <h4 class="fw-bold fs-5 mb-2">Land Preparation</h4>
+              <p class="text-muted small mb-3">
+                Deep-till compacted hardpan layers, harrow the field, and broadcast basal aged cattle manure 15 to 20 days prior to planting for microbial integration.
+              </p>
+              <div class="mt-auto pt-2 border-top border-light-subtle small text-success fw-semibold">
+                <i class="bi bi-gear-wide-connected me-1"></i> Aeration &amp; Basal
               </div>
             </div>
           </div>
 
           <!-- Stage 3 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="calendar-card">
-              <div class="calendar-img-wrap">
-                <span class="calendar-step-badge">Stage 3</span>
-                <img src="assets/images/home-2/season-stage-3.jpg" alt="Vegetative Stage - monitor crop growth and soil nutrition" loading="lazy">
-              </div>
-              <div class="p-3 d-flex flex-column flex-grow-1">
-                <h3 class="h6 fw-bold text-success mb-1">3. Vegetative Stage</h3>
-                <h4 class="small fw-semibold mb-2">Monitor crop growth and soil nutrition.</h4>
-                <p class="text-muted small mb-0 flex-grow-1">
-                  Side-dress with matured compost mulch. Buffers rhizosphere temperature during intense daytime heat and ensures sustained organic nitrogen uptake.
-                </p>
+          <div class="col-12 col-md-6 col-lg">
+            <div class="seasonal-phase-item">
+              <span class="phase-pill">Stage 03</span>
+              <h4 class="fw-bold fs-5 mb-2">Sowing Stage</h4>
+              <p class="text-muted small mb-3">
+                Apply targeted vermicompost bands along planting furrows. Ensure seeds or seedling roots make direct contact with enriched, non-burning humus.
+              </p>
+              <div class="mt-auto pt-2 border-top border-light-subtle small text-success fw-semibold">
+                <i class="bi bi-sprout me-1"></i> Gentle Seedbed
               </div>
             </div>
           </div>
 
           <!-- Stage 4 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="calendar-card">
-              <div class="calendar-img-wrap">
-                <span class="calendar-step-badge">Stage 4</span>
-                <img src="assets/images/home-2/season-stage-4.jpg" alt="Pre-Harvest stage - follow crop-specific nutrient management guidance" loading="lazy">
+          <div class="col-12 col-md-6 col-lg">
+            <div class="seasonal-phase-item">
+              <span class="phase-pill">Stage 04</span>
+              <h4 class="fw-bold fs-5 mb-2">Growing Stage</h4>
+              <p class="text-muted small mb-3">
+                Monitor soil moisture regularly, dress with neem cake to deter root pests, spread organic leaf mulch around rows, and maintain detailed field logs.
+              </p>
+              <div class="mt-auto pt-2 border-top border-light-subtle small text-success fw-semibold">
+                <i class="bi bi-activity me-1"></i> Active Crop Care
               </div>
-              <div class="p-3 d-flex flex-column flex-grow-1">
-                <h3 class="h6 fw-bold text-success mb-1">4. Pre-Harvest</h3>
-                <h4 class="small fw-semibold mb-2">Follow crop-specific nutrient management guidance.</h4>
-                <p class="text-muted small mb-0 flex-grow-1">
-                  Supplement with bio-potash and organic trace minerals to maximize grain weight, fruit brix levels, uniform skin coloration, and shelf stability.
-                </p>
+            </div>
+          </div>
+
+          <!-- Stage 5 -->
+          <div class="col-12 col-md-6 col-lg">
+            <div class="seasonal-phase-item">
+              <span class="phase-pill">Stage 05</span>
+              <h4 class="fw-bold fs-5 mb-2">Post-Harvest Preparation</h4>
+              <p class="text-muted small mb-3">
+                Chop residual biomass back into the topsoil, sow green-manure cover crops like sesbania or sunn hemp, and test soil condition for the following cycle.
+              </p>
+              <div class="mt-auto pt-2 border-top border-light-subtle small text-success fw-semibold">
+                <i class="bi bi-arrow-repeat me-1"></i> Nutrient Recharge
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seasonal Preparation Photography Highlight -->
+        <div class="edu-card overflow-hidden">
+          <div class="row g-0 align-items-center">
+            <div class="col-lg-6">
+              <img src="assets/images/home-2/seasonal-field-preparation.jpg" alt="Agricultural field preparation before seasonal sowing" class="img-fluid w-100 h-100" style="object-fit: cover; min-height: 280px;" loading="lazy">
+            </div>
+            <div class="col-lg-6 p-4 p-lg-5">
+              <h3 class="fw-bold mb-3 text-success">Why Seasonal Field Record-Keeping Matters</h3>
+              <p class="text-muted mb-4">
+                Maintaining a simple field log of fertilizer application dates, quantities used per acre, weather patterns, and crop yields helps you fine-tune your organic budget every season. Over 3 to 4 years, these records reveal which plots have built optimal organic carbon and require fewer external inputs.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="#farmerChecklistSection" class="btn btn-success rounded-pill px-4 py-2 fw-semibold">
+                  <i class="bi bi-list-check me-1"></i> View Farm Checklist
+                </a>
+                <a href="contact.html" class="btn btn-outline-success rounded-pill px-4 py-2 fw-semibold">
+                  <i class="bi bi-telephone me-1"></i> Talk to Soil Specialist
+                </a>
               </div>
             </div>
           </div>
@@ -1045,59 +1427,87 @@
     </section>
 
     <!-- ========================================================================= -->
-    <!-- SECTION 6 – BULK ORDER PLANNING                                           -->
+    <!-- SECTION 7: FARMER'S ORGANIC FARMING CHECKLIST                             -->
     <!-- ========================================================================= -->
-    <section class="py-5" id="bulkSupplySection">
+    <section class="py-5 edu-section-light" id="farmerChecklistSection">
       <div class="container py-4">
-        <div class="row g-4 align-items-center">
+        <div class="row align-items-center g-5">
           <div class="col-lg-6">
-            <div class="section-badge">
-              <i class="bi bi-truck"></i> COMMERCIAL FARM SUPPLY
-            </div>
-            <h2 class="section-title">Planning Organic Fertilizer for Large-Scale Cultivation?</h2>
-            <p class="text-muted mb-4" style="line-height: 1.7; font-size: 1.05rem;">
-              Plan your organic manure requirements for farms, plantations, and agricultural operations. Contact our team for bulk quantity enquiries and wholesale quotations.
+            <span class="section-badge-edu">
+              <i class="bi bi-check-all"></i> Pre-Sowing Audit
+            </span>
+            <h2 class="section-title-edu display-6">
+              Plan Smart. Farm Better.
+            </h2>
+            <p class="text-muted mb-4">
+              Before commencing field work or placing manure orders, run through this six-point agricultural readiness checklist to guarantee maximum efficiency and healthy yields.
             </p>
 
-            <div class="row g-3 mb-4">
-              <div class="col-sm-6">
-                <div class="bulk-feature-item">
-                  <i class="bi bi-box-seam-fill text-success fs-5"></i>
-                  <span>1 Ton to 100 Tons Supply</span>
+            <div class="checklist-container-card">
+              <!-- Item 1 -->
+              <div class="checklist-row">
+                <div class="check-icon-bubble"><i class="bi bi-check-lg"></i></div>
+                <div>
+                  <h5 class="fw-bold fs-6 mb-1">Have you checked your soil condition?</h5>
+                  <p class="small text-muted mb-0">Assess texture (sandy, clay, or loamy), moisture levels, and compaction depth before tillage.</p>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <div class="bulk-feature-item">
-                  <i class="bi bi-tags-fill text-success fs-5"></i>
-                  <span>Wholesale Enquiries</span>
+
+              <!-- Item 2 -->
+              <div class="checklist-row">
+                <div class="check-icon-bubble"><i class="bi bi-check-lg"></i></div>
+                <div>
+                  <h5 class="fw-bold fs-6 mb-1">Do you know your crop requirements?</h5>
+                  <p class="small text-muted mb-0">Identify specific nitrogen, phosphorus, and potassium needs across each growth phase.</p>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <div class="bulk-feature-item">
-                  <i class="bi bi-sliders text-success fs-5"></i>
-                  <span>Customized Quantity Requests</span>
+
+              <!-- Item 3 -->
+              <div class="checklist-row">
+                <div class="check-icon-bubble"><i class="bi bi-check-lg"></i></div>
+                <div>
+                  <h5 class="fw-bold fs-6 mb-1">Have you reviewed your soil test report?</h5>
+                  <p class="small text-muted mb-0">Check current pH, organic carbon percentage, and salinity levels to guide input dosages.</p>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <div class="bulk-feature-item">
-                  <i class="bi bi-geo-alt-fill text-success fs-5"></i>
-                  <span>Delivery Coordination</span>
+
+              <!-- Item 4 -->
+              <div class="checklist-row">
+                <div class="check-icon-bubble"><i class="bi bi-check-lg"></i></div>
+                <div>
+                  <h5 class="fw-bold fs-6 mb-1">Have you planned your organic input quantity?</h5>
+                  <p class="small text-muted mb-0">Calculate accurate tonnages for basal dressing and reserve bags for subsequent vegetative stages.</p>
+                </div>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="checklist-row">
+                <div class="check-icon-bubble"><i class="bi bi-check-lg"></i></div>
+                <div>
+                  <h5 class="fw-bold fs-6 mb-1">Is your manure storage area ready?</h5>
+                  <p class="small text-muted mb-0">Verify that covered sheds, raised pallet platforms, and waterproof tarpaulins are prepared.</p>
+                </div>
+              </div>
+
+              <!-- Item 6 -->
+              <div class="checklist-row mb-0">
+                <div class="check-icon-bubble"><i class="bi bi-check-lg"></i></div>
+                <div>
+                  <h5 class="fw-bold fs-6 mb-1">Have you planned your seasonal farm activities?</h5>
+                  <p class="small text-muted mb-0">Schedule plowing, basal blending, sowing dates, and irrigation cycles ahead of time.</p>
                 </div>
               </div>
             </div>
-
-            <a href="contact.html?type=bulk#orderForm" class="btn btn-success btn-lg rounded-pill px-4 py-3 fw-bold shadow-sm">
-              <i class="bi bi-file-earmark-text-fill me-2"></i> Request Bulk Quotation
-            </a>
           </div>
 
           <div class="col-lg-6">
-            <div class="position-relative rounded-4 overflow-hidden shadow-lg border">
-              <img src="assets/images/home-2/bulk-warehouse-bags.jpg" alt="Neatly stacked 50 KG organic vermicompost and manure bags inside a large fertilizer storage warehouse, ready for bulk agricultural dispatch" class="img-fluid w-100" style="min-height: 380px; object-fit: cover;" loading="lazy">
-              <div class="position-absolute bottom-0 start-0 end-0 p-3 bg-dark bg-opacity-75 text-white">
-                <div class="d-flex align-items-center justify-content-between">
-                  <small class="fw-semibold"><i class="bi bi-shield-check text-success me-1"></i> Factory-Sealed 50kg Heavy-Duty Bags</small>
-                  <small class="text-warning-emphasis">Daily Dispatch Ready</small>
+            <div class="edu-card overflow-hidden">
+              <div class="position-relative">
+                <img src="assets/images/home-2/farmer-planning-checklist.jpg" alt="Farmer in field reviewing crop planning clipboard checklist" class="img-fluid w-100" style="object-fit: cover; max-height: 480px;" loading="lazy">
+                <div class="position-absolute bottom-0 start-0 end-0 p-4" style="background: linear-gradient(to top, rgba(14, 30, 20, 0.95), transparent);">
+                  <span class="badge bg-success rounded-pill px-3 py-1 mb-2">Field-Ready Farm Checklist</span>
+                  <h4 class="text-white fw-bold mb-1">Cultivate with Complete Confidence</h4>
+                  <p class="text-white-50 small mb-0">Structured seasonal planning prevents unexpected nutrient shortfalls and ensures timely harvest cycles.</p>
                 </div>
               </div>
             </div>
@@ -1107,106 +1517,110 @@
     </section>
 
     <!-- ========================================================================= -->
-    <!-- SECTION 7 – FREQUENTLY ASKED QUESTIONS                                    -->
+    <!-- SECTION 8: FREQUENTLY ASKED QUESTIONS                                     -->
     <!-- ========================================================================= -->
-    <section class="py-5" id="faqSection">
+    <section class="py-5 edu-section-alt" id="faqSection">
       <div class="container py-4">
         <div class="text-center mb-5">
-          <div class="section-badge">
-            <i class="bi bi-question-circle"></i> Practical Knowledge
-          </div>
-          <h2 class="section-title">Frequently Asked Questions About Organic Fertilizers</h2>
-          <p class="section-subtitle">
-            Find answers to common questions about selecting, combining, and applying certified organic fertilizers for healthy crops.
+          <span class="section-badge-edu">
+            <i class="bi bi-question-circle"></i> Practical Solutions
+          </span>
+          <h2 class="section-title-edu display-6">
+            Common Questions About Organic Farm Preparation
+          </h2>
+          <p class="section-subtitle-edu">
+            Straightforward answers to the most common questions farmers ask regarding soil assessment, manure quality, on-farm composting, and input storage.
           </p>
         </div>
 
         <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="accordion faq-farm" id="faqAccordionHome2">
-              <!-- Question 1 -->
+          <div class="col-lg-9">
+            <div class="accordion accordion-edu" id="eduFaqAccordion">
+              
+              <!-- FAQ 1 -->
               <div class="accordion-item">
-                <h3 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    1. What is the difference between vermicompost and cow dung manure?
+                <h3 class="accordion-header" id="headingFaq1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq1" aria-expanded="true" aria-controls="collapseFaq1">
+                    Why is soil testing important before cultivation?
                   </button>
                 </h3>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordionHome2">
+                <div id="collapseFaq1" class="accordion-collapse collapse show" aria-labelledby="headingFaq1" data-bs-parent="#eduFaqAccordion">
                   <div class="accordion-body">
-                    Aged cow dung manure is a bulk organic soil conditioner rich in organic carbon and fibrous matter that enhances water holding capacity and soil structure over time. Vermicompost is an earthworm-processed biological goldmine teeming with active beneficial microorganisms, plant-growth enzymes, and instantly bio-available nitrogen, phosphorus, and potassium. Combining both provides long-term organic carbon and immediate plant nutrition.
+                    Soil testing provides an accurate inventory of native soil pH, available nitrogen, phosphorus, potassium, organic carbon, and electrical conductivity. Without testing, cultivators risk under-applying critical nutrients or wasting budget on elements already abundant in their soil. Testing allows you to tailor your organic fertilizer plan to exact crop needs.
                   </div>
                 </div>
               </div>
 
-              <!-- Question 2 -->
+              <!-- FAQ 2 -->
               <div class="accordion-item">
-                <h3 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    2. How do I select the right organic fertilizer for my crop?
+                <h3 class="accordion-header" id="headingFaq2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq2" aria-expanded="false" aria-controls="collapseFaq2">
+                    How can I identify different soil types?
                   </button>
                 </h3>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordionHome2">
+                <div id="collapseFaq2" class="accordion-collapse collapse" aria-labelledby="headingFaq2" data-bs-parent="#eduFaqAccordion">
                   <div class="accordion-body">
-                    Crop selection depends on nutrient uptake patterns and rooting depth. For heavy feeders like banana and sugarcane, a rich base of cured cow dung complemented with high-potash compost is optimal. For rapid-cycle crops such as vegetables and chili, quick-acting enriched vermicompost with neem cake delivers the necessary nitrogen and pathogen resistance. Our agronomists can guide you based on your soil test report.
+                    You can determine your primary soil type in the field using texture and percolation tests. <strong>Sandy soil</strong> feels gritty, drains rapidly, and crumbles immediately when squeezed into a ball. <strong>Clay soil</strong> feels sticky and smooth when wet, rolls into flexible ribbons longer than 5cm, and holds water for extended periods. <strong>Loamy soil</strong> crumbles softly, feels slightly spongy, and holds balanced moisture without becoming waterlogged.
                   </div>
                 </div>
               </div>
 
-              <!-- Question 3 -->
+              <!-- FAQ 3 -->
               <div class="accordion-item">
-                <h3 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    3. Can I use neem cake with vermicompost?
+                <h3 class="accordion-header" id="headingFaq3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq3" aria-expanded="false" aria-controls="collapseFaq3">
+                    What should I check before purchasing organic manure?
                   </button>
                 </h3>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordionHome2">
+                <div id="collapseFaq3" class="accordion-collapse collapse" aria-labelledby="headingFaq3" data-bs-parent="#eduFaqAccordion">
                   <div class="accordion-body">
-                    Yes, neem cake and vermicompost work together synergistically! Blending 10% to 15% neem cake powder into vermicompost suppresses root-knot nematodes and harmful soil pathogens while retarding nitrogen nitrification, allowing slow and continuous absorption by plant roots.
+                    Always verify four key physical criteria: <strong>Maturity</strong> (the pile must be cool, odorless, and dark brown or black), <strong>Moisture content</strong> (ideally 25% to 30%, crumbly rather than muddy or bone-dry), <strong>Purity</strong> (free of plastic debris, stones, weed seeds, or industrial contaminants), and <strong>Packaging integrity</strong> (packed in durable woven sacks with intact moisture-barrier liners).
                   </div>
                 </div>
               </div>
 
-              <!-- Question 4 -->
+              <!-- FAQ 4 -->
               <div class="accordion-item">
-                <h3 class="accordion-header" id="headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    4. How much organic manure is required per acre?
+                <h3 class="accordion-header" id="headingFaq4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq4" aria-expanded="false" aria-controls="collapseFaq4">
+                    How should organic manure be stored?
                   </button>
                 </h3>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordionHome2">
+                <div id="collapseFaq4" class="accordion-collapse collapse" aria-labelledby="headingFaq4" data-bs-parent="#eduFaqAccordion">
                   <div class="accordion-body">
-                    Typical baseload application ranges from 3.5 to 10 metric tons per acre depending on crop variety and soil depletion. Field crops like paddy usually require 5 tons of farmyard manure, whereas perennial orchards and commercial banana plantations benefit from 8 to 10 tons. Use our Smart Farm Dosage Calculator above for instant acreage estimations.
+                    Store organic manure inside a dry, well-ventilated shed with a sealed roof to protect against direct rainfall and solar overheating. Stack bags on elevated wooden pallets 10–15cm off bare ground to prevent moisture seepage. If storing bulk heaps outdoors, cover them with breathable heavy-duty tarpaulins, build drainage channels around the base, and use a First-In, First-Out (FIFO) rotation.
                   </div>
                 </div>
               </div>
 
-              <!-- Question 5 -->
+              <!-- FAQ 5 -->
               <div class="accordion-item">
-                <h3 class="accordion-header" id="headingFive">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    5. Do you provide bulk fertilizer supply?
+                <h3 class="accordion-header" id="headingFaq5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq5" aria-expanded="false" aria-controls="collapseFaq5">
+                    Can agricultural residues be used for composting?
                   </button>
                 </h3>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordionHome2">
+                <div id="collapseFaq5" class="accordion-collapse collapse" aria-labelledby="headingFaq5" data-bs-parent="#eduFaqAccordion">
                   <div class="accordion-body">
-                    Yes, TerraPure Organics specializes in commercial farm supply ranging from 1 Ton up to 100+ Tons per dispatch. We support 50 kg laminated moisture-proof bags, 1,000 kg Jumbo FIBC bags, and loose direct tipper truck loads across all agricultural districts.
+                    Yes. Crop residues such as paddy straw, banana leaf trimmings, sugarcane bagasse, and vegetable wastes are ideal raw materials for composting. Shred tough residues to 2–3 inches, mix them with green plant waste and cow dung slurry at a 3:1 brown-to-green ratio, maintain moderate moisture, and turn periodically to convert crop residues into rich, weed-free compost.
                   </div>
                 </div>
               </div>
 
-              <!-- Question 6 -->
+              <!-- FAQ 6 -->
               <div class="accordion-item">
-                <h3 class="accordion-header" id="headingSix">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                    6. Are product quality certificates available?
+                <h3 class="accordion-header" id="headingFaq6">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq6" aria-expanded="false" aria-controls="collapseFaq6">
+                    How often should farmers review their soil condition?
                   </button>
                 </h3>
-                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordionHome2">
+                <div id="collapseFaq6" class="accordion-collapse collapse" aria-labelledby="headingFaq6" data-bs-parent="#eduFaqAccordion">
                   <div class="accordion-body">
-                    Absolutely. Every production batch of vermicompost and aged cow dung manure undergoes rigorous NABL-accredited laboratory testing for C:N ratio (under 20:1), moisture content (under 25%), weed-seed sterility, and zero synthetic or heavy metal contamination. Lab test certificates are provided with every wholesale dispatch.
+                    Farmers should conduct a formal laboratory soil test at least once every 1 to 2 years, ideally 4 to 6 weeks before major sowing or planting seasons. In addition, cultivators should observe in-field biological indicators throughout the season: monitor soil moisture retention, earthworm activity, and root penetration depth after every major harvest.
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -1214,25 +1628,30 @@
     </section>
 
     <!-- ========================================================================= -->
-    <!-- SECTION 8 – FINAL CTA                                                     -->
+    <!-- SECTION 9: FINAL CALL TO ACTION                                           -->
     <!-- ========================================================================= -->
-    <section class="py-3">
-      <div class="container">
-        <div class="final-cta-section text-center p-4 p-md-5">
-          <div class="row justify-content-center">
-            <div class="col-lg-9">
+    <section class="py-5 edu-section-light" id="finalCtaSection">
+      <div class="container py-4">
+        <div class="cta-banner-edu">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <span class="badge bg-light text-dark rounded-pill px-3 py-1 mb-3 fw-bold">
+                <i class="bi bi-patch-check-fill text-success me-1"></i> TerraPure Agricultural Consultation
+              </span>
               <h2 class="display-6 fw-bold mb-3 text-white">
-                Grow Better with Smarter Organic Farming.
+                Planning Your Next Cultivation Season?
               </h2>
-              <p class="lead mb-4 text-white-50" style="max-width: 650px; margin: 0 auto;">
-                Make informed fertilizer choices, plan your crop nutrition, and build healthier agricultural soil with TerraPure Organics.
+              <p class="lead text-white-50 mb-0">
+                Connect with our experienced agricultural advisors for personalized soil preparation guidance, certified bulk organic manure supplies, and seasonal field consultation tailored to your farm.
               </p>
-              <div class="d-flex flex-wrap justify-content-center gap-3 pt-2">
-                <a href="contact.html" class="btn btn-success btn-lg rounded-pill px-4 py-3 fw-bold">
-                  <i class="bi bi-envelope-fill me-2"></i> Contact Our Team
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <div class="d-flex flex-column flex-sm-row flex-lg-column gap-3 justify-content-lg-end">
+                <a href="contact.html" class="btn btn-light btn-lg rounded-pill px-4 py-3 fw-bold text-success shadow">
+                  <i class="bi bi-telephone-fill me-2"></i> Contact Soil Specialists
                 </a>
-                <a href="products.html" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 fw-bold">
-                  <i class="bi bi-box-seam me-2"></i> Explore Products
+                <a href="contact.html#bulkOrderForm" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 fw-semibold">
+                  <i class="bi bi-truck me-2"></i> Request Bulk Consultation
                 </a>
               </div>
             </div>
@@ -1240,225 +1659,106 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- ========================================================================= -->
   <!-- FOOTER                                                                    -->
   <!-- ========================================================================= -->
-  <footer class="footer-farm">
+  <footer class="footer-custom">
     <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-4">
-          <a class="navbar-brand-logo mb-3 d-inline-flex" href="index.html">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
             <div class="brand-icon-box">
               <i class="bi bi-flower1"></i>
             </div>
             <div class="brand-text-block">
               <span class="brand-main-title">TerraPure</span>
-              <span class="brand-sub-title">ORGANICS & MANURE</span>
+              <span class="brand-sub-title">ORGANICS &amp; MANURE</span>
             </div>
-          </a>
-          <p class="footer-desc">
-            Supplying premium aged cow dung manure, biologically active vermicompost, and enriched organic fertilizers. Committed to restoring living soil ecosystems and sustainable harvests.
+          </div>
+          <p class="footer-tagline">
+            Empowering modern agriculture with 100% natural, laboratory-tested organic manures and bio-fertilizers. Certified sustainable solutions for healthier soils and abundant harvests.
           </p>
-          <div class="footer-social-links">
-            <a href="#" class="social-icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="social-icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="social-icon-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-            <a href="#" class="social-icon-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <div class="footer-badges">
+            <span class="cert-pill"><i class="bi bi-patch-check-fill"></i> ISO Certified</span>
+            <span class="cert-pill"><i class="bi bi-check-circle-fill"></i> 100% Organic</span>
+            <span class="cert-pill"><i class="bi bi-truck"></i> Bulk Pan-India</span>
           </div>
         </div>
 
-        <div class="col-6 col-lg-2">
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="home-2.html">Smart Crop Solutions</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="products.html">Products</a></li>
-          </ul>
-        </div>
-
-        <div class="col-6 col-lg-2">
-          <h4 class="footer-title">Resources</h4>
-          <ul class="footer-nav-list">
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1: Soil Health</a></li>
+            <li><a href="home-2.html">Home 2: Farm Guide</a></li>
+            <li><a href="about.html">About TerraPure</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="products.html">Organic Products</a></li>
             <li><a href="usage-guide.html">Usage Guide</a></li>
-            <li><a href="blog.html">Blog & Agronomy</a></li>
+            <li><a href="blog.html">Farming Blog</a></li>
             <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="contact.html?type=bulk">Wholesale Supply</a></li>
-            <li><a href="#calculatorSection">Dosage Calculator</a></li>
           </ul>
         </div>
 
-        <div class="col-lg-4">
-          <h4 class="footer-title">Contact Agronomy Hub</h4>
-          <ul class="footer-contact-list">
-            <li><i class="bi bi-geo-alt-fill"></i> SF No. 428/2, Organic Agro Corridor, Pollachi Main Road, Coimbatore, Tamil Nadu - 642001</li>
-            <li><i class="bi bi-telephone-fill"></i> <a href="tel:+919876543210">+91 98765 43210</a> / <a href="tel:+919443210987">+91 94432 10987</a></li>
-            <li><i class="bi bi-envelope-fill"></i> <a href="mailto:contact@terrapureorganics.com">contact@terrapureorganics.com</a></li>
-            <li><i class="bi bi-clock-fill"></i> Mon - Sat: 8:00 AM - 6:30 PM (Dispatch Active)</li>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-col-title">Educational Resources</h4>
+          <ul class="footer-links">
+            <li><a href="home-2.html#soilAssessmentSection">Soil Physical Typology</a></li>
+            <li><a href="home-2.html#soilTestingSection">Soil Testing &amp; Diagnostics</a></li>
+            <li><a href="home-2.html#inputDecisionSection">Input Quality Assessment</a></li>
+            <li><a href="home-2.html#wasteRecyclingSection">On-Farm Waste Composting</a></li>
+            <li><a href="home-2.html#manureStorageSection">Manure Storage Guidelines</a></li>
+            <li><a href="home-2.html#seasonalTimelineSection">Seasonal Planning Guide</a></li>
+            <li><a href="home-2.html#farmerChecklistSection">Farmer's Audit Checklist</a></li>
           </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-col-title">Direct Inquiries</h4>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill text-success"></i>
+            <span>Survey No. 42/B, Green Agro Corridor, Madurai, Tamil Nadu - 625020</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill text-success"></i>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope-fill text-success"></i>
+            <a href="mailto:support@terrapureorganics.com">support@terrapureorganics.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-clock-fill text-success"></i>
+            <span>Mon - Sat: 8:00 AM - 6:30 PM</span>
+          </div>
         </div>
       </div>
 
-      <div class="footer-bottom text-center">
-        <p class="mb-0">&copy; 2026 TerraPure Organics. All rights reserved. Certified Organic Soil Nutrients.</p>
+      <div class="footer-bottom">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            <p class="copyright-text mb-0">
+              &copy; 2026 TerraPure Organics &amp; Manure Supplier. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <ul class="footer-legal-links mb-0">
+              <li><a href="contact.html">Privacy Policy</a></li>
+              <li><a href="contact.html">Terms of Supply</a></li>
+              <li><a href="contact.html#bulkOrderForm">Bulk Inquiries</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Core JavaScript Libraries -->
+  <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/theme.js?v=6.0"></script>
-  <script src="assets/js/navigation.js?v=2.1"></script>
-  <script src="assets/js/contact-form.js?v=2.1"></script>
-  <script src="assets/js/main.js?v=2.1"></script>
 
-  <!-- Interactive Smart Farm Dosage Calculator Logic -->
-  <script>
-    (function() {
-      'use strict';
-
-      // Agronomist-verified dosage rates per acre
-      const cropDosages = {
-        vegetables: {
-          name: 'Vegetables (Tomato, Chili, Greens)',
-          contactValue: 'Vegetables',
-          cowDungTonsPerAcre: 6.0,
-          vermiKgPerAcre: 750,
-          neemKgPerAcre: 200
-        },
-        rice: {
-          name: 'Rice / Paddy Field',
-          contactValue: 'Rice',
-          cowDungTonsPerAcre: 5.0,
-          vermiKgPerAcre: 500,
-          neemKgPerAcre: 150
-        },
-        banana: {
-          name: 'Banana Plantation',
-          contactValue: 'Banana',
-          cowDungTonsPerAcre: 10.0,
-          vermiKgPerAcre: 1000,
-          neemKgPerAcre: 300
-        },
-        coconut: {
-          name: 'Coconut Orchard',
-          contactValue: 'Coconut',
-          cowDungTonsPerAcre: 4.0,
-          vermiKgPerAcre: 400,
-          neemKgPerAcre: 150
-        },
-        sugarcane: {
-          name: 'Commercial Sugarcane',
-          contactValue: 'Sugarcane',
-          cowDungTonsPerAcre: 8.0,
-          vermiKgPerAcre: 800,
-          neemKgPerAcre: 250
-        },
-        fruits: {
-          name: 'Fruit Orchards (Mango, Citrus)',
-          contactValue: 'Fruits',
-          cowDungTonsPerAcre: 7.0,
-          vermiKgPerAcre: 700,
-          neemKgPerAcre: 250
-        }
-      };
-
-      const cropSelect = document.getElementById('calcCropType');
-      const acreageInput = document.getElementById('calcAcreage');
-      const cropBadge = document.getElementById('calcCropBadge');
-      const resCowDung = document.getElementById('resCowDung');
-      const resVermicompost = document.getElementById('resVermicompost');
-      const resNeemCake = document.getElementById('resNeemCake');
-      const orderBtn = document.getElementById('btnOrderCalculated');
-
-      function calculate() {
-        if (!cropSelect || !acreageInput) return;
-
-        const cropKey = cropSelect.value;
-        const profile = cropDosages[cropKey] || cropDosages.vegetables;
-        
-        let acres = parseFloat(acreageInput.value);
-        if (isNaN(acres) || acres <= 0) {
-          acres = 1;
-        }
-
-        // Calculations
-        const totalCowDungTons = (profile.cowDungTonsPerAcre * acres).toFixed(1);
-        const totalVermiKg = Math.round(profile.vermiKgPerAcre * acres);
-        const vermiBags = Math.ceil(totalVermiKg / 50);
-        const totalNeemKg = Math.round(profile.neemKgPerAcre * acres);
-        const neemBags = Math.ceil(totalNeemKg / 50);
-
-        // Update UI
-        if (cropBadge) {
-          cropBadge.textContent = profile.name.split(' ')[0];
-        }
-        if (resCowDung) {
-          resCowDung.textContent = `${totalCowDungTons} Metric Tons`;
-        }
-        if (resVermicompost) {
-          resVermicompost.textContent = `${totalVermiKg.toLocaleString()} Kg (${vermiBags} Bags of 50kg)`;
-        }
-        if (resNeemCake) {
-          resNeemCake.textContent = `${totalNeemKg.toLocaleString()} Kg (${neemBags} Bags of 50kg)`;
-        }
-      }
-
-      // Quick trigger from crop cards
-      window.setCalculatorCrop = function(cropKey) {
-        if (cropSelect && cropDosages[cropKey]) {
-          cropSelect.value = cropKey;
-          calculate();
-          const calcSec = document.getElementById('calculatorSection');
-          if (calcSec) {
-            calcSec.scrollIntoView({ behavior: 'smooth' });
-          }
-        }
-      };
-
-      // Handle "Order This Estimated Quantity" Button
-      if (orderBtn) {
-        orderBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          const cropKey = cropSelect.value;
-          const profile = cropDosages[cropKey] || cropDosages.vegetables;
-          let acres = parseFloat(acreageInput.value) || 1;
-          if (acres <= 0) acres = 1;
-
-          const totalCowDungTons = (profile.cowDungTonsPerAcre * acres).toFixed(1);
-          const totalVermiKg = Math.round(profile.vermiKgPerAcre * acres);
-          const vermiBags = Math.ceil(totalVermiKg / 50);
-          const totalNeemKg = Math.round(profile.neemKgPerAcre * acres);
-          const neemBags = Math.ceil(totalNeemKg / 50);
-
-          const params = new URLSearchParams({
-            crop: profile.contactValue,
-            acres: acres.toString(),
-            cowdung: `${totalCowDungTons} MT`,
-            vermi: `${totalVermiKg} Kg (${vermiBags} bags)`,
-            neem: `${totalNeemKg} Kg (${neemBags} bags)`,
-            source: 'calculator_home2'
-          });
-
-          window.location.href = `contact.html?${params.toString()}#bulkOrderForm`;
-        });
-      }
-
-      // Event listeners for real-time recalculation
-      if (cropSelect) {
-        cropSelect.addEventListener('change', calculate);
-      }
-      if (acreageInput) {
-        acreageInput.addEventListener('input', calculate);
-        acreageInput.addEventListener('change', calculate);
-      }
-
-      // Initial run
-      calculate();
-    })();
-  </script>
+  <!-- Main JavaScript with Theme & RTL Support -->
+  <script src="assets/js/main.js?v=6.0"></script>
 </body>
 </html>

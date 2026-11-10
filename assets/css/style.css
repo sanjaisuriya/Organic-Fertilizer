@@ -5991,3 +5991,392 @@ img.rounded-4.shadow-sm:hover {
   background: #142219 !important;
   color: #b7cebf !important;
 }
+
+
+/* ============================================================
+   HOME PAGE 2: EDUCATIONAL FARM & SOIL PREPARATION MODULES
+   ============================================================ */
+
+.edu-section-light {
+  background-color: var(--bg-surface, #fdfbf7);
+  transition: background-color 0.3s ease;
+}
+.edu-section-alt {
+  background-color: var(--bg-surface-secondary, #f5f0e6);
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .edu-section-light {
+  background-color: #0d1611 !important;
+}
+[data-theme="dark"] .edu-section-alt {
+  background-color: #142219 !important;
+}
+
+.section-badge-edu {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #2d6a4f;
+  background-color: rgba(45, 106, 79, 0.12);
+  border: 1px solid rgba(45, 106, 79, 0.22);
+  border-radius: 30px;
+  padding: 6px 16px;
+  margin-bottom: 12px;
+}
+[data-theme="dark"] .section-badge-edu {
+  color: #74c69d;
+  background-color: rgba(82, 183, 136, 0.16);
+  border-color: rgba(82, 183, 136, 0.3);
+}
+
+.section-title-edu {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  color: var(--text-main, #142e1d);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+[data-theme="dark"] .section-title-edu {
+  color: #f0fdf4 !important;
+}
+
+.section-subtitle-edu {
+  font-size: 1.08rem;
+  line-height: 1.65;
+  color: var(--text-muted, #526658);
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+[data-theme="dark"] .section-subtitle-edu {
+  color: #b7cebf !important;
+}
+
+.edu-card {
+  background: var(--bg-card, #ffffff);
+  border: 1px solid rgba(45, 106, 79, 0.14);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.edu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+  border-color: #52b788;
+}
+[data-theme="dark"] .edu-card {
+  background: #18281e !important;
+  border-color: rgba(82, 183, 136, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.28);
+}
+[data-theme="dark"] .edu-card:hover {
+  border-color: #74c69d !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.edu-card-img-wrap {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  background: #e9e4da;
+}
+[data-theme="dark"] .edu-card-img-wrap {
+  background: #111e16;
+}
+.edu-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+.edu-card:hover .edu-card-img-wrap img {
+  transform: scale(1.06);
+}
+
+.edu-card-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(14, 30, 20, 0.85);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: #74c69d;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 30px;
+  border: 1px solid rgba(82, 183, 136, 0.4);
+}
+.edu-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.edu-card-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.32rem;
+  font-weight: 700;
+  color: var(--text-main, #142e1d);
+  margin-bottom: 12px;
+}
+[data-theme="dark"] .edu-card-title {
+  color: #f0fdf4 !important;
+}
+.edu-card-desc {
+  font-size: 0.96rem;
+  line-height: 1.62;
+  color: var(--text-muted, #495e51);
+  margin-bottom: 18px;
+}
+[data-theme="dark"] .edu-card-desc {
+  color: #b7cebf !important;
+}
+
+.edu-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+}
+.edu-feature-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 9px;
+  font-size: 0.92rem;
+  color: var(--text-main, #243c2c);
+  line-height: 1.5;
+}
+[data-theme="dark"] .edu-feature-list li {
+  color: #c9ded0 !important;
+}
+.edu-feature-list li::before {
+  content: "\F26E";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2d6a4f;
+  font-weight: 700;
+}
+[data-theme="dark"] .edu-feature-list li::before {
+  color: #74c69d;
+}
+
+.diagnostic-feature-card {
+  background: var(--bg-card, #ffffff);
+  border: 1px solid rgba(45, 106, 79, 0.14);
+  border-radius: 14px;
+  padding: 20px 22px;
+  height: 100%;
+  transition: all 0.25s ease;
+}
+.diagnostic-feature-card:hover {
+  border-color: #52b788;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+[data-theme="dark"] .diagnostic-feature-card {
+  background: #18281e !important;
+  border-color: rgba(82, 183, 136, 0.2);
+}
+[data-theme="dark"] .diagnostic-feature-card:hover {
+  border-color: #74c69d !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
+.param-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(45, 106, 79, 0.12);
+  color: #2d6a4f;
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+}
+[data-theme="dark"] .param-icon-box {
+  background: rgba(82, 183, 136, 0.18);
+  color: #74c69d;
+}
+
+.process-step-card {
+  position: relative;
+  background: var(--bg-card, #ffffff);
+  border: 1px solid rgba(45, 106, 79, 0.14);
+  border-radius: 16px;
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+.process-step-card:hover {
+  transform: translateY(-5px);
+  border-color: #52b788;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+[data-theme="dark"] .process-step-card {
+  background: #18281e !important;
+  border-color: rgba(82, 183, 136, 0.2);
+}
+[data-theme="dark"] .process-step-card:hover {
+  border-color: #74c69d !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+.step-number-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2d6a4f, #1b4332);
+  color: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 10px rgba(45, 106, 79, 0.3);
+}
+[data-theme="dark"] .step-number-badge {
+  background: linear-gradient(135deg, #52b788, #2d6a4f);
+  color: #0b1a10;
+}
+.process-step-img {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.process-step-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.process-step-card:hover .process-step-img img {
+  transform: scale(1.06);
+}
+
+.seasonal-phase-item {
+  background: var(--bg-card, #ffffff);
+  border: 1px solid rgba(45, 106, 79, 0.14);
+  border-radius: 14px;
+  padding: 22px;
+  height: 100%;
+  transition: all 0.28s ease;
+  display: flex;
+  flex-direction: column;
+}
+.seasonal-phase-item:hover {
+  border-color: #52b788;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
+}
+[data-theme="dark"] .seasonal-phase-item {
+  background: #18281e !important;
+  border-color: rgba(82, 183, 136, 0.2);
+}
+[data-theme="dark"] .seasonal-phase-item:hover {
+  border-color: #74c69d !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.phase-pill {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2d6a4f;
+  background: rgba(45, 106, 79, 0.1);
+  border-radius: 20px;
+  padding: 4px 12px;
+  display: inline-block;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+[data-theme="dark"] .phase-pill {
+  color: #74c69d;
+  background: rgba(82, 183, 136, 0.18);
+}
+
+.checklist-container-card {
+  background: var(--bg-card, #ffffff);
+  border: 1.5px solid rgba(45, 106, 79, 0.16);
+  border-radius: 18px;
+  padding: 32px 30px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+}
+[data-theme="dark"] .checklist-container-card {
+  background: #18281e !important;
+  border-color: rgba(82, 183, 136, 0.25);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
+.checklist-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(45, 106, 79, 0.03);
+  border: 1px solid rgba(45, 106, 79, 0.08);
+  margin-bottom: 14px;
+  transition: all 0.22s ease;
+}
+.checklist-row:hover {
+  background: rgba(45, 106, 79, 0.08);
+  border-color: rgba(45, 106, 79, 0.25);
+}
+[data-theme="dark"] .checklist-row {
+  background: #142219 !important;
+  border-color: rgba(82, 183, 136, 0.15);
+}
+[data-theme="dark"] .checklist-row:hover {
+  background: #1d3325 !important;
+  border-color: #52b788;
+}
+
+.check-icon-bubble {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #2d6a4f;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.05rem;
+}
+[data-theme="dark"] .check-icon-bubble {
+  background: #52b788;
+  color: #0d1611;
+}
+
+.cta-banner-edu {
+  background: linear-gradient(135deg, #12281a 0%, #1b4332 50%, #2d6a4f 100%);
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 56px 40px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
