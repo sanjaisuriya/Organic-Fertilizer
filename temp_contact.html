@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   
   <!-- Custom Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css?v=3.5">
+  <link rel="stylesheet" href="assets/css/style.css?v=6.0">
   <link rel="stylesheet" href="assets/css/responsive.css?v=2.1">
   <link rel="stylesheet" href="assets/css/rtl.css?v=2.1">
 </head>
@@ -52,7 +52,7 @@
             </a>
             <ul class="dropdown-menu shadow-sm border-0">
               <li><a class="dropdown-item" href="index.html"><i class="bi bi-flower1 me-2 text-success"></i>Organic Farming & Soil Health</a></li>
-              <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-truck me-2 text-success"></i>Commercial Agro & Bulk Supply</a></li>
+              <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-seedling me-2 text-success"></i>Smart Farming & Crop Solutions</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -88,93 +88,59 @@
     </div>
   </nav>
 
-  <!-- PREMIUM CONTACT US HERO BANNER -->
-  <section class="contact-hero-banner position-relative overflow-hidden">
-    <div class="contact-hero-overlay"></div>
-    <div class="container position-relative py-5" style="z-index: 2;">
-      <div class="row align-items-center g-4 g-lg-5">
-        <!-- Left Side Content -->
-        <div class="col-lg-7 col-xl-6 reveal-fade-up text-start">
-          <!-- Breadcrumb Navigation: Home / Contact Us -->
+  <!-- INNER PAGE BANNER (HERO BANNER) -->
+  <section class="inner-page-banner" style="background-image: url('assets/images/contact/contact-banner.jpg?v=2.0');">
+    <div class="banner-overlay" style="background: linear-gradient(135deg, rgba(10, 26, 16, 0.85) 0%, rgba(18, 48, 29, 0.80) 100%);"></div>
+    <div class="container text-center position-relative" style="z-index: 2;">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-9">
+          <!-- 1. Breadcrumb Navigation -->
           <nav aria-label="breadcrumb" class="mb-3">
-            <ol class="banner-breadcrumb list-unstyled d-flex align-items-center gap-2 mb-0">
-              <li><a href="index.html" class="text-white-50 text-decoration-none hover-white"><i class="bi bi-house-door-fill me-1"></i>Home</a></li>
+            <ol class="banner-breadcrumb list-unstyled mb-0">
+              <li><a href="index.html"><i class="bi bi-house-door-fill me-1"></i>Home</a></li>
               <li class="text-white-50">/</li>
               <li class="text-white fw-semibold" aria-current="page">Contact Us</li>
             </ol>
           </nav>
 
-          <!-- Small Label: GET IN TOUCH WITH US -->
-          <div class="mb-3">
-            <span class="badge bg-success bg-opacity-25 text-white border border-success border-opacity-40 px-3 py-1.5 rounded-pill text-uppercase fw-bold contact-hero-badge" style="letter-spacing: 1.2px; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.45rem;">
-              <i class="bi bi-patch-check-fill text-accent-mint"></i> GET IN TOUCH WITH US
+          <!-- Small Label -->
+          <div class="mb-2">
+            <span class="badge bg-success bg-opacity-25 text-white border border-success border-opacity-40 px-3 py-1.5 rounded-pill text-uppercase fw-bold" style="letter-spacing: 1px; font-size: 0.8rem;">
+              <i class="bi bi-patch-check-fill text-accent-mint me-1"></i> GET IN TOUCH WITH US
             </span>
           </div>
 
-          <!-- Main Heading: Let's Grow a Greener Future Together. -->
-          <h1 class="contact-hero-title text-white fw-bold mb-3">
-            Let's Grow a Greener <br class="d-none d-sm-inline">
-            <span class="text-accent-mint" style="color: var(--accent-mint, #b7e4c7) !important;">Future Together.</span>
-          </h1>
+          <!-- Main Heading -->
+          <h1 class="banner-title text-white mb-2">Let's Grow a Greener Future Together.</h1>
 
           <!-- Description -->
-          <p class="contact-hero-desc mb-4" style="color: #e2f0d9 !important;">
+          <p class="banner-subtitle text-white-50 mb-3 mx-auto" style="max-width: 820px; font-size: 1rem; line-height: 1.6; color: #e2f0d9 !important;">
             Connect with TerraPure Organics for premium organic fertilizers, natural manure, and reliable bulk supply solutions. Our team is ready to help with your farming and product requirements.
           </p>
 
           <!-- Action Buttons -->
-          <div class="d-flex flex-wrap gap-3 align-items-center mb-4 pb-2">
-            <!-- Primary button: Contact Our Team -->
-            <a href="#bulkOrderFormSection" class="btn-farm-primary d-inline-flex align-items-center gap-2 shadow">
-              <i class="bi bi-chat-dots-fill"></i> Contact Our Team
+          <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-2">
+            <a href="#bulkOrderFormSection" class="btn-cta-primary">
+              <i class="bi bi-chat-dots-fill me-1"></i> Contact Our Team
             </a>
-            <!-- Secondary button: Explore Our Products -->
-            <a href="products.html" class="btn-hero-secondary d-inline-flex align-items-center gap-2">
-              <i class="bi bi-flower1"></i> Explore Our Products
+            <a href="products.html" class="btn-banner-outline">
+              <i class="bi bi-flower1 me-1"></i> Explore Our Products
             </a>
           </div>
 
-          <!-- Small Trust Labels: Organic Fertilizers | Bulk Manure Supply | Agricultural Support -->
-          <div class="contact-hero-trust pt-3 border-top border-white border-opacity-20">
-            <div class="d-flex flex-wrap align-items-center gap-2 gap-md-3">
-              <span class="trust-pill-item d-inline-flex align-items-center gap-1.5">
-                <i class="bi bi-shield-check text-accent-mint"></i> Organic Fertilizers
-              </span>
-              <span class="trust-divider d-none d-sm-inline opacity-50">|</span>
-              <span class="trust-pill-item d-inline-flex align-items-center gap-1.5">
-                <i class="bi bi-truck text-accent-mint"></i> Bulk Manure Supply
-              </span>
-              <span class="trust-divider d-none d-sm-inline opacity-50">|</span>
-              <span class="trust-pill-item d-inline-flex align-items-center gap-1.5">
-                <i class="bi bi-headset text-accent-mint"></i> Agricultural Support
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Side Image: Farmer holding dark, rich organic vermicompost in their hands with green crops in background -->
-        <div class="col-lg-5 col-xl-6 reveal-fade-up">
-          <div class="contact-hero-frame position-relative mx-auto">
-            <div class="contact-hero-img-card rounded-4 overflow-hidden position-relative">
-              <img src="assets/images/contact/vermicompost-hands.jpg?v=2.0" alt="High-quality realistic photograph of a farmer holding dark, rich organic vermicompost in their hands, with healthy green crops and fertile agricultural land in the background" class="w-100 h-100 object-fit-cover" loading="eager">
-              <!-- Floating Micro Badge / Stat -->
-              <div class="contact-hero-card-footer position-absolute bottom-0 start-0 end-0 p-3 p-sm-3.5">
-                <div class="d-flex align-items-center justify-content-between text-white">
-                  <div class="d-flex align-items-center gap-2.5">
-                    <div class="contact-card-icon rounded-circle bg-success bg-opacity-80 d-flex align-items-center justify-content-center">
-                      <i class="bi bi-patch-check-fill text-accent-mint fs-5"></i>
-                    </div>
-                    <div>
-                      <span class="d-block fw-bold text-white" style="font-size: 0.9rem; line-height: 1.2;">100% Organic Vermicompost</span>
-                      <span class="small" style="font-size: 0.76rem; color: #d4ebd6;">Rich Earthworm Castings & Humus</span>
-                    </div>
-                  </div>
-                  <span class="badge rounded-pill bg-white bg-opacity-20 text-white border border-white border-opacity-30 px-2.5 py-1" style="font-size: 0.72rem; letter-spacing: 0.5px;">Bio-Active Soil</span>
-                </div>
-              </div>
-            </div>
-            <!-- Decorative Subtle Ambient Glow Behind Card -->
-            <div class="contact-hero-glow"></div>
+          <!-- Small Trust Labels -->
+          <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 gap-md-3 pt-2 border-top border-white border-opacity-20 mx-auto" style="max-width: 650px;">
+            <span class="d-inline-flex align-items-center gap-1.5 fw-medium small" style="color: #d4ebd6 !important;">
+              <i class="bi bi-shield-check text-accent-mint"></i> Organic Fertilizers
+            </span>
+            <span class="text-white-50 d-none d-sm-inline opacity-50">|</span>
+            <span class="d-inline-flex align-items-center gap-1.5 fw-medium small" style="color: #d4ebd6 !important;">
+              <i class="bi bi-truck text-accent-mint"></i> Bulk Manure Supply
+            </span>
+            <span class="text-white-50 d-none d-sm-inline opacity-50">|</span>
+            <span class="d-inline-flex align-items-center gap-1.5 fw-medium small" style="color: #d4ebd6 !important;">
+              <i class="bi bi-headset text-accent-mint"></i> Agricultural Support
+            </span>
           </div>
         </div>
       </div>
@@ -615,28 +581,143 @@
   <section class="section-py bg-surface" id="officeMap">
     <div class="container">
       <div class="text-center section-header reveal-fade-up">
-        <span class="badge-eco">Our Physical Location</span>
-        <h2 class="section-title">Visit Our Depot & Manufacturing Yard</h2>
+        <span class="badge-eco"><i class="bi bi-geo-alt-fill me-1"></i> Our Physical Location</span>
+        <h2 class="section-title">Visit Our Depot &amp; Manufacturing Yard</h2>
         <p class="section-subtitle">
-          Strategically situated on National Highway 44 for rapid logistics access across major agricultural corridors.
+          Strategically situated on National Highway 44 with certified 60-Ton automated weighbridges, dedicated hydraulic tipper loading bays, and rapid logistics access across major agricultural corridors.
         </p>
       </div>
 
-      <div class="rounded-4 overflow-hidden shadow-lg border reveal-fade-up position-relative">
-        <!-- Interactive Google Map Embed -->
+      <!-- Enhanced Depot Map Container with Pin & Floating Info Card -->
+      <div class="depot-map-wrapper reveal-fade-up position-relative mb-4">
+        <!-- Floating Depot Information Card -->
+        <div class="depot-floating-card">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <span class="badge bg-success text-white px-2.5 py-1 fw-bold small">
+              <i class="bi bi-patch-check-fill me-1"></i> VERIFIED DEPOT
+            </span>
+            <span class="badge bg-light text-dark border small fw-semibold">
+              <i class="bi bi-star-fill text-warning me-1"></i> 4.9 (480+ Reviews)
+            </span>
+          </div>
+          <h4>TerraPure Organics Central Depot</h4>
+          <p class="small text-muted mb-2">
+            <i class="bi bi-geo-alt-fill text-danger me-1"></i> Survey No. 42/B, NH 44 Agro Corridor, Krishnagiri / Hosur Sector, Tamil Nadu 635101
+          </p>
+          <p class="small text-muted mb-2">
+            <i class="bi bi-signpost-2-fill text-success me-1"></i> <strong>Highway Landmark:</strong> Directly on NH 44 Corridor (Between Krishnagiri &amp; Hosur, 2 km from Toll Plaza)
+          </p>
+          <div class="depot-status-pulse">
+            <span class="pulse-dot"></span> Open Today: 8:00 AM &ndash; 7:00 PM (Live Weighbridge Active)
+          </div>
+          <div class="d-flex flex-wrap gap-2 pt-1">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=12.5350,78.2150" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm rounded-pill px-3 py-2 fw-bold shadow-sm">
+              <i class="bi bi-compass-fill me-1"></i> Get Driving Directions
+            </a>
+            <a href="https://www.google.com/maps/search/?api=1&query=12.5350,78.2150" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-sm rounded-pill px-3 py-2 fw-semibold">
+              <i class="bi bi-box-arrow-up-right me-1"></i> Open in Maps App
+            </a>
+            <a href="tel:+919876543210" class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-2 fw-semibold">
+              <i class="bi bi-telephone-fill me-1"></i> Call Yard: +91 98765 43210
+            </a>
+          </div>
+        </div>
+
+        <!-- Map View Mode Switcher -->
+        <div class="map-view-switcher">
+          <button type="button" class="map-switcher-btn active" id="mapBtnRoad" onclick="setDepotMapView('road')">
+            <i class="bi bi-map-fill me-1"></i> Road Map
+          </button>
+          <button type="button" class="map-switcher-btn" id="mapBtnSatellite" onclick="setDepotMapView('satellite')">
+            <i class="bi bi-globe-americas me-1"></i> Satellite View
+          </button>
+        </div>
+
+        <!-- Interactive Google Map Embed with Exact Pin Drop & Depot Marker -->
         <iframe 
-          title="TerraPure Depot Location Map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124808.83549223366!2d78.14088927056463!3d12.52285141940989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac2ebcf4499bcf%3A0xe5a3c051a37c0977!2sKrishnagiri%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-          width="100%" 
-          height="450" 
-          style="border:0;" 
+          id="depotMapIframe"
+          class="depot-map-iframe"
+          title="TerraPure Depot & Manufacturing Yard Location Map"
+          src="https://maps.google.com/maps?q=12.5350,78.2150+(TerraPure+Organics+Depot)&amp;hl=en&amp;z=15&amp;output=embed" 
           allowfullscreen="" 
           loading="lazy" 
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
+
+      <!-- Strategic Logistics & Depot Advantages Bar -->
+      <div class="row g-4 mt-2 reveal-fade-up">
+        <div class="col-sm-6 col-lg-3">
+          <div class="depot-feature-card">
+            <div class="depot-feature-icon">
+              <i class="bi bi-truck-front-fill"></i>
+            </div>
+            <h5 class="fw-bold mb-2 fs-6">Direct NH 44 Highway Access</h5>
+            <p class="small text-muted mb-0">
+              Zero municipal truck entry restrictions. Direct wide-ramp connection for 10-wheel tippers and 25-ton multi-axle freight carriers.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="depot-feature-card">
+            <div class="depot-feature-icon">
+              <i class="bi bi-speedometer2"></i>
+            </div>
+            <h5 class="fw-bold mb-2 fs-6">60-Ton Automated Weighbridge</h5>
+            <p class="small text-muted mb-0">
+              On-site electronic weighbridge providing verified computerized weighment slips with tare, gross, and net weight at loading.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="depot-feature-card">
+            <div class="depot-feature-icon">
+              <i class="bi bi-droplet-half"></i>
+            </div>
+            <h5 class="fw-bold mb-2 fs-6">On-Site Testing &amp; Inspection</h5>
+            <p class="small text-muted mb-0">
+              Instant spot laboratory check for moisture content (&le;25%), organic matter purity, and certified zero chemical adulteration.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="depot-feature-card">
+            <div class="depot-feature-icon">
+              <i class="bi bi-signpost-split-fill"></i>
+            </div>
+            <h5 class="fw-bold mb-2 fs-6">Regional Transit Distances</h5>
+            <ul class="list-unstyled small text-muted mb-0 d-flex flex-column gap-1">
+              <li><i class="bi bi-check2 text-success me-1"></i><strong>Hosur Sector:</strong> 45 km (40 min)</li>
+              <li><i class="bi bi-check2 text-success me-1"></i><strong>Bengaluru:</strong> 85 km (1.5 hrs)</li>
+              <li><i class="bi bi-check2 text-success me-1"></i><strong>Salem Belt:</strong> 110 km (1.8 hrs)</li>
+              <li><i class="bi bi-check2 text-success me-1"></i><strong>Chennai Corridor:</strong> 250 km (4 hrs)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <script>
+    function setDepotMapView(mode) {
+      const iframe = document.getElementById('depotMapIframe');
+      const btnRoad = document.getElementById('mapBtnRoad');
+      const btnSat = document.getElementById('mapBtnSatellite');
+      if (!iframe) return;
+      if (mode === 'satellite') {
+        iframe.src = 'https://maps.google.com/maps?q=12.5350,78.2150+(TerraPure+Organics+Depot)&hl=en&t=k&z=16&output=embed';
+        if (btnSat) btnSat.classList.add('active');
+        if (btnRoad) btnRoad.classList.remove('active');
+      } else {
+        iframe.src = 'https://maps.google.com/maps?q=12.5350,78.2150+(TerraPure+Organics+Depot)&hl=en&z=15&output=embed';
+        if (btnRoad) btnRoad.classList.add('active');
+        if (btnSat) btnSat.classList.remove('active');
+      }
+    }
+  </script>
 
   <!-- FOOTER -->
     <!-- COMMON STANDARDIZED FOOTER -->
@@ -788,16 +869,9 @@
   <!-- Bootstrap 5 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS Scripts -->
-  <script src="assets/js/theme.js?v=2.1"></script>
+  <script src="assets/js/theme.js?v=6.0"></script>
   <script src="assets/js/navigation.js?v=2.1"></script>
   <script src="assets/js/contact-form.js?v=2.2"></script>
   <script src="assets/js/main.js?v=2.1"></script>
-<script>
-const banner = document.querySelector('.inner-page-banner');
-const container = document.querySelector('.inner-page-banner .container');
-console.log('BANNER_METRICS:' + JSON.stringify({
-    bannerHeight: banner ? banner.offsetHeight : null,
-    containerHeight: container ? container.offsetHeight : null
-}));
-</script></body>
+</body>
 </html>

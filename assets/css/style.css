@@ -6380,3 +6380,205 @@ img.rounded-4.shadow-sm:hover {
   position: relative;
   overflow: hidden;
 }
+
+
+/* ==========================================================================
+   INTERACTIVE DEPOT LOCATION MAP & DETAILS STYLING
+   ========================================================================== */
+.depot-map-wrapper {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(82, 183, 136, 0.25);
+  background-color: var(--bg-surface-secondary, #f0f7f2);
+}
+
+.depot-map-iframe {
+  width: 100%;
+  height: 520px;
+  border: 0;
+  display: block;
+}
+
+/* Floating Depot Information Card */
+.depot-floating-card {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  width: 390px;
+  max-width: calc(100% - 40px);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(45, 106, 79, 0.2);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .depot-floating-card {
+  background: rgba(18, 32, 23, 0.95);
+  border-color: rgba(82, 183, 136, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+  color: #e8f5e9;
+}
+
+.depot-floating-card h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1b4332;
+  margin-bottom: 6px;
+}
+
+[data-theme="dark"] .depot-floating-card h4 {
+  color: #ffffff;
+}
+
+/* Live Operational Status Pulse */
+.depot-status-pulse {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2d6a4f;
+  margin-bottom: 14px;
+}
+
+[data-theme="dark"] .depot-status-pulse {
+  color: #74c69d;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #28a745;
+  border-radius: 50%;
+  box-shadow: 0 0 0 rgba(40, 167, 69, 0.6);
+  animation: pulseDotAnim 2s infinite;
+}
+
+@keyframes pulseDotAnim {
+  0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+  70% { box-shadow: 0 0 0 7px rgba(40, 167, 69, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+}
+
+/* Map Mode Switcher in top right */
+.map-view-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  display: flex;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 30px;
+  padding: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(82, 183, 136, 0.3);
+}
+
+[data-theme="dark"] .map-view-switcher {
+  background: rgba(18, 32, 23, 0.95);
+  border-color: rgba(82, 183, 136, 0.3);
+}
+
+.map-switcher-btn {
+  border: none;
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #495057;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+[data-theme="dark"] .map-switcher-btn {
+  color: #d8e8dc;
+}
+
+.map-switcher-btn.active {
+  background: #2d6a4f;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(45, 106, 79, 0.3);
+}
+
+[data-theme="dark"] .map-switcher-btn.active {
+  background: #52b788;
+  color: #0d1611 !important;
+}
+
+/* Strategic Logistics Feature Cards Below Map */
+.depot-feature-card {
+  background: var(--bg-surface, #ffffff);
+  border: 1px solid rgba(82, 183, 136, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+}
+
+.depot-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-color: #52b788;
+}
+
+[data-theme="dark"] .depot-feature-card {
+  background: #142419;
+  border-color: rgba(82, 183, 136, 0.25);
+}
+
+[data-theme="dark"] .depot-feature-card:hover {
+  background: #182c1f;
+  border-color: #52b788;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+.depot-feature-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(45, 106, 79, 0.1);
+  color: #2d6a4f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+}
+
+[data-theme="dark"] .depot-feature-icon {
+  background: rgba(82, 183, 136, 0.15);
+  color: #52b788;
+}
+
+@media (max-width: 991.98px) {
+  .depot-map-iframe {
+    height: 440px;
+  }
+  .depot-floating-card {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    margin-bottom: 0;
+    backdrop-filter: none;
+    box-shadow: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: var(--bg-surface, #ffffff);
+  }
+  .map-view-switcher {
+    top: auto;
+    bottom: 15px;
+    right: 15px;
+  }
+}
