@@ -5895,3 +5895,99 @@ img.rounded-4.shadow-sm:hover {
 [data-theme="dark"] .soil-principle-desc {
   color: #c4d9cb !important;
 }
+
+
+/* ============================================================
+   HOME PAGE 2 - SMART ORGANIC FARMING RULES
+   ============================================================ */
+
+.crop-card,
+.app-card,
+.calendar-card {
+  border: 1px solid var(--border-color, rgba(35, 93, 58, 0.12));
+  background: var(--bg-card, #ffffff);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.crop-card:hover,
+.app-card:hover,
+.calendar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(35, 93, 58, 0.12);
+  border-color: var(--accent-green, #52b788);
+}
+
+[data-theme="dark"] .crop-card,
+[data-theme="dark"] .app-card,
+[data-theme="dark"] .calendar-card {
+  background: #1a2c21 !important;
+  border-color: rgba(82, 183, 136, 0.25) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+[data-theme="dark"] .crop-card:hover,
+[data-theme="dark"] .app-card:hover,
+[data-theme="dark"] .calendar-card:hover {
+  border-color: #52b788 !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55) !important;
+}
+
+[data-theme="dark"] .crop-card-img-wrap,
+[data-theme="dark"] .app-card-img-wrap,
+[data-theme="dark"] .calendar-img-wrap {
+  background-color: #121e16 !important;
+}
+
+[data-theme="dark"] .calc-card-container {
+  background: #1a2c21 !important;
+  border-color: rgba(82, 183, 136, 0.25) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45) !important;
+}
+
+[data-theme="dark"] .calc-result-box {
+  background: #142219 !important;
+  border-color: rgba(82, 183, 136, 0.35) !important;
+}
+
+[data-theme="dark"] .calc-stat-item {
+  background: #1a2c21 !important;
+  border-color: rgba(82, 183, 136, 0.25) !important;
+}
+
+[data-theme="dark"] .calc-stat-label {
+  color: #ebf5ee !important;
+}
+
+[data-theme="dark"] .calc-stat-val {
+  color: #74c69d !important;
+}
+
+[data-theme="dark"] .bulk-feature-item {
+  background: #1a2c21 !important;
+  border-color: rgba(82, 183, 136, 0.25) !important;
+  color: #f0fdf4 !important;
+}
+
+[data-theme="dark"] .faq-farm .accordion-item {
+  background: #1a2c21 !important;
+  border-color: rgba(82, 183, 136, 0.25) !important;
+}
+
+[data-theme="dark"] .faq-farm .accordion-button {
+  background: #1a2c21 !important;
+  color: #f0fdf4 !important;
+}
+
+[data-theme="dark"] .faq-farm .accordion-button:not(.collapsed) {
+  background: #233d2c !important;
+  color: #74c69d !important;
+  border-bottom: 1px solid rgba(82, 183, 136, 0.3) !important;
+}
+
+[data-theme="dark"] .faq-farm .accordion-body {
+  background: #142219 !important;
+  color: #b7cebf !important;
+}

@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <!-- Theme & Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=3.4">
+  <link rel="stylesheet" href="assets/css/style.css?v=6.0">
   <link rel="stylesheet" href="assets/css/responsive.css?v=2.1">
   <link rel="stylesheet" href="assets/css/rtl.css?v=2.1">
 
@@ -26,6 +26,29 @@
       overflow-x: hidden;
       max-width: 100vw;
     }
+
+    /* Section Backgrounds */
+    #cropGuideSection,
+    #bulkSupplySection {
+      background-color: var(--bg-surface-secondary, #f4f0e8);
+    }
+    #calculatorSection,
+    #seasonalScheduleSection,
+    #faqSection {
+      background-color: var(--bg-body, #faf8f5);
+    }
+
+    [data-theme="dark"] #cropGuideSection,
+    [data-theme="dark"] #bulkSupplySection {
+      background-color: #142219 !important;
+    }
+    [data-theme="dark"] #calculatorSection,
+    [data-theme="dark"] #seasonalScheduleSection,
+    [data-theme="dark"] #faqSection {
+      background-color: #0d1611 !important;
+    }
+
+    /* Hero Section */
     .hero-smart-agro {
       position: relative;
       background-color: #112217;
@@ -46,6 +69,9 @@
       height: 40px;
       background: linear-gradient(to top, var(--bg-surface, #fdfbf7), transparent);
       pointer-events: none;
+    }
+    [data-theme="dark"] .hero-smart-agro::after {
+      background: linear-gradient(to top, #142219, transparent);
     }
     .hero-badge-pill {
       display: inline-flex;
@@ -129,6 +155,12 @@
       overflow: hidden;
       border-radius: 12px 12px 0 0;
       position: relative;
+      background-color: var(--warm-beige, #f3ede2);
+    }
+    [data-theme="dark"] .crop-card-img-wrap,
+    [data-theme="dark"] .app-card-img-wrap,
+    [data-theme="dark"] .calendar-img-wrap {
+      background-color: #121e16 !important;
     }
     .crop-card-img-wrap img,
     .app-card-img-wrap img,
@@ -144,14 +176,15 @@
       transform: scale(1.05);
     }
 
+    /* Cards */
     .crop-card,
     .app-card,
     .calendar-card {
-      border: 1px solid var(--border-color, #e5e7eb);
+      border: 1px solid var(--border-color, rgba(35, 93, 58, 0.12));
       background: var(--bg-card, #ffffff);
       border-radius: 14px;
       overflow: hidden;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -160,10 +193,38 @@
     .app-card:hover,
     .calendar-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-      border-color: #52b788;
+      box-shadow: 0 12px 28px rgba(35, 93, 58, 0.12);
+      border-color: var(--accent-green, #52b788);
     }
 
+    [data-theme="dark"] .crop-card,
+    [data-theme="dark"] .app-card,
+    [data-theme="dark"] .calendar-card {
+      background: #1a2c21 !important;
+      border-color: rgba(82, 183, 136, 0.25) !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    }
+    [data-theme="dark"] .crop-card:hover,
+    [data-theme="dark"] .app-card:hover,
+    [data-theme="dark"] .calendar-card:hover {
+      border-color: #52b788 !important;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55);
+    }
+
+    [data-theme="dark"] .crop-card h3,
+    [data-theme="dark"] .calendar-card h3,
+    [data-theme="dark"] .app-card h3,
+    [data-theme="dark"] .calendar-card h4,
+    [data-theme="dark"] .app-card h4 {
+      color: #f0fdf4 !important;
+    }
+    [data-theme="dark"] .crop-card p,
+    [data-theme="dark"] .calendar-card p,
+    [data-theme="dark"] .app-card p {
+      color: #b7cebf !important;
+    }
+
+    /* Section Headers */
     .section-badge {
       display: inline-flex;
       align-items: center;
@@ -178,79 +239,130 @@
       border-radius: 50px;
       margin-bottom: 12px;
     }
-    [data-theme="dark"] .section-badge,
-    [data-bs-theme="dark"] .section-badge {
-      background: rgba(82, 183, 136, 0.18);
-      color: #74c69d;
+    [data-theme="dark"] .section-badge {
+      background: rgba(82, 183, 136, 0.18) !important;
+      color: #74c69d !important;
+      border: 1px solid rgba(82, 183, 136, 0.3) !important;
     }
 
     .section-title {
       font-family: 'Outfit', sans-serif;
       font-weight: 700;
       font-size: 2.35rem;
-      color: var(--text-heading, #1f2937);
+      color: var(--text-main, #1a3320);
       margin-bottom: 14px;
       line-height: 1.25;
     }
+    [data-theme="dark"] .section-title {
+      color: #f0fdf4 !important;
+    }
+
     .section-subtitle {
       font-size: 1.05rem;
-      color: var(--text-muted, #4b5563);
+      color: var(--text-muted, #536b5c);
       max-width: 680px;
       margin: 0 auto;
       line-height: 1.65;
+    }
+    [data-theme="dark"] .section-subtitle {
+      color: #b7cebf !important;
+    }
+
+    /* Crop Recommendation Box */
+    .crop-rec-box {
+      background-color: var(--bg-surface-secondary, #f3ede2);
+      color: var(--text-main, #1f2e24);
+      border: 1px solid var(--border-color, rgba(35, 93, 58, 0.12));
+    }
+    [data-theme="dark"] .crop-rec-box {
+      background-color: #142219 !important;
+      color: #ebf5ee !important;
+      border-color: rgba(82, 183, 136, 0.28) !important;
+    }
+    [data-theme="dark"] .crop-rec-box strong {
+      color: #74c69d !important;
     }
 
     /* Calculator Card Styling */
     .calc-card-container {
       background: var(--bg-card, #ffffff);
-      border: 1px solid var(--border-color, #e5e7eb);
+      border: 1px solid var(--border-color, rgba(35, 93, 58, 0.12));
       border-radius: 18px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 16px 40px rgba(35, 93, 58, 0.06);
       overflow: hidden;
     }
+    [data-theme="dark"] .calc-card-container {
+      background: #1a2c21 !important;
+      border-color: rgba(82, 183, 136, 0.25) !important;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45) !important;
+    }
+
+    [data-theme="dark"] .calc-card-container label {
+      color: #f0fdf4 !important;
+    }
+    [data-theme="dark"] .calc-card-container select,
+    [data-theme="dark"] .calc-card-container input[type="number"],
+    [data-theme="dark"] .calc-card-container input[type="text"] {
+      background-color: #142219 !important;
+      color: #f0fdf4 !important;
+      border-color: rgba(82, 183, 136, 0.35) !important;
+    }
+    [data-theme="dark"] .calc-card-container .input-group-text {
+      background-color: #18281e !important;
+      color: #74c69d !important;
+      border-color: rgba(82, 183, 136, 0.35) !important;
+    }
+    [data-theme="dark"] .calc-card-container h3,
+    [data-theme="dark"] .calc-card-container h4 {
+      color: #f0fdf4 !important;
+    }
+    [data-theme="dark"] .calc-card-container p {
+      color: #b7cebf !important;
+    }
+
     .calc-result-box {
-      background: var(--bg-surface-alt, #f4f7f5);
+      background: var(--bg-surface-secondary, #f4f7f5);
       border: 1px solid rgba(82, 183, 136, 0.25);
       border-radius: 14px;
       padding: 24px;
     }
-    [data-theme="dark"] .calc-result-box,
-    [data-bs-theme="dark"] .calc-result-box {
-      background: #192720;
-      border-color: rgba(82, 183, 136, 0.35);
+    [data-theme="dark"] .calc-result-box {
+      background: #142219 !important;
+      border-color: rgba(82, 183, 136, 0.35) !important;
     }
 
     .calc-stat-item {
       padding: 12px 16px;
       background: var(--bg-card, #ffffff);
       border-radius: 10px;
-      border: 1px solid var(--border-color, #e5e7eb);
+      border: 1px solid var(--border-color, rgba(35, 93, 58, 0.12));
       margin-bottom: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    [data-theme="dark"] .calc-stat-item,
-    [data-bs-theme="dark"] .calc-stat-item {
-      background: #111e17;
-      border-color: #27392f;
+    [data-theme="dark"] .calc-stat-item {
+      background: #1a2c21 !important;
+      border-color: rgba(82, 183, 136, 0.25) !important;
     }
     .calc-stat-label {
       font-weight: 600;
       font-size: 0.95rem;
-      color: var(--text-main, #374151);
+      color: var(--text-main, #1f2e24);
       display: flex;
       align-items: center;
       gap: 8px;
     }
+    [data-theme="dark"] .calc-stat-label {
+      color: #ebf5ee !important;
+    }
     .calc-stat-val {
       font-weight: 700;
       font-size: 1.05rem;
-      color: #2d6a4f;
+      color: #235d3a;
     }
-    [data-theme="dark"] .calc-stat-val,
-    [data-bs-theme="dark"] .calc-stat-val {
-      color: #52b788;
+    [data-theme="dark"] .calc-stat-val {
+      color: #74c69d !important;
     }
 
     /* Calendar Step Styling */
@@ -258,7 +370,7 @@
       position: absolute;
       top: 14px;
       left: 14px;
-      background: #2d6a4f;
+      background: #235d3a;
       color: #ffffff;
       font-size: 0.78rem;
       font-weight: 700;
@@ -277,14 +389,17 @@
       padding: 12px 18px;
       background: var(--bg-card, #ffffff);
       border-radius: 10px;
-      border: 1px solid var(--border-color, #e5e7eb);
+      border: 1px solid var(--border-color, rgba(35, 93, 58, 0.12));
       font-weight: 600;
-      color: var(--text-main, #1f2937);
+      color: var(--text-main, #1f2e24);
     }
-    [data-theme="dark"] .bulk-feature-item,
-    [data-bs-theme="dark"] .bulk-feature-item {
-      background: #16241c;
-      border-color: #23372c;
+    [data-theme="dark"] .bulk-feature-item {
+      background: #1a2c21 !important;
+      border-color: rgba(82, 183, 136, 0.25) !important;
+      color: #f0fdf4 !important;
+    }
+    [data-theme="dark"] .bulk-feature-item i {
+      color: #52b788 !important;
     }
 
     /* Final CTA Banner */
@@ -302,37 +417,55 @@
 
     /* FAQ Custom Accordion */
     .faq-farm .accordion-item {
-      border: 1px solid var(--border-color, #e5e7eb);
+      border: 1px solid var(--border-color, rgba(35, 93, 58, 0.12));
       margin-bottom: 12px;
       border-radius: 12px !important;
       overflow: hidden;
       background: var(--bg-card, #ffffff);
     }
+    [data-theme="dark"] .faq-farm .accordion-item {
+      background: #1a2c21 !important;
+      border-color: rgba(82, 183, 136, 0.25) !important;
+    }
+
     .faq-farm .accordion-button {
       font-family: 'Outfit', sans-serif;
       font-weight: 600;
       font-size: 1.05rem;
-      color: var(--text-heading, #1f2937);
+      color: var(--text-main, #1a3320);
       background: var(--bg-card, #ffffff);
       padding: 18px 22px;
       box-shadow: none;
     }
+    [data-theme="dark"] .faq-farm .accordion-button {
+      color: #f0fdf4 !important;
+      background: #1a2c21 !important;
+    }
+
     .faq-farm .accordion-button:not(.collapsed) {
-      color: #2d6a4f;
-      background: var(--bg-surface-alt, #f7faf8);
-      border-bottom: 1px solid var(--border-color, #e5e7eb);
+      color: #235d3a;
+      background: #eef7f1;
+      border-bottom: 1px solid rgba(35, 93, 58, 0.12);
     }
-    [data-theme="dark"] .faq-farm .accordion-button:not(.collapsed),
-    [data-bs-theme="dark"] .faq-farm .accordion-button:not(.collapsed) {
-      color: #52b788;
-      background: #16241c;
-      border-color: #23372c;
+    [data-theme="dark"] .faq-farm .accordion-button:not(.collapsed) {
+      color: #74c69d !important;
+      background: #233d2c !important;
+      border-bottom: 1px solid rgba(82, 183, 136, 0.3) !important;
     }
+    [data-theme="dark"] .faq-farm .accordion-button::after {
+      filter: invert(1) hue-rotate(90deg) brightness(1.2);
+    }
+
     .faq-farm .accordion-body {
-      color: var(--text-muted, #4b5563);
+      color: var(--text-muted, #536b5c);
       line-height: 1.7;
       padding: 20px 22px;
       font-size: 0.98rem;
+      background: #fafcfb;
+    }
+    [data-theme="dark"] .faq-farm .accordion-body {
+      background: #142219 !important;
+      color: #b7cebf !important;
     }
 
     @media (max-width: 768px) {
@@ -465,7 +598,7 @@
     <!-- ========================================================================= -->
     <!-- SECTION 2 – CROP-BASED FERTILIZER GUIDE                                   -->
     <!-- ========================================================================= -->
-    <section class="py-5" id="cropGuideSection" style="background-color: var(--bg-surface, #fdfbf7);">
+    <section class="py-5" id="cropGuideSection">
       <div class="container py-4">
         <div class="text-center mb-5">
           <div class="section-badge">
@@ -710,7 +843,7 @@
     <!-- ========================================================================= -->
     <!-- SECTION 4 – SMART FARM DOSAGE CALCULATOR                                  -->
     <!-- ========================================================================= -->
-    <section class="py-5" id="calculatorSection" style="background-color: var(--bg-surface, #fdfbf7);">
+    <section class="py-5" id="calculatorSection">
       <div class="container py-4">
         <div class="text-center mb-5">
           <div class="section-badge">
@@ -914,7 +1047,7 @@
     <!-- ========================================================================= -->
     <!-- SECTION 6 – BULK ORDER PLANNING                                           -->
     <!-- ========================================================================= -->
-    <section class="py-5" id="bulkSupplySection" style="background-color: var(--bg-surface, #fdfbf7);">
+    <section class="py-5" id="bulkSupplySection">
       <div class="container py-4">
         <div class="row g-4 align-items-center">
           <div class="col-lg-6">
@@ -1177,7 +1310,7 @@
 
   <!-- Core JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/theme.js?v=2.1"></script>
+  <script src="assets/js/theme.js?v=6.0"></script>
   <script src="assets/js/navigation.js?v=2.1"></script>
   <script src="assets/js/contact-form.js?v=2.1"></script>
   <script src="assets/js/main.js?v=2.1"></script>
