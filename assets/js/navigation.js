@@ -15,12 +15,19 @@
 
     const rtlBtns = document.querySelectorAll('.rtl-toggle-btn');
     rtlBtns.forEach(btn => {
+      let icon = btn.querySelector('i');
+      if (!icon) {
+        btn.innerHTML = '<i class="bi bi-text-right"></i>';
+        icon = btn.querySelector('i');
+      }
       if (dir === 'rtl') {
-        btn.textContent = 'LTR';
-        btn.setAttribute('title', 'Switch to Left-to-Right');
+        icon.className = 'bi bi-text-left';
+        btn.setAttribute('title', 'Switch to Left-to-Right (LTR)');
+        btn.setAttribute('aria-label', 'Switch to Left-to-Right');
       } else {
-        btn.textContent = 'RTL';
-        btn.setAttribute('title', 'Switch to Right-to-Left');
+        icon.className = 'bi bi-text-right';
+        btn.setAttribute('title', 'Switch to Right-to-Left (RTL)');
+        btn.setAttribute('aria-label', 'Switch to Right-to-Left');
       }
     });
   }
