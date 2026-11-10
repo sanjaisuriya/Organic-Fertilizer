@@ -5341,3 +5341,145 @@ img.rounded-4.shadow-sm:hover {
     max-height: 340px;
   }
 }
+
+
+/* ==========================================================================
+   Home Page 1: Soil Health Benefits Section (Healthy Soil, Healthy Harvest)
+   ========================================================================== */
+.soil-health-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.soil-health-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(35, 93, 58, 0.16);
+  border-color: var(--accent-green);
+}
+
+.soil-health-card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background-color: var(--warm-beige);
+}
+
+.soil-health-card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.soil-health-card:hover .soil-health-card-img-wrapper img {
+  transform: scale(1.08);
+}
+
+.soil-health-card-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(19, 43, 27, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.soil-health-icon-bubble {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #2d6a4f, #1b4332);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  border: 3px solid var(--bg-surface);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  z-index: 3;
+  transition: transform 0.35s ease, background 0.35s ease;
+}
+
+.soil-health-card:hover .soil-health-icon-bubble {
+  transform: scale(1.15) rotate(8deg);
+  background: linear-gradient(135deg, #52b788, #2d6a4f);
+}
+
+.soil-health-card-body {
+  padding: 1.75rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.soil-health-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.65rem;
+  line-height: 1.35;
+  font-family: 'Outfit', sans-serif;
+}
+
+.soil-health-card-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.badge-tag-eco {
+  background: rgba(45, 106, 79, 0.1);
+  color: var(--primary-green);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.soil-health-card .arrow-indicator {
+  transition: transform 0.25s ease;
+  display: inline-block;
+}
+
+.soil-health-card:hover .arrow-indicator {
+  transform: translateX(5px);
+}
+
+[data-theme="dark"] .soil-health-card {
+  background: #18281e;
+  border-color: rgba(82, 183, 136, 0.22);
+}
+
+[data-theme="dark"] .soil-health-icon-bubble {
+  border-color: #18281e;
+  background: linear-gradient(135deg, #40916c, #2d6a4f);
+}
+
+[data-theme="dark"] .badge-tag-eco {
+  background: rgba(82, 183, 136, 0.18);
+  color: #74c69d;
+}
