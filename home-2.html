@@ -228,6 +228,30 @@
       transform: scale(1.06);
     }
 
+    
+    /* Soil Diagnostics Highlight Box */
+    .diag-highlight-box {
+      background: rgba(45, 106, 79, 0.08);
+      border: 1px solid rgba(45, 106, 79, 0.16);
+      border-radius: 10px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    [data-theme="dark"] .diag-highlight-box {
+      background: rgba(82, 183, 136, 0.12);
+      border-color: rgba(82, 183, 136, 0.25);
+    }
+    .diag-highlight-text {
+      font-weight: 700;
+      font-size: 0.86rem;
+      color: var(--primary-green, #1b4332);
+    }
+    [data-theme="dark"] .diag-highlight-text {
+      color: #74c69d !important;
+    }
     .edu-card-badge {
       position: absolute;
       top: 14px;
@@ -810,152 +834,146 @@
       <div class="container py-4">
         <div class="text-center mb-5">
           <span class="section-badge-edu">
-            <i class="bi bi-clipboard2-pulse"></i> Scientific Diagnostics
+            <i class="bi bi-clipboard2-pulse"></i> SCIENTIFIC SOIL DIAGNOSTICS
           </span>
           <h2 class="section-title-edu display-6">
             Know What Your Soil Needs
           </h2>
           <p class="section-subtitle-edu">
-            Eliminate guesswork from your farm budget. Routine soil testing establishes accurate baseline parameters for pH, essential macronutrients, organic carbon percentage, and salinity levels.
+            Make informed farming decisions with regular soil testing. Understand your soil's pH, essential nutrients, organic carbon, salinity and moisture conditions to plan suitable soil management practices and organic input requirements.
           </p>
         </div>
 
-        <!-- Diagnostic Parameters Grid -->
-        <div class="row g-4 mb-5">
+        <!-- 6 Informative Content Cards in Responsive 3-Column Grid -->
+        <div class="row g-4">
+          <!-- Card 1: Soil pH Levels -->
           <div class="col-12 col-md-6 col-lg-4">
-            <div class="diagnostic-feature-card">
-              <div class="param-icon-box">
-                <i class="bi bi-speedometer2"></i>
-              </div>
-              <h4 class="fw-bold fs-5 mb-2">Soil pH Levels</h4>
-              <p class="text-muted small mb-3">
-                Measures the soil solution acidity or alkalinity. An ideal range between 6.2 and 7.5 provides the perfect biochemical climate for beneficial bacteria and prevents micronutrient lockup.
-              </p>
-              <div class="p-2 rounded bg-light-subtle small fw-semibold text-success">
-                <i class="bi bi-check-circle me-1"></i> Optimal Range: 6.2 – 7.2
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="diagnostic-feature-card">
-              <div class="param-icon-box">
-                <i class="bi bi-diagram-3"></i>
-              </div>
-              <h4 class="fw-bold fs-5 mb-2">Nitrogen, Phosphorus and Potassium (NPK)</h4>
-              <p class="text-muted small mb-3">
-                Identifies available reserves of the primary crop nutrients. Balancing NPK organically avoids toxic salt accumulation while supplying sustained nutrition throughout all vegetative cycles.
-              </p>
-              <div class="p-2 rounded bg-light-subtle small fw-semibold text-success">
-                <i class="bi bi-check-circle me-1"></i> Primary Growth Drivers
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="diagnostic-feature-card">
-              <div class="param-icon-box">
-                <i class="bi bi-radioactive"></i>
-              </div>
-              <h4 class="fw-bold fs-5 mb-2">Organic Carbon (SOC)</h4>
-              <p class="text-muted small mb-3">
-                The core barometer of living biological matter. Organic carbon sustains soil microbiome networks, enhances moisture retention, and builds crumbly humic structures in cultivated beds.
-              </p>
-              <div class="p-2 rounded bg-light-subtle small fw-semibold text-success">
-                <i class="bi bi-check-circle me-1"></i> Target Level: &gt; 0.75%
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="diagnostic-feature-card">
-              <div class="param-icon-box">
-                <i class="bi bi-lightning-charge"></i>
-              </div>
-              <h4 class="fw-bold fs-5 mb-2">Electrical Conductivity (EC)</h4>
-              <p class="text-muted small mb-3">
-                Measures total soluble salt concentration. High EC indicates salinization from over-irrigation or chemical synthetic residues, which stunts root tips and disrupts water intake.
-              </p>
-              <div class="p-2 rounded bg-light-subtle small fw-semibold text-success">
-                <i class="bi bi-check-circle me-1"></i> Non-Saline Threshold: &lt; 1.0 dS/m
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="diagnostic-feature-card">
-              <div class="param-icon-box">
-                <i class="bi bi-moisture"></i>
-              </div>
-              <h4 class="fw-bold fs-5 mb-2">Soil Moisture and Texture</h4>
-              <p class="text-muted small mb-3">
-                Evaluates effective field water-holding capacity, pore aeration, and bulk density, guiding the volume and frequency of organic mulch and compost amendments needed per plot.
-              </p>
-              <div class="p-2 rounded bg-light-subtle small fw-semibold text-success">
-                <i class="bi bi-check-circle me-1"></i> Soil Water Reserve Metric
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="diagnostic-feature-card">
-              <div class="param-icon-box">
-                <i class="bi bi-journal-check"></i>
-              </div>
-              <h4 class="fw-bold fs-5 mb-2">Soil Test Report Reading</h4>
-              <p class="text-muted small mb-3">
-                Interpreting test columns enables cultivators to purchase only required organic amendments, preventing wasteful expenditures and avoiding excessive nitrogen during sensitive fruiting phases.
-              </p>
-              <div class="p-2 rounded bg-light-subtle small fw-semibold text-success">
-                <i class="bi bi-check-circle me-1"></i> Informed Fertilizer Strategy
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3 Soil Testing Visual Steps -->
-        <div class="row g-4 align-items-stretch">
-          <div class="col-12 col-md-4">
             <div class="edu-card">
               <div class="edu-card-img-wrap">
-                <img src="assets/images/home-2/soil-sample-collection.jpg" alt="Farmer collecting soil sample in field using zig-zag core sampling" loading="lazy">
-                <span class="edu-card-badge">Step 1: In-Field Sampling</span>
+                <img src="assets/images/home-2/diag-ph.jpg?v=1.0" alt="Close-up agricultural soil pH testing using a digital pH meter and soil sample" loading="lazy">
+                <span class="edu-card-badge">Soil pH Parameter</span>
               </div>
               <div class="edu-card-body">
-                <h4 class="edu-card-title fs-5">Zig-Zag Sample Collection</h4>
-                <p class="edu-card-desc mb-0">
-                  Collect 10 to 15 V-shaped core slices at 15cm depth across your field, discarding surface weeds, and composite them thoroughly into a representative 500g batch.
+                <h3 class="edu-card-title">Soil pH Levels</h3>
+                <p class="edu-card-desc">
+                  Measures the acidity or alkalinity of soil and influences nutrient availability and microbial activity. Understanding pH helps farmers identify whether soil conditions are suitable for their intended crops.
                 </p>
+                <div class="diag-highlight-box mt-auto">
+                  <span class="diag-highlight-text">
+                    <i class="bi bi-shield-check text-success me-1"></i> General Reference: pH 6.0–7.0
+                  </span>
+                  <span class="badge bg-success-subtle text-success rounded-pill px-2 py-1 small">pH Scale</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="col-12 col-md-4">
+          <!-- Card 2: Nitrogen, Phosphorus and Potassium (NPK) -->
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="edu-card">
               <div class="edu-card-img-wrap">
-                <img src="assets/images/home-2/soil-lab-testing.jpg" alt="Agricultural soil testing equipment in laboratory" loading="lazy">
-                <span class="edu-card-badge">Step 2: Lab Diagnostics</span>
+                <img src="assets/images/home-2/diag-npk.jpg?v=1.0" alt="Soil laboratory nutrient analysis showing soil samples and NPK testing equipment" loading="lazy">
+                <span class="edu-card-badge">Primary Nutrients</span>
               </div>
               <div class="edu-card-body">
-                <h4 class="edu-card-title fs-5">Laboratory Testing Equipment</h4>
-                <p class="edu-card-desc mb-0">
-                  Certified testing facilities utilize spectrophotometry, flame photometers, and calibrated probes to quantify accurate elemental concentrations per acre.
+                <h3 class="edu-card-title">Nitrogen, Phosphorus and Potassium (NPK)</h3>
+                <p class="edu-card-desc">
+                  Evaluates the availability of three essential plant nutrients. Soil test results help identify nutrient deficiencies and guide balanced fertilizer planning according to crop requirements.
                 </p>
+                <div class="diag-highlight-box mt-auto">
+                  <span class="diag-highlight-text">
+                    <i class="bi bi-shield-check text-success me-1"></i> Primary Nutrient Assessment
+                  </span>
+                  <span class="badge bg-success-subtle text-success rounded-pill px-2 py-1 small">NPK Balance</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="col-12 col-md-4">
+          <!-- Card 3: Soil Organic Carbon (SOC) -->
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="edu-card">
               <div class="edu-card-img-wrap">
-                <img src="assets/images/home-2/soil-test-report.jpg" alt="Agronomist reviewing soil test report with recommendations" loading="lazy">
-                <span class="edu-card-badge">Step 3: Actionable Advice</span>
+                <img src="assets/images/home-2/diag-soc.jpg?v=1.0" alt="Rich, dark agricultural soil with visible humus and organic matter in macro photography" loading="lazy">
+                <span class="edu-card-badge">Soil Biology</span>
               </div>
               <div class="edu-card-body">
-                <h4 class="edu-card-title fs-5">Interpreting Soil Test Reports</h4>
-                <p class="edu-card-desc mb-0">
-                  Translate laboratory indices into exact tons of aged manure, bags of enriched vermicompost, and organic botanical cakes for targeted application.
+                <h3 class="edu-card-title">Soil Organic Carbon (SOC)</h3>
+                <p class="edu-card-desc">
+                  Indicates the amount of organic carbon present in soil. Organic carbon contributes to soil structure, moisture retention, nutrient cycling and beneficial microbial activity.
                 </p>
+                <div class="diag-highlight-box mt-auto">
+                  <span class="diag-highlight-text">
+                    <i class="bi bi-shield-check text-success me-1"></i> Soil Organic Matter Indicator
+                  </span>
+                  <span class="badge bg-success-subtle text-success rounded-pill px-2 py-1 small">Humus Core</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Electrical Conductivity (EC) -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="edu-card">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/diag-ec.jpg?v=1.0" alt="Close-up of an agricultural soil EC meter testing a soil sample" loading="lazy">
+                <span class="edu-card-badge">Salinity Index</span>
+              </div>
+              <div class="edu-card-body">
+                <h3 class="edu-card-title">Electrical Conductivity (EC)</h3>
+                <p class="edu-card-desc">
+                  Measures the concentration of soluble salts in soil. Monitoring EC helps identify potential salinity problems that may affect water absorption and healthy root development.
+                </p>
+                <div class="diag-highlight-box mt-auto">
+                  <span class="diag-highlight-text">
+                    <i class="bi bi-shield-check text-success me-1"></i> Salinity Assessment
+                  </span>
+                  <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill px-2 py-1 small">EC Metric</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Soil Moisture and Texture -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="edu-card">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/diag-moisture.jpg?v=1.0" alt="Soil moisture meter probe inserted into agricultural soil, showing a realistic field testing process" loading="lazy">
+                <span class="edu-card-badge">Water &amp; Aeration</span>
+              </div>
+              <div class="edu-card-body">
+                <h3 class="edu-card-title">Soil Moisture and Texture</h3>
+                <p class="edu-card-desc">
+                  Evaluates soil water-holding capacity, drainage, aeration and physical structure. These factors help farmers understand irrigation requirements and plan suitable soil amendments.
+                </p>
+                <div class="diag-highlight-box mt-auto">
+                  <span class="diag-highlight-text">
+                    <i class="bi bi-shield-check text-success me-1"></i> Water Retention &amp; Soil Structure
+                  </span>
+                  <span class="badge bg-success-subtle text-success rounded-pill px-2 py-1 small">Hydration</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Soil Test Report Interpretation -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="edu-card">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/diag-report.jpg?v=1.0" alt="Professional agricultural laboratory soil test report placed beside soil samples and testing equipment" loading="lazy">
+                <span class="edu-card-badge">Report Reading</span>
+              </div>
+              <div class="edu-card-body">
+                <h3 class="edu-card-title">Soil Test Report Interpretation</h3>
+                <p class="edu-card-desc">
+                  Learn how to read soil test results, understand nutrient deficiencies and identify soil management priorities. Use laboratory recommendations to plan suitable organic inputs and avoid unnecessary fertilizer applications.
+                </p>
+                <div class="diag-highlight-box mt-auto">
+                  <span class="diag-highlight-text">
+                    <i class="bi bi-shield-check text-success me-1"></i> Informed Farm Management
+                  </span>
+                  <span class="badge bg-success-subtle text-success rounded-pill px-2 py-1 small">Decision Tool</span>
+                </div>
               </div>
             </div>
           </div>
