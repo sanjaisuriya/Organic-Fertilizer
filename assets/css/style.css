@@ -463,7 +463,7 @@ body {
 
   line-height: 1.65;
 
-  overflow-x: hidden;
+  overflow-x: clip;
 
   transition: background-color 0.3s ease, color 0.3s ease;
 
@@ -6581,4 +6581,554 @@ img.rounded-4.shadow-sm:hover {
     bottom: 15px;
     right: 15px;
   }
+}
+
+/* ==========================================================================
+   TERRAPURE MASTER ALIGNMENT & THEME VISIBILITY SYSTEM
+   Guarantees:
+   1. Flawless card equal heights, flex column flow, and bottom alignment across all pages.
+   2. 100% visible, high-contrast text, icons, badges, borders, tables, modals in Dark Mode.
+   3. Crisp, elegant, WCAG AA compliant readability and contrast in Light Mode.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   SECTION A: UNIVERSAL CARD EQUAL HEIGHT & HORIZONTAL ALIGNMENT RULES
+   -------------------------------------------------------------------------- */
+
+/* Ensure all grid columns stretch children evenly */
+.row.g-4 > [class*="col-"],
+.row.g-3 > [class*="col-"],
+.row.g-2 > [class*="col-"] {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Force all major card components to 100% height and flex column */
+.farm-card,
+.product-card,
+.soil-health-card,
+.edu-card,
+.usage-card,
+.blog-card,
+.core-value-card,
+.service-action-card,
+.depot-feature-card,
+.depot-floating-card,
+.impact-feature-card,
+.testimonial-card,
+.kpi-metric-card,
+.packaging-card,
+.proven-edge-card,
+.diagnostic-feature-card,
+.soil-principle-card,
+.service-home-card,
+.card.h-100 {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  margin-bottom: 0 !important;
+}
+
+/* Standardize card image wrappers for uniform card tops across all grids */
+.card-img-wrapper,
+.usage-card-img-wrapper,
+.soil-health-card-img-wrapper,
+.edu-card-img-wrap,
+.action-card-img-wrapper {
+  height: 220px !important;
+  min-height: 220px !important;
+  max-height: 220px !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  position: relative !important;
+  flex-shrink: 0 !important;
+  background-color: var(--warm-beige, #f4f6f3);
+}
+
+.card-img-wrapper img,
+.usage-card-img-wrapper img,
+.soil-health-card-img-wrapper img,
+.edu-card-img-wrap img,
+.action-card-img-wrapper img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Hover zoom on card images */
+.farm-card:hover .card-img-wrapper img,
+.product-card:hover .card-img-wrapper img,
+.usage-card:hover .usage-card-img-wrapper img,
+.soil-health-card:hover .soil-health-card-img-wrapper img,
+.edu-card:hover .edu-card-img-wrap img,
+.blog-card:hover .card-img-wrapper img,
+.service-action-card:hover img {
+  transform: scale(1.08) !important;
+}
+
+/* Ensure all card content containers flex-grow and use column direction */
+.card-body,
+.edu-card-body,
+.soil-health-card-body,
+.usage-card-body,
+.blog-content {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  width: 100% !important;
+}
+
+/* Card titles alignment with consistent min-height */
+.product-title,
+.soil-health-card-title,
+.edu-card-title,
+.usage-card-title {
+  min-height: 2.85rem !important;
+  display: flex !important;
+  align-items: center !important;
+  line-height: 1.3 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.blog-title {
+  min-height: 3.2rem !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  line-height: 1.35 !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Card body descriptions flex-grow to push footers down */
+.product-desc,
+.soil-health-card-desc,
+.edu-card-desc,
+.usage-card-text,
+.blog-summary,
+.card-body > p:not(.lead) {
+  flex-grow: 1 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Align card footers, buttons, and metadata bars at the exact bottom */
+.crop-tags-row,
+.soil-health-card-footer,
+.usage-card-footer,
+.card-body > .mt-auto,
+.edu-card-body > .mt-auto,
+.soil-health-card-body > .mt-auto,
+.blog-content > .mt-auto,
+.farm-card > .mt-auto {
+  margin-top: auto !important;
+  width: 100% !important;
+}
+
+/* Product card crop tags row: perfect flex spacing */
+.crop-tags-row {
+  min-height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0.5rem !important;
+  padding-top: 0.85rem !important;
+  border-top: 1px dashed rgba(45, 106, 79, 0.2) !important;
+}
+
+.crop-tags-row .btn {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.nutrient-specs {
+  min-height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 0.4rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION B: LIGHT MODE CONTRAST & VISIBILITY ENHANCEMENTS
+   -------------------------------------------------------------------------- */
+
+html:not([data-theme="dark"]) .farm-card,
+html:not([data-theme="dark"]) .product-card,
+html:not([data-theme="dark"]) .soil-health-card,
+html:not([data-theme="dark"]) .edu-card,
+html:not([data-theme="dark"]) .usage-card,
+html:not([data-theme="dark"]) .blog-card,
+html:not([data-theme="dark"]) .depot-feature-card,
+html:not([data-theme="dark"]) .testimonial-card {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(45, 106, 79, 0.16) !important;
+  box-shadow: 0 4px 18px rgba(35, 93, 58, 0.06) !important;
+}
+
+html:not([data-theme="dark"]) .product-title,
+html:not([data-theme="dark"]) .soil-health-card-title,
+html:not([data-theme="dark"]) .edu-card-title,
+html:not([data-theme="dark"]) .usage-card-title,
+html:not([data-theme="dark"]) .blog-title,
+html:not([data-theme="dark"]) .blog-title a {
+  color: #152c1e !important;
+  font-weight: 700 !important;
+}
+
+html:not([data-theme="dark"]) .product-desc,
+html:not([data-theme="dark"]) .soil-health-card-desc,
+html:not([data-theme="dark"]) .edu-card-desc,
+html:not([data-theme="dark"]) .usage-card-text,
+html:not([data-theme="dark"]) .blog-summary {
+  color: #3b5244 !important;
+}
+
+html:not([data-theme="dark"]) .nutrient-tag {
+  background-color: #f1f6f2 !important;
+  color: #235d3a !important;
+  border: 1px solid rgba(45, 106, 79, 0.2) !important;
+  font-weight: 600 !important;
+}
+
+html:not([data-theme="dark"]) .crop-tag-text {
+  color: #235d3a !important;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION C: DARK MODE MASTER CONTRAST & VISIBILITY (100% COVERAGE)
+   -------------------------------------------------------------------------- */
+
+/* Surfaces and Cards */
+[data-theme="dark"] .farm-card,
+[data-theme="dark"] .product-card,
+[data-theme="dark"] .soil-health-card,
+[data-theme="dark"] .edu-card,
+[data-theme="dark"] .usage-card,
+[data-theme="dark"] .blog-card,
+[data-theme="dark"] .core-value-card,
+[data-theme="dark"] .service-action-card,
+[data-theme="dark"] .depot-feature-card,
+[data-theme="dark"] .depot-floating-card,
+[data-theme="dark"] .impact-feature-card,
+[data-theme="dark"] .testimonial-card,
+[data-theme="dark"] .kpi-metric-card,
+[data-theme="dark"] .packaging-card,
+[data-theme="dark"] .proven-edge-card,
+[data-theme="dark"] .diagnostic-feature-card,
+[data-theme="dark"] .soil-principle-card,
+[data-theme="dark"] .checklist-container-card,
+[data-theme="dark"] .service-home-card,
+[data-theme="dark"] .card:not(.bg-transparent):not(.bg-warning):not(.bg-success) {
+  background-color: #16261b !important;
+  color: #eaf4ed !important;
+  border: 1px solid rgba(82, 183, 136, 0.22) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Card image wrappers in dark mode */
+[data-theme="dark"] .card-img-wrapper,
+[data-theme="dark"] .usage-card-img-wrapper,
+[data-theme="dark"] .soil-health-card-img-wrapper,
+[data-theme="dark"] .edu-card-img-wrap,
+[data-theme="dark"] .action-card-img-wrapper {
+  background-color: #101c14 !important;
+}
+
+/* Headings and Titles in Dark Mode */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] .product-title,
+[data-theme="dark"] .soil-health-card-title,
+[data-theme="dark"] .edu-card-title,
+[data-theme="dark"] .usage-card-title,
+[data-theme="dark"] .blog-title,
+[data-theme="dark"] .blog-title a,
+[data-theme="dark"] .card-title,
+[data-theme="dark"] .font-heading,
+[data-theme="dark"] .display-6,
+[data-theme="dark"] .display-5,
+[data-theme="dark"] .display-4 {
+  color: #ffffff !important;
+}
+
+/* Paragraphs and Body Text in Dark Mode */
+[data-theme="dark"] p,
+[data-theme="dark"] .lead,
+[data-theme="dark"] .product-desc,
+[data-theme="dark"] .soil-health-card-desc,
+[data-theme="dark"] .edu-card-desc,
+[data-theme="dark"] .usage-card-text,
+[data-theme="dark"] .blog-summary,
+[data-theme="dark"] .card-text,
+[data-theme="dark"] .text-main,
+[data-theme="dark"] body {
+  color: #d2e4d7 !important;
+}
+
+/* Muted, secondary, and small text in Dark Mode */
+[data-theme="dark"] .text-muted,
+[data-theme="dark"] .text-secondary,
+[data-theme="dark"] small,
+[data-theme="dark"] .small,
+[data-theme="dark"] .blog-meta,
+[data-theme="dark"] .blog-meta span {
+  color: #a1c4b0 !important;
+}
+
+/* Strong, bold text in Dark Mode */
+[data-theme="dark"] strong,
+[data-theme="dark"] b,
+[data-theme="dark"] .fw-bold:not(.text-dark):not(.btn-warning *):not(.bg-warning *),
+[data-theme="dark"] .fw-semibold:not(.btn-warning *):not(.bg-warning *) {
+  color: #ffffff !important;
+}
+
+/* Badges, Pills, Tags in Dark Mode */
+[data-theme="dark"] .badge-eco,
+[data-theme="dark"] [class*="badge-eco"],
+[data-theme="dark"] .badge-earth,
+[data-theme="dark"] .badge-tag-eco,
+[data-theme="dark"] .usage-card-badge,
+[data-theme="dark"] .edu-card-badge,
+[data-theme="dark"] .soil-health-card-badge,
+[data-theme="dark"] .nutrient-tag,
+[data-theme="dark"] .cert-pill,
+[data-theme="dark"] .field-impact-badge,
+[data-theme="dark"] .hero-badge-pill,
+[data-theme="dark"] .section-badge-edu,
+[data-theme="dark"] .phase-pill,
+[data-theme="dark"] .step-number-badge,
+[data-theme="dark"] .bg-success-subtle,
+[data-theme="dark"] .bg-secondary-subtle {
+  background-color: rgba(82, 183, 136, 0.18) !important;
+  color: #74c69d !important;
+  border: 1px solid rgba(82, 183, 136, 0.35) !important;
+}
+
+/* Top Seller / Cured badges in Dark Mode */
+[data-theme="dark"] .badge.bg-success {
+  background-color: #2d6a4f !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .badge.bg-earth,
+[data-theme="dark"] .badge[style*="background-color: var(--earth-brown)"] {
+  background-color: #6b4d3c !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(212, 163, 115, 0.4) !important;
+}
+
+/* Crop Tags Row & Details Button in Dark Mode */
+[data-theme="dark"] .crop-tags-row {
+  border-top-color: rgba(82, 183, 136, 0.25) !important;
+}
+
+[data-theme="dark"] .crop-tag-text,
+[data-theme="dark"] .crop-tags-row i {
+  color: #74c69d !important;
+}
+
+[data-theme="dark"] .btn-outline-success {
+  border-color: #52b788 !important;
+  color: #74c69d !important;
+  background-color: transparent !important;
+}
+
+[data-theme="dark"] .btn-outline-success:hover {
+  background-color: #2d6a4f !important;
+  border-color: #52b788 !important;
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION D: ICONS & ICON BOXES IN DARK MODE
+   -------------------------------------------------------------------------- */
+
+[data-theme="dark"] i.bi:not(.btn-warning *):not(.bg-warning *):not(.text-warning) {
+  color: inherit;
+}
+
+[data-theme="dark"] .text-success,
+[data-theme="dark"] i.text-success,
+[data-theme="dark"] .bi.text-success {
+  color: #74c69d !important;
+}
+
+[data-theme="dark"] .service-icon-box,
+[data-theme="dark"] .benefit-icon,
+[data-theme="dark"] .brand-icon-box,
+[data-theme="dark"] .kpi-icon-box,
+[data-theme="dark"] .proven-edge-icon-box,
+[data-theme="dark"] .depot-feature-icon,
+[data-theme="dark"] .soil-health-icon-bubble {
+  background-color: rgba(82, 183, 136, 0.18) !important;
+  color: #74c69d !important;
+  border: 1px solid rgba(82, 183, 136, 0.3) !important;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION E: MODALS, TABLES, ACCORDIONS, & FORMS IN DARK MODE
+   -------------------------------------------------------------------------- */
+
+/* Modals */
+[data-theme="dark"] .modal-content {
+  background-color: #142319 !important;
+  color: #eaf4ed !important;
+  border: 1px solid rgba(82, 183, 136, 0.3) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7) !important;
+}
+
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-footer {
+  border-color: rgba(82, 183, 136, 0.2) !important;
+  background-color: transparent !important;
+}
+
+[data-theme="dark"] .modal-title {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .modal-body {
+  color: #d2e4d7 !important;
+}
+
+[data-theme="dark"] .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%) !important;
+}
+
+/* Tables */
+[data-theme="dark"] .table,
+[data-theme="dark"] .table-light,
+[data-theme="dark"] .table > :not(caption) > * > * {
+  background-color: #16261b !important;
+  color: #eaf4ed !important;
+  border-color: rgba(82, 183, 136, 0.2) !important;
+}
+
+[data-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  color: #eaf4ed !important;
+}
+
+[data-theme="dark"] .table-hover > tbody > tr:hover > * {
+  background-color: rgba(82, 183, 136, 0.1) !important;
+}
+
+/* Accordions */
+[data-theme="dark"] .accordion-item {
+  background-color: #16261b !important;
+  border: 1px solid rgba(82, 183, 136, 0.2) !important;
+}
+
+[data-theme="dark"] .accordion-button {
+  background-color: #16261b !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+  background-color: rgba(82, 183, 136, 0.15) !important;
+  color: #74c69d !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] .accordion-button::after {
+  filter: invert(1) hue-rotate(90deg) brightness(1.5) !important;
+}
+
+[data-theme="dark"] .accordion-body {
+  background-color: #132017 !important;
+  color: #d2e4d7 !important;
+  border-top: 1px solid rgba(82, 183, 136, 0.15) !important;
+}
+
+/* Forms */
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] .form-farm-control,
+[data-theme="dark"] .input-group-text {
+  background-color: #111e15 !important;
+  color: #ffffff !important;
+  border-color: rgba(82, 183, 136, 0.3) !important;
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus,
+[data-theme="dark"] .form-farm-control:focus {
+  background-color: #142319 !important;
+  color: #ffffff !important;
+  border-color: #52b788 !important;
+  box-shadow: 0 0 0 0.25rem rgba(82, 183, 136, 0.25) !important;
+}
+
+[data-theme="dark"] .form-control::placeholder,
+[data-theme="dark"] .form-farm-control::placeholder,
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-theme="dark"] .form-label,
+[data-theme="dark"] .form-label-farm {
+  color: #eaf4ed !important;
+}
+
+/* Breadcrumbs */
+[data-theme="dark"] .breadcrumb-item a {
+  color: #74c69d !important;
+}
+
+[data-theme="dark"] .breadcrumb-item.active {
+  color: #a1c4b0 !important;
+}
+
+[data-theme="dark"] .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(82, 183, 136, 0.4) !important;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION F: INLINE STYLE OVERRIDES IN DARK MODE
+   -------------------------------------------------------------------------- */
+
+[data-theme="dark"] [style*="color: #1e4d2b"],
+[data-theme="dark"] [style*="color:#1e4d2b"],
+[data-theme="dark"] [style*="color: #2d6a4f"],
+[data-theme="dark"] [style*="color:#2d6a4f"],
+[data-theme="dark"] [style*="color: #1a3320"],
+[data-theme="dark"] [style*="color:#1a3320"] {
+  color: #74c69d !important;
+}
+
+[data-theme="dark"] [style*="color: #5d4037"],
+[data-theme="dark"] [style*="color:#5d4037"] {
+  color: #e2b184 !important;
+}
+
+[data-theme="dark"] [style*="color: #4e6555"],
+[data-theme="dark"] [style*="color:#4e6555"],
+[data-theme="dark"] [style*="color: #4b6354"],
+[data-theme="dark"] [style*="color:#4b6354"] {
+  color: #d2e4d7 !important;
+}
+
+[data-theme="dark"] [style*="background-color: rgba(30, 77, 43, 0.1)"],
+[data-theme="dark"] [style*="background-color:rgba(30, 77, 43, 0.1)"] {
+  background-color: rgba(82, 183, 136, 0.18) !important;
+}
+
+[data-theme="dark"] [style*="background-color: rgba(93, 64, 55, 0.1)"],
+[data-theme="dark"] [style*="background-color:rgba(93, 64, 55, 0.1)"] {
+  background-color: rgba(226, 177, 132, 0.18) !important;
+}
+
+[data-theme="dark"] [style*="border-color: #eef3ef"],
+[data-theme="dark"] [style*="border-color:#eef3ef"],
+[data-theme="dark"] [style*="border-color: #e2ebe4"],
+[data-theme="dark"] [style*="border-color:#e2ebe4"] {
+  border-color: rgba(82, 183, 136, 0.22) !important;
 }

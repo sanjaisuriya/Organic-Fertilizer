@@ -25,8 +25,14 @@
        HOME PAGE 2 SPECIALIZED EDUCATINAL SYSTEM STYLES
        ------------------------------------------------------------- */
     html, body {
-      overflow-x: hidden;
-      max-width: 100vw;
+      overflow-x: clip;
+    }
+
+    /* Sticky Navigation Bar Fix */
+    .navbar-custom {
+      position: sticky !important;
+      top: 0 !important;
+      z-index: 1040 !important;
     }
 
     /* Section Backgrounds Alternating Scheme */
