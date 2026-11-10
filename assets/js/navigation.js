@@ -13,6 +13,14 @@
     document.documentElement.setAttribute('dir', dir);
     localStorage.setItem(RTL_STORAGE_KEY, dir);
 
+    // Swap Bootstrap CSS: LTR <-> RTL
+    const bsLtr = document.getElementById('bootstrap-ltr-css');
+    const bsRtl = document.getElementById('bootstrap-rtl-css');
+    if (bsLtr && bsRtl) {
+      bsLtr.disabled = (dir === 'rtl');
+      bsRtl.disabled = (dir === 'ltr');
+    }
+
     const rtlBtns = document.querySelectorAll('.rtl-toggle-btn');
     rtlBtns.forEach(btn => {
       let icon = btn.querySelector('i');
