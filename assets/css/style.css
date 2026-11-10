@@ -5484,3 +5484,19 @@ img.rounded-4.shadow-sm:hover {
   background: rgba(82, 183, 136, 0.18);
   color: #74c69d;
 }
+
+.soil-health-icon-bubble i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.soil-health-icon-bubble svg {
+  width: 22px;
+  height: 22px;
+  stroke: #ffffff;
+  fill: none;
+  display: block;
+}
