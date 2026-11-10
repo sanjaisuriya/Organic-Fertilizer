@@ -26,6 +26,10 @@
 
   --accent-green: #52b788;
 
+  --accent-light-green: #74c69d;
+
+  --bg-card: #ffffff;
+
   --accent-mint: #b7e4c7;
 
   --accent-lime: #95d5b2;
@@ -140,6 +144,10 @@
 
   --warm-cream: #121d16;
 
+  --accent-light-green: #74c69d;
+
+  --bg-card: #1a2c21;
+
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.35);
 
   --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.45);
@@ -147,6 +155,277 @@
   --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.6);
 
 }
+
+/* ===================================================================
+   MASTER UNIVERSAL DARK MODE & LIGHT MODE ENGINE
+   Guarantees 100% visible text, icons, cards, forms, images,
+   tables, badges, and accordions across all pages from Home to Contact.
+   =================================================================== */
+
+/* 1. Universal Card & Surface Overrides in Dark Mode */
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-surface,
+[data-theme="dark"] .farm-card,
+[data-theme="dark"] .card:not(.bg-transparent):not(.bg-warning):not(.bg-success) {
+  background-color: var(--bg-surface-elevated, #1a2c21) !important;
+  color: var(--text-main, #ebf5ee) !important;
+  border-color: rgba(82, 183, 136, 0.22) !important;
+}
+
+[data-theme="dark"] .bg-light,
+[data-theme="dark"] .bg-surface-secondary {
+  background-color: var(--bg-surface-secondary, #18281e) !important;
+  color: var(--text-main, #ebf5ee) !important;
+}
+
+/* 2. Universal Typography & Contrast in Dark Mode */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] .font-heading,
+[data-theme="dark"] .product-title,
+[data-theme="dark"] .display-6,
+[data-theme="dark"] .display-5,
+[data-theme="dark"] .display-4 {
+  color: #f0fdf4 !important;
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] .lead {
+  color: #b7cebf !important;
+}
+
+[data-theme="dark"] .text-muted,
+[data-theme="dark"] .text-secondary {
+  color: #a3c2af !important;
+}
+
+/* Maintain dark text inside bright yellow warning elements */
+[data-theme="dark"] .text-dark:not(.bg-warning):not(.bg-warning *):not(.btn-warning):not(.btn-warning *):not(.badge-warning):not(.badge-warning *),
+[data-theme="dark"] .text-black:not(.bg-warning):not(.bg-warning *) {
+  color: #f0fdf4 !important;
+}
+
+[data-theme="dark"] strong,
+[data-theme="dark"] b,
+[data-theme="dark"] .fw-bold:not(.text-dark):not(.btn-warning *),
+[data-theme="dark"] .fw-semibold:not(.btn-warning *) {
+  color: #ffffff;
+}
+
+/* 3. Override Hardcoded Dark Inline Colors in Dark Mode */
+[data-theme="dark"] [style*="color: #1a3320"],
+[data-theme="dark"] [style*="color:#1a3320"],
+[data-theme="dark"] [style*="color: #1e4d2b"],
+[data-theme="dark"] [style*="color:#1e4d2b"],
+[data-theme="dark"] [style*="color: #212529"],
+[data-theme="dark"] [style*="color:#212529"],
+[data-theme="dark"] [style*="color: #000000"],
+[data-theme="dark"] [style*="color:#000000"],
+[data-theme="dark"] [style*="color: #333333"],
+[data-theme="dark"] [style*="color:#333333"] {
+  color: #f0fdf4 !important;
+}
+
+[data-theme="dark"] [style*="color: #4e6555"],
+[data-theme="dark"] [style*="color:#4e6555"],
+[data-theme="dark"] [style*="color: #4b6354"],
+[data-theme="dark"] [style*="color:#4b6354"],
+[data-theme="dark"] [style*="color: #5d4037"],
+[data-theme="dark"] [style*="color:#5d4037"],
+[data-theme="dark"] [style*="color: #6c757d"],
+[data-theme="dark"] [style*="color:#6c757d"] {
+  color: #b7cebf !important;
+}
+
+/* 4. Override Hardcoded Light Backgrounds in Dark Mode */
+[data-theme="dark"] [style*="background-color: #ffffff"],
+[data-theme="dark"] [style*="background-color:#ffffff"],
+[data-theme="dark"] [style*="background-color: #fbfcfa"],
+[data-theme="dark"] [style*="background-color:#fbfcfa"],
+[data-theme="dark"] [style*="background-color: #f4f6f4"],
+[data-theme="dark"] [style*="background-color:#f4f6f4"],
+[data-theme="dark"] [style*="background-color: #f8f9fa"],
+[data-theme="dark"] [style*="background-color:#f8f9fa"],
+[data-theme="dark"] [style*="background: #ffffff"],
+[data-theme="dark"] [style*="background:#ffffff"] {
+  background-color: #1a2c21 !important;
+}
+
+[data-theme="dark"] [style*="border-color: #e2ebe4"],
+[data-theme="dark"] [style*="border-color:#e2ebe4"],
+[data-theme="dark"] [style*="border-color: #eef3ef"],
+[data-theme="dark"] [style*="border-color:#eef3ef"],
+[data-theme="dark"] [style*="border-color: #dee2e6"],
+[data-theme="dark"] [style*="border-color:#dee2e6"] {
+  border-color: rgba(82, 183, 136, 0.22) !important;
+}
+
+/* 5. Icons and Icon Boxes in Dark Mode */
+[data-theme="dark"] [style*="background-color: rgba(30, 77, 43, 0.1)"],
+[data-theme="dark"] [style*="background-color:rgba(30, 77, 43, 0.1)"],
+[data-theme="dark"] [style*="background-color: rgba(45, 106, 79, 0.1)"],
+[data-theme="dark"] [style*="background-color:rgba(45, 106, 79, 0.1)"],
+[data-theme="dark"] [style*="background-color: rgba(93, 64, 55, 0.1)"],
+[data-theme="dark"] [style*="background-color:rgba(93, 64, 55, 0.1)"],
+[data-theme="dark"] [style*="background: rgba(45, 106, 79, 0.12)"],
+[data-theme="dark"] [style*="background:rgba(45, 106, 79, 0.12)"] {
+  background-color: rgba(82, 183, 136, 0.18) !important;
+  color: #74c69d !important;
+  border-color: rgba(82, 183, 136, 0.3) !important;
+}
+
+[data-theme="dark"] .text-success,
+[data-theme="dark"] .bi.text-success,
+[data-theme="dark"] i.text-success {
+  color: #52b788 !important;
+}
+
+/* 6. Form Controls in Dark Mode */
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] .form-farm-control,
+[data-theme="dark"] .input-group-text {
+  background-color: #142219 !important;
+  color: #f0fdf4 !important;
+  border-color: rgba(82, 183, 136, 0.32) !important;
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus,
+[data-theme="dark"] .form-farm-control:focus {
+  background-color: #1a2c21 !important;
+  color: #ffffff !important;
+  border-color: #52b788 !important;
+  box-shadow: 0 0 0 4px rgba(82, 183, 136, 0.22) !important;
+}
+
+[data-theme="dark"] .form-control::placeholder,
+[data-theme="dark"] .form-farm-control::placeholder,
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #7a9c86 !important;
+  opacity: 1;
+}
+
+[data-theme="dark"] .form-label,
+[data-theme="dark"] .form-label-farm {
+  color: #f0fdf4 !important;
+}
+
+[data-theme="dark"] .form-select option {
+  background-color: #142219 !important;
+  color: #f0fdf4 !important;
+}
+
+/* 7. Accordions in Dark Mode */
+[data-theme="dark"] .accordion-item {
+  background-color: #1a2c21 !important;
+  border-color: rgba(82, 183, 136, 0.22) !important;
+}
+
+[data-theme="dark"] .accordion-button {
+  background-color: #1a2c21 !important;
+  color: #f0fdf4 !important;
+  border-color: rgba(82, 183, 136, 0.2) !important;
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+  background-color: #233d2c !important;
+  color: #74c69d !important;
+  box-shadow: inset 0 -1px 0 rgba(82, 183, 136, 0.25) !important;
+}
+
+[data-theme="dark"] .accordion-button::after {
+  filter: invert(1) hue-rotate(90deg) brightness(1.2);
+}
+
+[data-theme="dark"] .accordion-body {
+  background-color: #142219 !important;
+  color: #b7cebf !important;
+}
+
+/* 8. Tables in Dark Mode */
+[data-theme="dark"] .table {
+  color: #f0fdf4 !important;
+  border-color: rgba(82, 183, 136, 0.22) !important;
+}
+
+[data-theme="dark"] .table > :not(caption) > * > * {
+  background-color: #16241b !important;
+  color: #f0fdf4 !important;
+  border-bottom-color: rgba(82, 183, 136, 0.2) !important;
+}
+
+[data-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: #1c3024 !important;
+}
+
+[data-theme="dark"] .table-hover > tbody > tr:hover > * {
+  background-color: #233d2c !important;
+}
+
+/* 9. Badges, Buttons & Filters in Dark Mode */
+[data-theme="dark"] .badge-eco,
+[data-theme="dark"] [class*="badge-eco"] {
+  background-color: rgba(82, 183, 136, 0.18) !important;
+  color: #74c69d !important;
+  border: 1px solid rgba(82, 183, 136, 0.3) !important;
+}
+
+[data-theme="dark"] .bg-success-subtle {
+  background-color: rgba(82, 183, 136, 0.18) !important;
+  color: #74c69d !important;
+}
+
+[data-theme="dark"] .btn-outline-success,
+[data-theme="dark"] [style*="border-color: #1e4d2b; color: #1e4d2b;"] {
+  color: #74c69d !important;
+  border-color: #52b788 !important;
+}
+
+[data-theme="dark"] .btn-outline-success:hover,
+[data-theme="dark"] [style*="border-color: #1e4d2b; color: #1e4d2b;"]:hover {
+  background-color: #2d6a4f !important;
+  color: #ffffff !important;
+  border-color: #2d6a4f !important;
+}
+
+[data-theme="dark"] .filter-btn:not(.active) {
+  background-color: #1a2c21 !important;
+  color: #b7cebf !important;
+  border-color: rgba(82, 183, 136, 0.25) !important;
+}
+
+[data-theme="dark"] .filter-btn:not(.active):hover {
+  background-color: rgba(82, 183, 136, 0.2) !important;
+  color: #74c69d !important;
+  border-color: #52b788 !important;
+}
+
+[data-theme="dark"] .crop-rec-box {
+  background-color: #142219 !important;
+  color: #ebf5ee !important;
+  border: 1px solid rgba(82, 183, 136, 0.25) !important;
+}
+
+/* 10. Image Containers & Borders in Dark Mode */
+[data-theme="dark"] .card-img-wrapper,
+[data-theme="dark"] .soil-health-card-img-wrapper {
+  background-color: #121e16 !important;
+}
+
+[data-theme="dark"] .border-top,
+[data-theme="dark"] .border-bottom,
+[data-theme="dark"] .border-start,
+[data-theme="dark"] .border-end,
+[data-theme="dark"] .border {
+  border-color: rgba(82, 183, 136, 0.22) !important;
+}
+
 
 
 
