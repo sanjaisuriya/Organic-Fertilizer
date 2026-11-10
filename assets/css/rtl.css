@@ -1,8 +1,12 @@
 /* ===================================================================
-   TerraPure Organics - RTL Support (Arabic / Hebrew)
+   TerraPure Organics - RTL Support
    Right-to-Left Layout Rules
+   v3.0 - Full Bootstrap RTL swap + all page overrides
    =================================================================== */
 
+/* ---------------------------------------------------------------
+   BASE
+--------------------------------------------------------------- */
 [dir="rtl"] {
   direction: rtl;
   text-align: right;
@@ -12,77 +16,86 @@
   font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 }
 
-[dir="rtl"] .me-1, [dir="rtl"] .me-2, [dir="rtl"] .me-3, [dir="rtl"] .me-4 {
-  margin-right: 0 !important;
-}
+/* ---------------------------------------------------------------
+   BOOTSTRAP UTILITY MANUAL FLIPS
+   (extra safety layer when RTL CSS build kicks in)
+--------------------------------------------------------------- */
+[dir="rtl"] .me-1 { margin-right: 0 !important; margin-left: 0.25rem !important; }
+[dir="rtl"] .me-2 { margin-right: 0 !important; margin-left: 0.5rem !important; }
+[dir="rtl"] .me-3 { margin-right: 0 !important; margin-left: 1rem !important; }
+[dir="rtl"] .me-4 { margin-right: 0 !important; margin-left: 1.5rem !important; }
+[dir="rtl"] .ms-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+[dir="rtl"] .ms-2 { margin-left: 0 !important; margin-right: 0.5rem !important; }
+[dir="rtl"] .ms-3 { margin-left: 0 !important; margin-right: 1rem !important; }
+[dir="rtl"] .ms-4 { margin-left: 0 !important; margin-right: 1.5rem !important; }
+[dir="rtl"] .ms-auto { margin-left: 0 !important; margin-right: auto !important; }
+[dir="rtl"] .ps-3 { padding-left: 0 !important; padding-right: 1rem !important; }
+[dir="rtl"] .ps-4 { padding-left: 0 !important; padding-right: 1.5rem !important; }
+[dir="rtl"] .pe-3 { padding-right: 0 !important; padding-left: 1rem !important; }
+[dir="rtl"] .pe-4 { padding-right: 0 !important; padding-left: 1.5rem !important; }
+[dir="rtl"] .text-start { text-align: right !important; }
+[dir="rtl"] .text-end { text-align: left !important; }
 
-[dir="rtl"] .ms-1, [dir="rtl"] .ms-2, [dir="rtl"] .ms-3, [dir="rtl"] .ms-4 {
-  margin-left: 0 !important;
-}
+/* ---------------------------------------------------------------
+   NAVBAR & DROPDOWNS
+--------------------------------------------------------------- */
+[dir="rtl"] .navbar-nav { padding-right: 0; }
+[dir="rtl"] .dropdown-menu { text-align: right; }
+[dir="rtl"] .dropdown-item i { margin-right: 0; margin-left: 0.5rem; }
+[dir="rtl"] .bi-chevron-right::before { content: "\f284"; } /* bi-chevron-left */
 
-/* Adjust button icons and flex gap */
+/* ---------------------------------------------------------------
+   BUTTONS
+--------------------------------------------------------------- */
 [dir="rtl"] .btn-farm-primary,
 [dir="rtl"] .btn-farm-secondary,
 [dir="rtl"] .btn-farm-earth {
   flex-direction: row-reverse;
 }
 
-[dir="rtl"] .card-badge-top {
-  left: auto;
-  right: 14px;
-}
-
-[dir="rtl"] .usage-step-box {
-  border-left: 1px solid var(--border-color);
-  border-right: 5px solid var(--primary-green);
-}
-
-[dir="rtl"] .step-number {
-  right: auto;
-  left: 20px;
-}
-
-[dir="rtl"] .footer-farm h5::after {
-  left: auto;
-  right: 0;
-}
-
-[dir="rtl"] .footer-links a:hover {
-  transform: translateX(-4px);
-}
-
-[dir="rtl"] .bi-arrow-right::before {
-  content: "\f12f"; /* bi-arrow-left */
-}
-
+/* ---------------------------------------------------------------
+   SCROLL TO TOP
+--------------------------------------------------------------- */
 [dir="rtl"] .scroll-top-btn {
   right: auto;
   left: 25px;
 }
 
+/* ---------------------------------------------------------------
+   ICONS
+--------------------------------------------------------------- */
+[dir="rtl"] .bi-arrow-right::before { content: "\f12f"; } /* bi-arrow-left */
+
+/* ---------------------------------------------------------------
+   FOOTER
+--------------------------------------------------------------- */
+[dir="rtl"] .footer-farm h5::after {
+  left: auto;
+  right: 0;
+}
+[dir="rtl"] .footer-links a:hover {
+  transform: translateX(-4px);
+}
+
+/* ---------------------------------------------------------------
+   FORMS
+--------------------------------------------------------------- */
+[dir="rtl"] .form-farm-control {
+  text-align: right;
+}
+
+/* ---------------------------------------------------------------
+   TABLES
+--------------------------------------------------------------- */
 [dir="rtl"] .table-farm th,
 [dir="rtl"] .table-farm td {
   text-align: right;
 }
 
-[dir="rtl"] .floating-stat-card.bottom-left {
-  left: auto;
-  right: -20px;
-}
-
-[dir="rtl"] .floating-stat-card.top-right {
-  right: auto;
-  left: -25px;
-}
-
-[dir="rtl"] .form-farm-control {
-  text-align: right;
-}
-
-/* Hero RTL Enhancements */
-[dir="rtl"] .hero-trust-highlights {
-  text-align: right;
-}
+/* ---------------------------------------------------------------
+   HERO (index.html) - Floating stat cards
+--------------------------------------------------------------- */
+[dir="rtl"] .hero-trust-highlights { text-align: right; }
 [dir="rtl"] .floating-stat-card.bottom-left {
   left: auto;
   right: -24px;
@@ -94,4 +107,89 @@
 [dir="rtl"] .hero-image-overlay-pill {
   left: auto;
   right: 18px;
+}
+
+/* ---------------------------------------------------------------
+   HOME-2: HERO STAT DIVIDERS
+--------------------------------------------------------------- */
+[dir="rtl"] .hero-stat-item {
+  border-right: none !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+[dir="rtl"] .hero-stat-item:last-child {
+  border-left: none !important;
+}
+
+/* ---------------------------------------------------------------
+   HOME-2: EDU CARDS & BADGE
+--------------------------------------------------------------- */
+[dir="rtl"] .edu-card-badge {
+  left: auto !important;
+  right: 14px !important;
+}
+[dir="rtl"] .card-badge-top {
+  left: auto;
+  right: 14px;
+}
+
+/* ---------------------------------------------------------------
+   HOME-2: FEATURE LIST BULLETS
+--------------------------------------------------------------- */
+[dir="rtl"] .edu-feature-list li {
+  padding-left: 0 !important;
+  padding-right: 24px !important;
+}
+[dir="rtl"] .edu-feature-list li::before {
+  left: auto !important;
+  right: 0 !important;
+}
+
+/* ---------------------------------------------------------------
+   HOME-2: CTA BANNER DECORATIVE ELEMENT
+--------------------------------------------------------------- */
+[dir="rtl"] .cta-banner-edu::before {
+  right: auto !important;
+  left: -50px !important;
+}
+
+/* ---------------------------------------------------------------
+   HOME-2: CHECKLIST ROWS
+--------------------------------------------------------------- */
+[dir="rtl"] .checklist-icon {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+/* ---------------------------------------------------------------
+   HOME-2: PROCESS / STEP CARDS
+--------------------------------------------------------------- */
+[dir="rtl"] .process-step-card .step-number-badge {
+  right: auto;
+  left: -16px;
+}
+[dir="rtl"] .process-step-connector {
+  right: auto;
+  left: -24px;
+}
+
+/* ---------------------------------------------------------------
+   HOME-2: SEASONAL PHASE ITEMS
+--------------------------------------------------------------- */
+[dir="rtl"] .seasonal-phase-item {
+  border-left: none;
+  border-right: 4px solid var(--primary-green, #2d7a3c);
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+/* ---------------------------------------------------------------
+   USAGE GUIDE PAGE
+--------------------------------------------------------------- */
+[dir="rtl"] .usage-step-box {
+  border-left: 1px solid var(--border-color);
+  border-right: 5px solid var(--primary-green);
+}
+[dir="rtl"] .step-number {
+  right: auto;
+  left: 20px;
 }
