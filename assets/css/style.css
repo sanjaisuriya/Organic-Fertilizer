@@ -1195,11 +1195,12 @@ img {
 
 
 .dropdown-item.active i,
-
-.dropdown-item:active i {
-
+.dropdown-item.active i.text-success,
+.dropdown-item:active i,
+.dropdown-item:active i.text-success,
+[data-theme="dark"] .dropdown-item.active i,
+[data-theme="dark"] .dropdown-item.active i.text-success {
   color: #ffffff !important;
-
 }
 
 
