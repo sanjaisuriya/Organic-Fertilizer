@@ -15,9 +15,58 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   
   <!-- Custom Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css?v=6.1">
+  <link rel="stylesheet" href="assets/css/style.css?v=6.2">
   <link rel="stylesheet" href="assets/css/responsive.css?v=2.1">
   <link rel="stylesheet" href="assets/css/rtl.css?v=2.1">
+  <!-- Inline KPI Metric Cards styles for instant zero-cache rendering -->
+  <style>
+    .kpi-metric-card {
+      background: var(--bg-surface, #ffffff);
+      border: 1.5px solid rgba(35, 93, 58, 0.22) !important;
+      border-radius: 20px !important;
+      padding: 28px 22px !important;
+      text-align: center;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center;
+      height: 100% !important;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .kpi-metric-card:hover {
+      transform: translateY(-5px);
+      border-color: #235d3a !important;
+      box-shadow: 0 12px 28px rgba(35, 93, 58, 0.14);
+    }
+    .kpi-icon-box {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: rgba(35, 93, 58, 0.08);
+      color: #235d3a;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      border: 1px solid rgba(35, 93, 58, 0.12);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .kpi-metric-card:hover .kpi-icon-box {
+      background: rgba(35, 93, 58, 0.16);
+      transform: scale(1.08);
+    }
+    [data-theme="dark"] .kpi-metric-card {
+      background: #142219 !important;
+      border-color: rgba(82, 183, 136, 0.3) !important;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+    }
+    [data-theme="dark"] .kpi-icon-box {
+      background: rgba(82, 183, 136, 0.15);
+      color: #74c69d;
+      border-color: rgba(82, 183, 136, 0.25);
+    }
+  </style>
 </head>
 <body>
 
@@ -623,22 +672,22 @@
       </div>
 
       <!-- 8.2 Separate Impact Highlights Sub-Section -->
-      <div class="mt-5 pt-4">
-        <div class="text-center mb-4 pb-2">
+      <div class="mt-4 pt-2">
+        <div class="text-center mb-4">
           <span class="badge-eco mb-2"><i class="bi bi-graph-up-arrow me-1"></i> Impact Highlights</span>
           <h3 class="h3 fw-bold text-main">Our Annual Regenerative Footprint</h3>
           <p class="text-muted small mx-auto" style="max-width: 680px;">Verifiable environmental metrics and socio-economic milestones delivered across India's organic agricultural belts.</p>
         </div>
 
         <!-- 4 KPI Cards in One Row on Desktop -->
-        <div class="row g-4">
+        <div class="row g-4 align-items-stretch">
           <!-- KPI 1 -->
           <div class="col-12 col-sm-6 col-lg-3 reveal-fade-up">
             <div class="kpi-metric-card">
-              <div class="kpi-icon-box mb-3">
+              <div class="kpi-icon-box">
                 <i class="bi bi-boxes"></i>
               </div>
-              <div class="display-6 fw-bold text-success mb-1 font-heading">50,000+</div>
+              <div class="display-6 fw-bold text-success mb-2 font-heading">50,000+</div>
               <h4 class="h6 fw-bold text-main mb-2">Tons of Organic Compost Distributed</h4>
               <p class="small text-muted mb-0 mt-auto">Rebuilding soil organic matter and native biological microflora across commercial farms nationwide.</p>
             </div>
@@ -647,10 +696,10 @@
           <!-- KPI 2 -->
           <div class="col-12 col-sm-6 col-lg-3 reveal-fade-up">
             <div class="kpi-metric-card">
-              <div class="kpi-icon-box mb-3">
+              <div class="kpi-icon-box">
                 <i class="bi bi-globe-americas"></i>
               </div>
-              <div class="display-6 fw-bold text-success mb-1 font-heading">100,000+</div>
+              <div class="display-6 fw-bold text-success mb-2 font-heading">100,000+</div>
               <h4 class="h6 fw-bold text-main mb-2">Acres Supported Through Sustainable Soil Management</h4>
               <p class="small text-muted mb-0 mt-auto">Rehabilitated from mineral salt compaction, chemical toxicity, and salinity to biological fertility.</p>
             </div>
@@ -659,10 +708,10 @@
           <!-- KPI 3 -->
           <div class="col-12 col-sm-6 col-lg-3 reveal-fade-up">
             <div class="kpi-metric-card">
-              <div class="kpi-icon-box mb-3">
+              <div class="kpi-icon-box">
                 <i class="bi bi-people-fill"></i>
               </div>
-              <div class="display-6 fw-bold text-success mb-1 font-heading">4,500+</div>
+              <div class="display-6 fw-bold text-success mb-2 font-heading">4,500+</div>
               <h4 class="h6 fw-bold text-main mb-2">Rural Dairy Farmers Supported</h4>
               <p class="small text-muted mb-0 mt-auto">Securing sustainable monthly livelihoods through transparent bovine manure collection centers.</p>
             </div>
@@ -671,10 +720,10 @@
           <!-- KPI 4 -->
           <div class="col-12 col-sm-6 col-lg-3 reveal-fade-up">
             <div class="kpi-metric-card">
-              <div class="kpi-icon-box mb-3">
+              <div class="kpi-icon-box">
                 <i class="bi bi-shield-check"></i>
               </div>
-              <div class="display-6 fw-bold text-success mb-1 font-heading">0</div>
+              <div class="display-6 fw-bold text-success mb-2 font-heading">0</div>
               <h4 class="h6 fw-bold text-main mb-2">Synthetic Chemical Additives in Certified Products</h4>
               <p class="small text-muted mb-0 mt-auto">Certified pure botanical and organic inputs with zero heavy metals, sewage sludge, or toxic adulterants.</p>
             </div>
@@ -682,13 +731,13 @@
         </div>
 
         <!-- 8.3 Closing Statement Prominently Displayed -->
-        <div class="mt-4 pt-3">
-          <div class="p-4 p-md-5 rounded-4 bg-dark-forest text-white text-center shadow-sm border border-success border-opacity-25">
-            <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-success bg-opacity-20 p-3 mb-3">
-              <i class="bi bi-quote text-warning fs-3"></i>
+        <div class="mt-4 pt-1">
+          <div class="p-4 p-md-4 rounded-4 bg-dark-forest text-white text-center shadow-sm border border-success border-opacity-25">
+            <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-success bg-opacity-20 p-2 mb-2" style="width: 44px; height: 44px;">
+              <i class="bi bi-quote text-warning fs-4"></i>
             </div>
             <blockquote class="blockquote mb-0">
-              <p class="h4 fst-italic fw-semibold text-white mx-auto" style="max-width: 860px; line-height: 1.6;">
+              <p class="h5 fst-italic fw-medium text-white mx-auto mb-0" style="max-width: 860px; line-height: 1.6;">
                 &ldquo;Every bag of TerraPure organic fertilizer represents a step towards healthier soil, sustainable farming, and a greener future.&rdquo;
               </p>
             </blockquote>
