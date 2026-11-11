@@ -18,23 +18,9 @@
 
 /* ---------------------------------------------------------------
    BOOTSTRAP UTILITY MANUAL FLIPS
-   (extra safety layer when RTL CSS build kicks in)
+   Bootstrap RTL CSS handles me-*/ms-*/ps-*/pe-* automatically.
+   Only add custom overrides here that Bootstrap does not cover.
 --------------------------------------------------------------- */
-[dir="rtl"] .me-1 { margin-right: 0 !important; margin-left: 0.25rem !important; }
-[dir="rtl"] .me-2 { margin-right: 0 !important; margin-left: 0.5rem !important; }
-[dir="rtl"] .me-3 { margin-right: 0 !important; margin-left: 1rem !important; }
-[dir="rtl"] .me-4 { margin-right: 0 !important; margin-left: 1.5rem !important; }
-[dir="rtl"] .ms-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
-[dir="rtl"] .ms-2 { margin-left: 0 !important; margin-right: 0.5rem !important; }
-[dir="rtl"] .ms-3 { margin-left: 0 !important; margin-right: 1rem !important; }
-[dir="rtl"] .ms-4 { margin-left: 0 !important; margin-right: 1.5rem !important; }
-[dir="rtl"] .ms-auto { margin-left: 0 !important; margin-right: auto !important; }
-[dir="rtl"] .ps-3 { padding-left: 0 !important; padding-right: 1rem !important; }
-[dir="rtl"] .ps-4 { padding-left: 0 !important; padding-right: 1.5rem !important; }
-[dir="rtl"] .pe-3 { padding-right: 0 !important; padding-left: 1rem !important; }
-[dir="rtl"] .pe-4 { padding-right: 0 !important; padding-left: 1.5rem !important; }
-[dir="rtl"] .text-start { text-align: right !important; }
-[dir="rtl"] .text-end { text-align: left !important; }
 
 /* ---------------------------------------------------------------
    NAVBAR & DROPDOWNS
@@ -97,16 +83,16 @@
 --------------------------------------------------------------- */
 [dir="rtl"] .hero-trust-highlights { text-align: right; }
 [dir="rtl"] .floating-stat-card.bottom-left {
-  left: auto;
-  right: -24px;
+  left: auto !important;
+  right: -24px !important;
 }
 [dir="rtl"] .floating-stat-card.top-right {
-  right: auto;
-  left: -24px;
+  right: auto !important;
+  left: -24px !important;
 }
 [dir="rtl"] .hero-image-overlay-pill {
-  left: auto;
-  right: 18px;
+  left: auto !important;
+  right: 18px !important;
 }
 
 /* ---------------------------------------------------------------
@@ -168,8 +154,8 @@
   left: -16px;
 }
 [dir="rtl"] .process-step-connector {
-  right: auto;
-  left: -24px;
+  right: auto !important;
+  left: -24px !important;
 }
 
 /* ---------------------------------------------------------------

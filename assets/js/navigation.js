@@ -40,11 +40,16 @@
     });
   }
 
-  // Initialize Direction on load
+  // Initialize Direction on load - only set dir attribute early (before DOM ready)
+  // CSS swap will happen in DOMContentLoaded when elements are available
   const savedDir = localStorage.getItem(RTL_STORAGE_KEY) || 'ltr';
-  applyDirection(savedDir);
+  document.documentElement.setAttribute('dir', savedDir);
 
   document.addEventListener('DOMContentLoaded', () => {
+    // Apply full direction (including Bootstrap CSS swap) now that DOM is ready
+    const initialDir = localStorage.getItem(RTL_STORAGE_KEY) || 'ltr';
+    applyDirection(initialDir);
+
     // 1. RTL Toggle Event
     const rtlBtns = document.querySelectorAll('.rtl-toggle-btn');
     rtlBtns.forEach(btn => {
