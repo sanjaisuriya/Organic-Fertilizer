@@ -8,6 +8,8 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
 
   <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,8 +22,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <!-- Theme & Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=7.0">
-  <link rel="stylesheet" href="assets/css/responsive.css?v=2.1">
+  <link rel="stylesheet" href="assets/css/style.css?v=8.1">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=4.0">
   <link rel="stylesheet" href="assets/css/rtl.css?v=3.0">
 
   <style>
@@ -260,17 +262,47 @@
       position: absolute;
       top: 14px;
       left: 14px;
-      background: rgba(14, 30, 20, 0.85);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      color: #74c69d;
-      font-size: 0.78rem;
+      background: rgba(10, 26, 17, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #ffffff;
+      font-size: 0.76rem;
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      padding: 5px 12px;
+      padding: 6px 14px;
       border-radius: 30px;
-      border: 1px solid rgba(82, 183, 136, 0.4);
+      border: 1px solid rgba(82, 183, 136, 0.55);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      line-height: 1.2;
+    }
+    .edu-card-badge::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #52b788;
+      box-shadow: 0 0 6px rgba(82, 183, 136, 0.9);
+      margin-right: 7px;
+      flex-shrink: 0;
+    }
+    [dir="rtl"] .edu-card-badge::before {
+      margin-right: 0;
+      margin-left: 7px;
+    }
+    [data-theme="dark"] .edu-card-badge {
+      background: rgba(6, 18, 11, 0.95) !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(116, 198, 157, 0.65) !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6) !important;
+    }
+    [data-theme="dark"] .edu-card-badge::before {
+      background-color: #74c69d !important;
+      box-shadow: 0 0 8px rgba(116, 198, 157, 1) !important;
     }
     .edu-card-body {
       padding: 24px;
@@ -587,6 +619,120 @@
       height: 240px;
       background: radial-gradient(circle, rgba(116, 198, 157, 0.25) 0%, transparent 70%);
       pointer-events: none;
+    }
+
+    /* High-Contrast Protection for CTA Banner Badge and Buttons in Light and Dark Mode */
+    .cta-banner-edu .badge-cta-pill,
+    [data-theme="dark"] .cta-banner-edu .badge-cta-pill {
+      background-color: #ffffff !important;
+      color: #142e1d !important;
+      border: 1px solid rgba(255, 255, 255, 0.5) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+      display: inline-flex;
+      align-items: center;
+    }
+    .cta-banner-edu .badge-cta-pill i,
+    [data-theme="dark"] .cta-banner-edu .badge-cta-pill i {
+      color: #2d6a4f !important;
+    }
+    .cta-banner-edu .btn-cta-white,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-white,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-white.fw-bold,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-white:not(:disabled) {
+      background-color: #ffffff !important;
+      color: #142e1d !important;
+      border: 2px solid #ffffff !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28) !important;
+      font-weight: 700 !important;
+      transition: all 0.25s ease !important;
+    }
+    .cta-banner-edu .btn-cta-white i,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-white i,
+    .cta-banner-edu .btn-cta-white *,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-white * {
+      color: #142e1d !important;
+    }
+    .cta-banner-edu .btn-cta-white i,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-white i {
+      color: #2d6a4f !important;
+    }
+    .cta-banner-edu .btn-cta-white:hover,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-white:hover {
+      background-color: #f0fdf4 !important;
+      color: #0b1a10 !important;
+      border-color: #f0fdf4 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35) !important;
+    }
+
+    /* Secondary CTA Button (Glass Outline with 100% Guaranteed Contrast) */
+    .cta-banner-edu .btn-cta-outline,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-outline,
+    .cta-banner-edu .btn-outline-light,
+    [data-theme="dark"] .cta-banner-edu .btn-outline-light {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+      color: #ffffff !important;
+      border: 2px solid rgba(255, 255, 255, 0.85) !important;
+      backdrop-filter: blur(8px) !important;
+      -webkit-backdrop-filter: blur(8px) !important;
+      font-weight: 600 !important;
+      transition: all 0.25s ease !important;
+    }
+    .cta-banner-edu .btn-cta-outline i,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-outline i,
+    .cta-banner-edu .btn-cta-outline span,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-outline span,
+    .cta-banner-edu .btn-outline-light i,
+    [data-theme="dark"] .cta-banner-edu .btn-outline-light i,
+    .cta-banner-edu .btn-outline-light span,
+    [data-theme="dark"] .cta-banner-edu .btn-outline-light span {
+      color: #ffffff !important;
+    }
+    .cta-banner-edu .btn-cta-outline:hover,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-outline:hover,
+    .cta-banner-edu .btn-cta-outline:focus,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-outline:focus,
+    .cta-banner-edu .btn-cta-outline:active,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-outline:active,
+    .cta-banner-edu .btn-outline-light:hover,
+    [data-theme="dark"] .cta-banner-edu .btn-outline-light:hover,
+    .cta-banner-edu .btn-outline-light:focus,
+    [data-theme="dark"] .cta-banner-edu .btn-outline-light:focus,
+    .cta-banner-edu .btn-outline-light:active,
+    [data-theme="dark"] .cta-banner-edu .btn-outline-light:active {
+      background-color: #ffffff !important;
+      border-color: #ffffff !important;
+      color: #142e1d !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
+    }
+    .cta-banner-edu .btn-cta-outline:hover *,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-outline:hover *,
+    .cta-banner-edu .btn-cta-outline:focus *,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-outline:focus *,
+    .cta-banner-edu .btn-cta-outline:active *,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-outline:active *,
+    .cta-banner-edu .btn-outline-light:hover *,
+    [data-theme="dark"] .cta-banner-edu .btn-outline-light:hover *,
+    .cta-banner-edu .btn-outline-light:focus *,
+    [data-theme="dark"] .cta-banner-edu .btn-outline-light:focus *,
+    .cta-banner-edu .btn-outline-light:active *,
+    [data-theme="dark"] .cta-banner-edu .btn-outline-light:active * {
+      color: #142e1d !important;
+    }
+    .cta-banner-edu .btn-cta-outline:hover i,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-outline:hover i,
+    .cta-banner-edu .btn-cta-outline:focus i,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-outline:focus i,
+    .cta-banner-edu .btn-cta-outline:active i,
+    [data-theme="dark"] .cta-banner-edu .btn-cta-outline:active i,
+    .cta-banner-edu .btn-outline-light:hover i,
+    [data-theme="dark"] .cta-banner-edu .btn-outline-light:hover i,
+    .cta-banner-edu .btn-outline-light:focus i,
+    [data-theme="dark"] .cta-banner-edu .btn-outline-light:focus i,
+    .cta-banner-edu .btn-outline-light:active i,
+    [data-theme="dark"] .cta-banner-edu .btn-outline-light:active i {
+      color: #2d6a4f !important;
     }
   </style>
 </head>
@@ -1433,7 +1579,7 @@
         <div class="edu-card overflow-hidden">
           <div class="row g-0 align-items-center">
             <div class="col-lg-6">
-              <img src="assets/images/home-2/seasonal-field-preparation.jpg?v=3.0" alt="Farmer recording seasonal field logbook notes and fertilizer applications in crop field" class="img-fluid w-100 h-100" style="object-fit: cover; min-height: 280px;" loading="lazy">
+              <img src="assets/images/home-2/seasonal-field-preparation.jpg?v=4.0" alt="Farmer recording seasonal field logbook notes and fertilizer applications in crop field" class="img-fluid w-100 h-100" style="object-fit: cover; min-height: 280px;" loading="lazy">
             </div>
             <div class="col-lg-6 p-4 p-lg-5">
               <h3 class="fw-bold mb-3 text-success">Why Seasonal Field Record-Keeping Matters</h3>
@@ -1528,15 +1674,57 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-lg-6 d-flex flex-column gap-4">
+            <!-- Checklist Feature Image Card -->
             <div class="edu-card overflow-hidden">
               <div class="position-relative">
-                <img src="assets/images/home-2/farmer-planning-checklist.jpg?v=2.0" alt="Agricultural specialist reviewing farm planning checklist in organic crop field" class="img-fluid w-100" style="object-fit: cover; max-height: 480px;" loading="lazy">
+                <img src="assets/images/home-2/farmer-planning-checklist.jpg?v=4.0" alt="Agricultural specialist reviewing farm planning checklist in organic crop field" class="img-fluid w-100" style="object-fit: cover; height: 320px;" loading="lazy">
                 <div class="position-absolute bottom-0 start-0 end-0 p-4" style="background: linear-gradient(to top, rgba(14, 30, 20, 0.95), transparent);">
                   <span class="badge bg-success rounded-pill px-3 py-1 mb-2">Field-Ready Farm Checklist</span>
-                  <h4 class="text-white fw-bold mb-1">Cultivate with Complete Confidence</h4>
+                  <h4 class="text-white fw-bold mb-1 fs-5">Cultivate with Complete Confidence</h4>
                   <p class="text-white-50 small mb-0">Structured seasonal planning prevents unexpected nutrient shortfalls and ensures timely harvest cycles.</p>
                 </div>
+              </div>
+            </div>
+
+            <!-- Audit Readiness & Farm Support Box -->
+            <div class="edu-card p-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge bg-success-subtle text-success rounded-pill px-3 py-1 fw-bold">Audit Benchmarks</span>
+                <span class="text-success small fw-bold"><i class="bi bi-shield-check me-1"></i> Pre-Sowing Protocol</span>
+              </div>
+              <p class="edu-card-desc mb-3 small">
+                Key agronomic indicators every cultivator should confirm before dispatching manure to the fields:
+              </p>
+              
+              <div class="row g-3 mb-3">
+                <div class="col-4">
+                  <div class="text-center p-2 rounded-3" style="background: rgba(45, 106, 79, 0.06); border: 1px solid rgba(45, 106, 79, 0.1);">
+                    <div class="fs-5 fw-bold text-success font-monospace">15-20</div>
+                    <div class="text-muted fw-semibold" style="font-size: 0.72rem;">Days Pre-Sowing</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="text-center p-2 rounded-3" style="background: rgba(45, 106, 79, 0.06); border: 1px solid rgba(45, 106, 79, 0.1);">
+                    <div class="fs-5 fw-bold text-success font-monospace">&le; 25%</div>
+                    <div class="text-muted fw-semibold" style="font-size: 0.72rem;">Moisture Tolerance</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="text-center p-2 rounded-3" style="background: rgba(45, 106, 79, 0.06); border: 1px solid rgba(45, 106, 79, 0.1);">
+                    <div class="fs-5 fw-bold text-success font-monospace">100%</div>
+                    <div class="text-muted fw-semibold" style="font-size: 0.72rem;">Weed-Free Humus</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-3 border-top border-light-subtle d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+                <div class="small text-muted">
+                  <i class="bi bi-calculator text-success me-1"></i> Need help calculating exact bulk acreage tonnages?
+                </div>
+                <a href="contact.html#bulkOrderForm" class="btn btn-outline-success btn-sm rounded-pill px-3 py-1 fw-bold text-nowrap">
+                  Request Guidance <i class="bi bi-arrow-right ms-1"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -1545,9 +1733,439 @@
     </section>
 
     <!-- ========================================================================= -->
-    <!-- SECTION 8: FREQUENTLY ASKED QUESTIONS                                     -->
+    <!-- SECTION 8: ORGANIC MANURE APPLICATION METHODS                            -->
     <!-- ========================================================================= -->
-    <section class="py-5 edu-section-alt" id="faqSection">
+    <section class="py-5 edu-section-alt" id="manureApplicationSection">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-badge-edu">
+            <i class="bi bi-gear-wide-connected"></i> Practical Field Application
+          </span>
+          <h2 class="section-title-edu display-6">
+            Apply Organic Manure the Right Way
+          </h2>
+          <p class="section-subtitle-edu">
+            Learn practical organic manure application methods based on crop type, soil condition and cultivation stage. Proper application supports soil health and healthy crop development.
+          </p>
+        </div>
+
+        <!-- Featured Application Spotlight Banner -->
+        <div class="edu-card overflow-hidden mb-5" style="margin-bottom: 3.75rem !important;">
+          <div class="row g-0 align-items-center">
+            <div class="col-lg-6">
+              <div class="edu-card-img-wrap" style="height: 100%; min-height: 340px;">
+                <img src="assets/images/home-2/farmer-manure-application.jpg" alt="Indian farmer applying organic compost manure around crop plants" style="min-height: 340px; width: 100%; object-fit: cover;" loading="lazy">
+                <span class="edu-card-badge">
+                  Active Field Application
+                </span>
+              </div>
+            </div>
+            <div class="col-lg-6 p-4 p-md-5">
+              <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill fw-bold text-uppercase small mb-2">Field Best Practice</span>
+              <h3 class="edu-card-title fs-4 mb-3">Optimal Placement for Nutrient Absorption</h3>
+              <p class="edu-card-desc mb-4">
+                Applying organic manure at the correct depth and distance from the root collar prevents root burn, reduces volatile nitrogen losses, and accelerates aerobic microbial decomposition in the soil.
+              </p>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                    <span class="small fw-semibold text-main">Pre-Planting Integration</span>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                    <span class="small fw-semibold text-main">Root-Zone Placement</span>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                    <span class="small fw-semibold text-main">Moisture Maintenance</span>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                    <span class="small fw-semibold text-main">Zero Seed Contact</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Application Method Cards -->
+        <div class="row g-4 mt-1 mt-md-2">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="edu-card h-100 p-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge bg-success-subtle text-success rounded-pill px-3 py-1 fw-bold">Method 01</span>
+                <div class="rounded-circle bg-success bg-opacity-10 text-success d-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+                  <i class="bi bi-layers fs-5"></i>
+                </div>
+              </div>
+              <h3 class="edu-card-title fs-5 mb-2">Basal Soil Application</h3>
+              <p class="edu-card-desc mb-3 flex-grow-1">
+                Mix suitable organic manure into the soil during land preparation before planting.
+              </p>
+              <div class="pt-3 border-top border-light-subtle">
+                <span class="text-success small fw-semibold">
+                  <i class="bi bi-clock-history me-1"></i> 15-20 Days Pre-Sowing
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="edu-card h-100 p-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge bg-success-subtle text-success rounded-pill px-3 py-1 fw-bold">Method 02</span>
+                <div class="rounded-circle bg-success bg-opacity-10 text-success d-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+                  <i class="bi bi-flower2 fs-5"></i>
+                </div>
+              </div>
+              <h3 class="edu-card-title fs-5 mb-2">Planting-Time Application</h3>
+              <p class="edu-card-desc mb-3 flex-grow-1">
+                Apply manure around planting areas while avoiding direct contact with seeds.
+              </p>
+              <div class="pt-3 border-top border-light-subtle">
+                <span class="text-success small fw-semibold">
+                  <i class="bi bi-shield-check me-1"></i> Furrow &amp; Pit Placement
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="edu-card h-100 p-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge bg-success-subtle text-success rounded-pill px-3 py-1 fw-bold">Method 03</span>
+                <div class="rounded-circle bg-success bg-opacity-10 text-success d-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+                  <i class="bi bi-arrow-repeat fs-5"></i>
+                </div>
+              </div>
+              <h3 class="edu-card-title fs-5 mb-2">Top Dressing</h3>
+              <p class="edu-card-desc mb-3 flex-grow-1">
+                Apply suitable manure around established plants according to crop requirements.
+              </p>
+              <div class="pt-3 border-top border-light-subtle">
+                <span class="text-success small fw-semibold">
+                  <i class="bi bi-droplet-half me-1"></i> Active Vegetative Stage
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="edu-card h-100 p-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge bg-success-subtle text-success rounded-pill px-3 py-1 fw-bold">Method 04</span>
+                <div class="rounded-circle bg-success bg-opacity-10 text-success d-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+                  <i class="bi bi-tree fs-5"></i>
+                </div>
+              </div>
+              <h3 class="edu-card-title fs-5 mb-2">Orchard Application</h3>
+              <p class="edu-card-desc mb-3 flex-grow-1">
+                Distribute manure around the active root zone of fruit trees and plantation crops.
+              </p>
+              <div class="pt-3 border-top border-light-subtle">
+                <span class="text-success small fw-semibold">
+                  <i class="bi bi-circle me-1"></i> Canopy Drip-Line Ring
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 9: CROP-WISE ORGANIC NUTRIENT PLANNING                           -->
+    <!-- ========================================================================= -->
+    <section class="py-5 edu-section-light" id="cropNutrientPlanningSection">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-badge-edu">
+            <i class="bi bi-clipboard2-pulse"></i> Crop-Specific Farm Guidance
+          </span>
+          <h2 class="section-title-edu display-6">
+            Match Organic Nutrition with Your Crop Requirements
+          </h2>
+          <p class="section-subtitle-edu">
+            Different crops require different nutrient management practices. Select suitable organic manure based on crop variety, soil test results and growth stage.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Card 1: Paddy & Field Crops -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="edu-card h-100">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/crop-plan-paddy.jpg" alt="Paddy rice cultivation field with lush green crops" loading="lazy">
+                <span class="edu-card-badge">Paddy &amp; Cereals</span>
+              </div>
+              <div class="edu-card-body">
+                <h3 class="edu-card-title fs-5">Paddy &amp; Field Crops</h3>
+                <p class="edu-card-desc">
+                  Plan organic matter application during land preparation and crop establishment.
+                </p>
+                <ul class="edu-feature-list">
+                  <li><strong>Land Prep:</strong> Basal cattle manure in puddle fields</li>
+                  <li><strong>Active Tillering:</strong> Vermicompost top dressing</li>
+                </ul>
+                <div class="mt-auto pt-3 border-top border-light-subtle d-flex justify-content-between align-items-center">
+                  <span class="text-success fw-bold small"><i class="bi bi-shield-check me-1"></i> Root Zone Stability</span>
+                  <span class="badge bg-success-subtle text-success rounded-pill px-2 py-1 small">Basal &amp; Tillering</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Vegetables & Greens -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="edu-card h-100">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/crop-plan-vegetables.jpg" alt="Vegetable farming field with organized crop rows" loading="lazy">
+                <span class="edu-card-badge">Horticulture</span>
+              </div>
+              <div class="edu-card-body">
+                <h3 class="edu-card-title fs-5">Vegetables &amp; Greens</h3>
+                <p class="edu-card-desc">
+                  Maintain suitable soil conditions for healthy vegetable growth.
+                </p>
+                <ul class="edu-feature-list">
+                  <li><strong>Bed Preparation:</strong> Enriched vermicompost &amp; neem cake</li>
+                  <li><strong>Foliage Support:</strong> Regular bio-nutrient top dressed feeds</li>
+                </ul>
+                <div class="mt-auto pt-3 border-top border-light-subtle d-flex justify-content-between align-items-center">
+                  <span class="text-success fw-bold small"><i class="bi bi-shield-check me-1"></i> Rapid Growth Cycle</span>
+                  <span class="badge bg-success-subtle text-success rounded-pill px-2 py-1 small">High Organic Matter</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Fruit Crops -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="edu-card h-100">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/crop-plan-fruits.jpg" alt="Fruit orchard trees with weed-free tilled basins" loading="lazy">
+                <span class="edu-card-badge">Fruit Orchards</span>
+              </div>
+              <div class="edu-card-body">
+                <h3 class="edu-card-title fs-5">Fruit Crops</h3>
+                <p class="edu-card-desc">
+                  Support orchard soil management through appropriate organic matter application.
+                </p>
+                <ul class="edu-feature-list">
+                  <li><strong>Pre-Monsoon:</strong> Ring trench organic manure feeding</li>
+                  <li><strong>Fruit Setting:</strong> Organic potash and bone meal blend</li>
+                </ul>
+                <div class="mt-auto pt-3 border-top border-light-subtle d-flex justify-content-between align-items-center">
+                  <span class="text-success fw-bold small"><i class="bi bi-shield-check me-1"></i> Perennial Nutrition</span>
+                  <span class="badge bg-success-subtle text-success rounded-pill px-2 py-1 small">Drip-Line Feeding</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Coconut & Plantation Crops -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="edu-card h-100">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/crop-plan-coconut.jpg" alt="Coconut plantation grove with healthy palms" loading="lazy">
+                <span class="edu-card-badge">Plantation</span>
+              </div>
+              <div class="edu-card-body">
+                <h3 class="edu-card-title fs-5">Coconut &amp; Plantation Crops</h3>
+                <p class="edu-card-desc">
+                  Improve soil organic matter through crop-specific manure management.
+                </p>
+                <ul class="edu-feature-list">
+                  <li><strong>Circular Basins:</strong> Aged cow dung &amp; neem cake ring</li>
+                  <li><strong>Mulch Layering:</strong> Biomass recycling for moisture retention</li>
+                </ul>
+                <div class="mt-auto pt-3 border-top border-light-subtle d-flex justify-content-between align-items-center">
+                  <span class="text-success fw-bold small"><i class="bi bi-shield-check me-1"></i> Long-Term Vitality</span>
+                  <span class="badge bg-success-subtle text-success rounded-pill px-2 py-1 small">Bi-Annual Schedule</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 10: ORGANIC FARMING MAINTENANCE & MONITORING                      -->
+    <!-- ========================================================================= -->
+    <section class="py-5 edu-section-alt" id="farmMonitoringSection">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-badge-edu">
+            <i class="bi bi-graph-up-arrow"></i> Continuous Field Improvement
+          </span>
+          <h2 class="section-title-edu display-6">
+            Monitor Your Soil. Improve Your Farming Practices.
+          </h2>
+          <p class="section-subtitle-edu">
+            Regular field observation helps farmers understand soil conditions, crop development and organic input performance. Maintain records and review cultivation results to improve future farming practices.
+          </p>
+        </div>
+
+        <!-- 3 Field Observation Images Showcase -->
+        <div class="row g-4 mb-5" style="margin-bottom: 3.75rem !important;">
+          <!-- Photo 1: Crop Growth Inspection -->
+          <div class="col-12 col-md-4">
+            <div class="edu-card h-100">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/monitor-crop-inspection.jpg" alt="Farmer inspecting crop growth and plant foliage health" loading="lazy">
+                <span class="edu-card-badge">Foliage &amp; Vigor Check</span>
+              </div>
+              <div class="edu-card-body">
+                <h3 class="edu-card-title fs-5">Crop Growth Observation</h3>
+                <p class="edu-card-desc mb-0">
+                  Careful examination of crop tillering, root anchoring, leaf color, and canopy vigor to evaluate immediate response to organic nutrition.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 2: Soil Moisture Checking -->
+          <div class="col-12 col-md-4">
+            <div class="edu-card h-100">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/monitor-soil-moisture.jpg" alt="Soil moisture checking and soil texture inspection in farmland" loading="lazy">
+                <span class="edu-card-badge">Moisture &amp; Humus</span>
+              </div>
+              <div class="edu-card-body">
+                <h3 class="edu-card-title fs-5">Soil Moisture Checking</h3>
+                <p class="edu-card-desc mb-0">
+                  Assessing crumb structure, water-holding consistency, and sub-surface moisture retention to guide irrigation and compost top-up timing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 3: Farmer Recording Field Observations -->
+          <div class="col-12 col-md-4">
+            <div class="edu-card h-100">
+              <div class="edu-card-img-wrap">
+                <img src="assets/images/home-2/monitor-record-keeping.jpg" alt="Farmer recording field observations and agronomic records" loading="lazy">
+                <span class="edu-card-badge">Farm Logbook</span>
+              </div>
+              <div class="edu-card-body">
+                <h3 class="edu-card-title fs-5">Field Observation Records</h3>
+                <p class="edu-card-desc mb-0">
+                  Systematic documentation of organic input dates, batch numbers, soil test results, and yield metrics for continuous farming improvement.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Field Monitoring & Maintenance Cards -->
+        <div class="row g-4 mt-1 mt-md-2">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="edu-card h-100 p-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge bg-success-subtle text-success rounded-pill px-3 py-1 fw-bold">Step 01</span>
+                <div class="rounded-circle bg-success bg-opacity-10 text-success d-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+                  <i class="bi bi-moisture fs-5"></i>
+                </div>
+              </div>
+              <h3 class="edu-card-title fs-5 mb-2">Soil Condition Monitoring</h3>
+              <p class="edu-card-desc mb-3 flex-grow-1">
+                Observe soil texture, drainage and moisture conditions.
+              </p>
+              <div class="pt-3 border-top border-light-subtle">
+                <span class="text-success small fw-semibold">
+                  <i class="bi bi-check2-circle me-1"></i> Weekly Texture &amp; Infiltration
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="edu-card h-100 p-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge bg-success-subtle text-success rounded-pill px-3 py-1 fw-bold">Step 02</span>
+                <div class="rounded-circle bg-success bg-opacity-10 text-success d-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+                  <i class="bi bi-eye fs-5"></i>
+                </div>
+              </div>
+              <h3 class="edu-card-title fs-5 mb-2">Crop Growth Observation</h3>
+              <p class="edu-card-desc mb-3 flex-grow-1">
+                Monitor plant growth, leaf condition and crop development.
+              </p>
+              <div class="pt-3 border-top border-light-subtle">
+                <span class="text-success small fw-semibold">
+                  <i class="bi bi-check2-circle me-1"></i> Bi-Weekly Foliar Health
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="edu-card h-100 p-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge bg-success-subtle text-success rounded-pill px-3 py-1 fw-bold">Step 03</span>
+                <div class="rounded-circle bg-success bg-opacity-10 text-success d-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+                  <i class="bi bi-journal-text fs-5"></i>
+                </div>
+              </div>
+              <h3 class="edu-card-title fs-5 mb-2">Input Application Records</h3>
+              <p class="edu-card-desc mb-3 flex-grow-1">
+                Record manure types, application dates and quantities.
+              </p>
+              <div class="pt-3 border-top border-light-subtle">
+                <span class="text-success small fw-semibold">
+                  <i class="bi bi-check2-circle me-1"></i> Real-Time Field Logbook
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="edu-card h-100 p-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge bg-success-subtle text-success rounded-pill px-3 py-1 fw-bold">Step 04</span>
+                <div class="rounded-circle bg-success bg-opacity-10 text-success d-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+                  <i class="bi bi-bar-chart-line fs-5"></i>
+                </div>
+              </div>
+              <h3 class="edu-card-title fs-5 mb-2">Seasonal Performance Review</h3>
+              <p class="edu-card-desc mb-3 flex-grow-1">
+                Compare field observations across cultivation seasons.
+              </p>
+              <div class="pt-3 border-top border-light-subtle">
+                <span class="text-success small fw-semibold">
+                  <i class="bi bi-check2-circle me-1"></i> Post-Harvest Comparison
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<!-- ========================================================================= -->
+    <!-- SECTION 11: FREQUENTLY ASKED QUESTIONS                                     -->
+    <!-- ========================================================================= -->
+    <section class="py-5 edu-section-light" id="faqSection">
       <div class="container py-4">
         <div class="text-center mb-5">
           <span class="section-badge-edu">
@@ -1656,16 +2274,16 @@
     </section>
 
     <!-- ========================================================================= -->
-    <!-- SECTION 9: FINAL CALL TO ACTION                                           -->
+    <!-- SECTION 12: FINAL CALL TO ACTION                                           -->
     <!-- ========================================================================= -->
-    <section class="py-5 edu-section-light" id="bulkOrderSection">
+    <section class="py-5 edu-section-alt" id="bulkOrderSection">
       <div id="finalCtaSection"></div>
       <div class="container py-4">
         <div class="cta-banner-edu">
           <div class="row align-items-center g-4">
             <div class="col-lg-8">
-              <span class="badge bg-light text-dark rounded-pill px-3 py-1 mb-3 fw-bold">
-                <i class="bi bi-patch-check-fill text-success me-1"></i> TerraPure Agricultural Consultation
+              <span class="badge rounded-pill px-3 py-2 mb-3 fw-bold badge-cta-pill" style="background-color: #ffffff !important; color: #142e1d !important;">
+                <i class="bi bi-patch-check-fill me-1" style="color: #2d6a4f !important;"></i> TerraPure Agricultural Consultation
               </span>
               <h2 class="display-6 fw-bold mb-3 text-white">
                 Planning Your Next Cultivation Season?
@@ -1676,11 +2294,11 @@
             </div>
             <div class="col-lg-4 text-lg-end">
               <div class="d-flex flex-column flex-sm-row flex-lg-column gap-3 justify-content-lg-end">
-                <a href="contact.html" class="btn btn-light btn-lg rounded-pill px-4 py-3 fw-bold text-success shadow">
-                  <i class="bi bi-telephone-fill me-2"></i> Contact Soil Specialists
+                <a href="contact.html" class="btn btn-cta-white btn-lg rounded-pill px-4 py-3 fw-bold shadow" style="background-color: #ffffff !important; color: #142e1d !important; border: 2px solid #ffffff !important;">
+                  <i class="bi bi-telephone-fill me-2" style="color: #2d6a4f !important;"></i> <span style="color: #142e1d !important;">Contact Soil Specialists</span>
                 </a>
-                <a href="contact.html#bulkOrderForm" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 fw-semibold">
-                  <i class="bi bi-truck me-2"></i> Request Bulk Consultation
+                <a href="contact.html#bulkOrderForm" class="btn btn-cta-outline btn-lg rounded-pill px-4 py-3 fw-semibold">
+                  <i class="bi bi-truck me-2"></i> <span>Request Bulk Consultation</span>
                 </a>
               </div>
             </div>
@@ -1689,7 +2307,7 @@
       </div>
     </section>
 
-  </main>
+      </main>
 
   <!-- FOOTER -->
     <!-- COMMON STANDARDIZED FOOTER -->
