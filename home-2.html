@@ -23,8 +23,6 @@
 
   <!-- Theme & Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css?v=8.1">
-  <link rel="stylesheet" href="assets/css/responsive.css?v=4.0">
-  <link rel="stylesheet" href="assets/css/rtl.css?v=3.0">
 
   <style>
     /* -------------------------------------------------------------
@@ -734,7 +732,177 @@
     [data-theme="dark"] .cta-banner-edu .btn-outline-light:active i {
       color: #2d6a4f !important;
     }
+
+    /* -------------------------------------------------------------
+       HOME PAGE 2 INLINE RESPONSIVE BREAKPOINTS (ALL DEVICES)
+       ------------------------------------------------------------- */
+    @media (max-width: 991.98px) {
+      .hero-edu-farming {
+        padding: 60px 0 50px !important;
+        text-align: center !important;
+      }
+      .hero-title-main {
+        font-size: 2.45rem !important;
+      }
+      .hero-desc-lead {
+        margin: 0 auto 28px !important;
+        font-size: 1.08rem !important;
+      }
+      .hero-stats-box {
+        max-width: 520px !important;
+        margin: 2rem auto 0 !important;
+      }
+      .section-title-edu {
+        font-size: 2rem !important;
+      }
+      .cta-banner-edu {
+        padding: 42px 28px !important;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .hero-edu-farming {
+        padding: 48px 0 40px !important;
+      }
+      .hero-title-main {
+        font-size: 2.05rem !important;
+        line-height: 1.22 !important;
+      }
+      .section-title-edu {
+        font-size: 1.7rem !important;
+      }
+      .section-subtitle-edu {
+        font-size: 0.98rem !important;
+        margin-bottom: 24px !important;
+      }
+      .edu-card-img-wrap {
+        height: 190px !important;
+      }
+      .checklist-container-card {
+        padding: 22px 16px !important;
+      }
+      .cta-banner-edu {
+        padding: 34px 20px !important;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .hero-edu-farming {
+        padding: 38px 0 32px !important;
+      }
+      .hero-title-main {
+        font-size: 1.75rem !important;
+        line-height: 1.25 !important;
+        letter-spacing: -0.01em !important;
+      }
+      .hero-desc-lead {
+        font-size: 0.95rem !important;
+        line-height: 1.55 !important;
+      }
+      .hero-badge-pill {
+        font-size: 0.72rem !important;
+        padding: 5px 12px !important;
+      }
+      .hero-edu-farming .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+      }
+      .hero-stats-box {
+        padding: 14px 8px !important;
+      }
+      .hero-stat-num {
+        font-size: 1.45rem !important;
+      }
+      .hero-stat-lbl {
+        font-size: 0.72rem !important;
+      }
+      .hero-stat-item {
+        padding: 0 4px !important;
+      }
+      .section-title-edu {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+      }
+      .section-subtitle-edu {
+        font-size: 0.92rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 20px !important;
+      }
+      .edu-card-body {
+        padding: 16px 14px !important;
+      }
+      .edu-card-title {
+        font-size: 1.15rem !important;
+      }
+      .edu-card-desc {
+        font-size: 0.88rem !important;
+        line-height: 1.5 !important;
+      }
+      .edu-card-badge {
+        font-size: 0.68rem !important;
+        padding: 4px 9px !important;
+        top: 10px !important;
+        left: 10px !important;
+      }
+      [dir="rtl"] .edu-card-badge {
+        left: auto !important;
+        right: 10px !important;
+      }
+      .checklist-container-card {
+        padding: 18px 12px !important;
+        border-radius: 14px !important;
+      }
+      .checklist-row {
+        padding: 12px 10px !important;
+        gap: 10px !important;
+        margin-bottom: 10px !important;
+      }
+      .check-icon-bubble {
+        width: 26px !important;
+        height: 26px !important;
+        font-size: 0.85rem !important;
+      }
+      .cta-banner-edu {
+        padding: 28px 16px !important;
+        border-radius: 16px !important;
+      }
+      .cta-banner-edu h2 {
+        font-size: 1.55rem !important;
+        line-height: 1.25 !important;
+      }
+      .cta-banner-edu p {
+        font-size: 0.9rem !important;
+      }
+      .cta-banner-edu .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero-title-main {
+        font-size: 1.55rem !important;
+      }
+      .hero-stat-num {
+        font-size: 1.25rem !important;
+      }
+      .hero-stat-lbl {
+        font-size: 0.65rem !important;
+      }
+      .section-title-edu {
+        font-size: 1.35rem !important;
+      }
+      .edu-card-body {
+        padding: 14px 10px !important;
+      }
+    }
   </style>
+
+  <!-- Responsive & RTL CSS (Must follow inline styles to guarantee cascade precedence) -->
+  <link rel="stylesheet" href="assets/css/responsive.css?v=5.0">
+  <link rel="stylesheet" href="assets/css/rtl.css?v=3.0">
 </head>
 <body>
 
