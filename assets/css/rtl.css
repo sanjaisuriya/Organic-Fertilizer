@@ -29,6 +29,23 @@
 [dir="rtl"] .dropdown-menu { text-align: right; }
 [dir="rtl"] .dropdown-item i { margin-right: 0; margin-left: 0.5rem; }
 [dir="rtl"] .bi-chevron-right::before { content: "\f284"; } /* bi-chevron-left */
+[dir="rtl"] .nav-control-btn svg,
+[dir="rtl"] .rtl-icon {
+  width: 1.15em;
+  height: 1.15em;
+  display: block;
+  fill: currentColor;
+  pointer-events: none;
+  transform: scaleX(-1);
+}
+[dir="rtl"] .protocol-card-watermark {
+  right: auto !important;
+  left: 18px !important;
+}
+[dir="rtl"] .protocol-banner-watermark {
+  right: auto !important;
+  left: 28px !important;
+}
 
 /* ---------------------------------------------------------------
    BUTTONS

@@ -4482,7 +4482,7 @@ img {
 
 
 
-  background: linear-gradient(135deg, rgba(16, 40, 24, 0.92) 0%, rgba(22, 60, 36, 0.85) 100%),
+  background: linear-gradient(135deg, rgba(8, 22, 13, 0.90) 0%, rgba(14, 38, 23, 0.85) 50%, rgba(8, 22, 13, 0.90) 100%),
 
 
 
@@ -4510,7 +4510,11 @@ img {
 
 
 
-  color: #ffffff;
+  color: #ffffff !important;
+
+
+
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.7);
 
 
 
@@ -4526,7 +4530,11 @@ img {
 
 
 
-  color: #d1e7dd;
+  color: #e2f0d9 !important;
+
+
+
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
 
 
 
@@ -4690,7 +4698,7 @@ img {
 
 
 
-  background: linear-gradient(135deg, rgba(10, 26, 16, 0.76) 0%, rgba(18, 48, 29, 0.70) 100%);
+  background: linear-gradient(135deg, rgba(8, 22, 13, 0.90) 0%, rgba(14, 38, 23, 0.84) 50%, rgba(8, 22, 13, 0.90) 100%) !important;
 
 
 
@@ -4754,7 +4762,7 @@ img {
 
 
 
-  color: #ffffff;
+  color: #ffffff !important;
 
 
 
@@ -4766,11 +4774,19 @@ img {
 
 
 
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.7);
+
+
+
 }
 
 
 
 
+
+
+
+.inner-page-banner .banner-subtitle,
 
 
 
@@ -4782,11 +4798,11 @@ img {
 
 
 
-  color: #d1e7dd;
+  color: #e2f0d9 !important;
 
 
 
-  max-width: 680px;
+  max-width: 780px;
 
 
 
@@ -4794,7 +4810,11 @@ img {
 
 
 
-  line-height: 1.6;
+  line-height: 1.65;
+
+
+
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
 
 
 
@@ -4830,15 +4850,15 @@ img {
 
 
 
-  color: #bad3c2;
+  color: #d8f3dc;
 
 
 
-  background: rgba(16, 36, 23, 0.65);
+  background: rgba(8, 22, 13, 0.78);
 
 
 
-  padding: 0.35rem 1.15rem;
+  padding: 0.4rem 1.25rem;
 
 
 
@@ -4854,11 +4874,11 @@ img {
 
 
 
-  border: 1px solid rgba(82, 183, 136, 0.35);
+  border: 1px solid rgba(82, 183, 136, 0.45);
 
 
 
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
 
 
 
@@ -4898,7 +4918,7 @@ img {
 
 
 
-  color: #ffffff;
+  color: #ffffff !important;
 
 
 
@@ -4915,6 +4935,34 @@ img {
 
 
   align-items: center;
+
+
+
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+
+
+
+}
+
+
+
+.banner-breadcrumb .active,
+
+
+
+.banner-breadcrumb li[aria-current="page"] {
+
+
+
+  color: #d8f3dc !important;
+
+
+
+  font-weight: 600;
+
+
+
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 
 
 
@@ -4946,7 +4994,7 @@ img {
 
 
 
-  background: rgba(16, 36, 23, 0.75) !important;
+  background: rgba(10, 28, 17, 0.85) !important;
 
 
 
@@ -4962,7 +5010,7 @@ img {
 
 
 
-  border: 1px solid rgba(82, 183, 136, 0.45) !important;
+  border: 1px solid rgba(82, 183, 136, 0.5) !important;
 
 
 
@@ -4994,11 +5042,51 @@ img {
 
 
 
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+
+
+
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 
 
 
   transition: transform var(--transition-fast), background var(--transition-fast);
+
+
+
+}
+
+
+
+.inner-page-banner .badge {
+
+
+
+  background-color: rgba(10, 28, 17, 0.85) !important;
+
+
+
+  border: 1px solid rgba(82, 183, 136, 0.5) !important;
+
+
+
+  color: #ffffff !important;
+
+
+
+  backdrop-filter: blur(8px);
+
+
+
+  -webkit-backdrop-filter: blur(8px);
+
+
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+
+
+
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 
 
 
@@ -14488,3 +14576,96 @@ html:not([data-theme="dark"]) .crop-tag-text {
   color: #52b788 !important;
   font-size: 0.95rem;
 }
+
+
+/* ==========================================================================
+   NAVIGATION RTL ICON & TRANSITION PROTOCOL STEP WATERMARKS
+   ========================================================================== */
+
+/* Standard RTL Icon in Navigation */
+.nav-control-btn svg,
+.rtl-icon {
+  width: 1.15em;
+  height: 1.15em;
+  display: block;
+  fill: currentColor;
+  pointer-events: none;
+  transition: transform var(--transition-fast, 0.2s ease);
+}
+
+/* Transition Protocol Step Cards */
+.protocol-step-card {
+  transition: transform var(--transition-normal, 0.3s ease), box-shadow var(--transition-normal, 0.3s ease);
+}
+
+.protocol-step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(35, 93, 58, 0.12);
+}
+
+/* Solid Green Step Pill Badge in Top Right */
+.protocol-step-pill {
+  background-color: var(--primary-green, #235d3a) !important;
+  color: #ffffff !important;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  border-radius: 9999px !important;
+  box-shadow: 0 2px 8px rgba(35, 93, 58, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+[data-theme="dark"] .protocol-step-pill {
+  background-color: #2d6a4f !important;
+  color: #ffffff !important;
+  border-color: rgba(82, 183, 136, 0.35) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Step Number Watermarks inside Cards (01, 02, 03 at top right) */
+.protocol-card-watermark {
+  position: absolute;
+  top: 4px;
+  right: 18px;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 0.85;
+  color: var(--primary-green, #235d3a);
+  opacity: 0.20;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  letter-spacing: -0.04em;
+  transition: opacity var(--transition-normal, 0.3s ease), transform var(--transition-normal, 0.3s ease);
+}
+
+.protocol-step-card:hover .protocol-card-watermark {
+  opacity: 0.30;
+  transform: scale(1.05);
+}
+
+.protocol-banner-watermark {
+  font-size: 5.5rem;
+  right: 28px;
+  bottom: -15px;
+  top: auto;
+  opacity: 0.14;
+  line-height: 1;
+}
+
+[data-theme="dark"] .protocol-card-watermark {
+  color: var(--accent-light-green, #74c69d) !important;
+  opacity: 0.24 !important;
+}
+
+[data-theme="dark"] .protocol-step-card:hover .protocol-card-watermark {
+  opacity: 0.34 !important;
+}
+
+[data-theme="dark"] .protocol-banner-watermark {
+  color: var(--accent-light-green, #74c69d) !important;
+  opacity: 0.18 !important;
+}

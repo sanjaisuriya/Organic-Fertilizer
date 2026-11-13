@@ -8,6 +8,15 @@
 
   const RTL_STORAGE_KEY = 'terrapure-direction';
 
+  // Horizontal exchange arrows (Top pointing Right, Bottom pointing Left)
+  const SWAP_ICON_PATH = 'M6.99 11L3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z';
+
+  function getRtlSvg(dir) {
+    const isRtl = (dir === 'rtl');
+    const variantClass = isRtl ? 'rtl-icon-active' : '';
+    return `<svg class="rtl-icon ${variantClass}" data-icon="swap_horiz" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="${SWAP_ICON_PATH}"/></svg>`;
+  }
+
   // Apply Direction (RTL / LTR)
   function applyDirection(dir) {
     document.documentElement.setAttribute('dir', dir);
@@ -23,17 +32,11 @@
 
     const rtlBtns = document.querySelectorAll('.rtl-toggle-btn');
     rtlBtns.forEach(btn => {
-      let icon = btn.querySelector('i');
-      if (!icon) {
-        btn.innerHTML = '<i class="bi bi-text-right"></i>';
-        icon = btn.querySelector('i');
-      }
+      btn.innerHTML = getRtlSvg(dir);
       if (dir === 'rtl') {
-        icon.className = 'bi bi-text-left';
         btn.setAttribute('title', 'Switch to Left-to-Right (LTR)');
         btn.setAttribute('aria-label', 'Switch to Left-to-Right');
       } else {
-        icon.className = 'bi bi-text-right';
         btn.setAttribute('title', 'Switch to Right-to-Left (RTL)');
         btn.setAttribute('aria-label', 'Switch to Right-to-Left');
       }
